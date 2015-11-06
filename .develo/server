@@ -11,5 +11,4 @@ echo ""
 echo "ZaraLab"
 echo ""
 
-
-node index.js
+(node index.js & cd content/themes/zaralab/; gulp)
