@@ -70,7 +70,7 @@ if (process.env.OPENSHIFT_MYSQL_DB_HOST != undefined) {
         // ### Development **(default)**
         development: {
             // The url to use when providing links to the site, E.g. in RSS and email.
-            url: 'http://my-ghost-blog.com',
+            url: 'http://'+process.env.OPENSHIFT_CNAME || 'http://'+process.env.OPENSHIFT_APP_DNS,
 
             // Example mail config
             // Visit http://support.ghost.org/mail for instructions
@@ -87,13 +87,24 @@ if (process.env.OPENSHIFT_MYSQL_DB_HOST != undefined) {
             //  },
             // ```
 
+            // database: {
+            //     client: 'sqlite3',
+            //     connection: {
+            //         filename: path.join(__dirname, '/content/data/ghost-dev.db')
+            //     },
+            //     debug: false
+            // },
             database: {
-                client: 'sqlite3',
+                client: 'mysql',
                 connection: {
-                    filename: path.join(__dirname, '/content/data/ghost-dev.db')
+                    host     : process.env.STARTAPP_MYSQL_HOST,
+                    port     : process.env.STARTAPP_MYSQL_PORT,
+                    user     : process.env.STARTAPP_MYSQL_USER,
+                    password : process.env.STARTAPP_MYSQL_PASS,
+                    database : process.env.STARTAPP_MYSQL_DATABASE,
+                    charset  : 'utf8'
+                }
                 },
-                debug: false
-            },
             server: {
                 // Host to be passed to node's `net.Server#listen()`
                 host: '127.0.0.1',
