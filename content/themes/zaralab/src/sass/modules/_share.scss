@@ -1,0 +1,139 @@
+@mixin transition($transition:0.1s all) {
+  -webkit-transition: #{$transition};
+  -moz-transition: #{$transition};
+  -o-transition: #{$transition};
+  transition: #{$transition};
+}
+
+/*================ Social share buttons ================*/
+$shareButtonHeight: 28px;
+$shareCountBg: #fff;
+$shareBorderColor: #ececec;
+
+.social-sharing {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 60px;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+    margin-right: 10px;
+    height: $shareButtonHeight;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  svg {
+    margin: 0 8px 0 8px;
+  }
+
+  .share-title {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+}
+
+.share-facebook {
+  background-color: #3b5998;
+
+  &:hover {
+    background-color: darken(#3b5998, 10%);
+  }
+
+  svg {
+    margin: 0 4px 0 4px;
+  }
+}
+
+.share-twitter {
+  background-color: #00aced;
+
+  &:hover {
+    background-color: darken(#00aced, 10%);
+  }
+}
+
+.share-pinterest {
+  background-color: #cb2027;
+
+  &:hover {
+    background-color: darken(#cb2027, 10%);
+  }
+}
+
+.share-google {
+  background-color: #dd4b39;
+
+  &:hover {
+    background-color: darken(#dd4b39, 10%);
+  }
+}
+
+.share-count {
+  position: relative;
+  height: 100%;
+  line-height: $shareButtonHeight;
+  background-color: $shareCountBg;
+  padding: 0 8px;
+  margin-right: -2px;
+  color: #333;
+  border-radius: 0 3px 3px 0;
+
+  opacity: 0;
+  @include transition(opacity 0.2s ease-in);
+
+  &.is-loaded {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid;
+  }
+
+  &:before {
+    left: -6px;
+    border-right-color: $shareBorderColor;
+  }
+
+  &:after {
+    left: -5px;
+    border-right-color: $shareCountBg;
+  }
+
+  a:hover & {
+    background-color: darken($shareCountBg, 4%);
+
+    &:after {
+      border-right-color: darken($shareCountBg, 4%);
+    }
+  }
+
+  .is-large & {
+    font-size: 18px;
+    padding: 0 14px;
+  }
+
+}
+

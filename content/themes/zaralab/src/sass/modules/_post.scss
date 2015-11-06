@@ -1,0 +1,91 @@
+.post-template .post,
+#disqus_thread {
+  background-color: #fff;
+}
+.post-template .post img {
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255, .6);
+}
+.post-template .post .inner {
+  padding: 40px 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+}
+.post-template .post h1 {
+  color: #444;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.share,
+.post-template .post-tags {
+  color: #474747;
+  font-size: 16px;
+}
+.share {
+  text-align: right;
+  color: #919191;
+}
+.share a {
+  text-decoration: none;
+}
+.share a:hover {
+  text-decoration: none;
+}
+.author {
+  margin-top: 20px;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+.author a {
+  text-decoration: none;
+}
+.author a:hover {
+  text-decoration: underline;
+}
+.author h4 {
+  text-align: center;
+}
+.author-bio {
+  text-align: left;
+}
+
+.event {
+  position: absolute;
+  bottom: 38px;
+  right: 40px;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background-color: #59A426;
+  color: #fff;
+  text-align: center;
+  text-decoration: none !important;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: darken($green, 4%);
+  }
+}
+
+.post-template .time {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: $green;
+  font-size: 14px;
+  text-align: right;
+  opacity: 0.6;
+}
+
