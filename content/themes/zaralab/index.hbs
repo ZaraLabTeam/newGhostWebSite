@@ -11,13 +11,13 @@
 
     <article class="animated {{post_class}}{{#if @even}} fadeInLeftBig even {{else}} fadeInRightBig odd{{/if}}">
       <div class="inner">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         <span class="time">
           <time datetime="{{date format='DD MM YYYY'}}">
             <span class="month">{{date format="MMM"}}</span>
             <span class="day">{{date format="DD"}}</span>
           </time>
         </span>
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         <a href="{{url}}"><img src={{image absolute="true"}} alt="{{{title}}}"/></a>
       </div>
     </article>

@@ -15,7 +15,7 @@
 }
 
 @keyframes fadeInDownBig {
-  0% { opacity: 0;transform: translateY(-2000px);}
+  0% { opacity: 0;transform: translateY(-100%);}
   100% { opacity: 1;transform: translateY(0); }
 }
 
@@ -50,15 +50,15 @@
 }
 
 .post.odd {
-  animation-delay: 1.5s;
+  // animation-delay: 1s;
 }
 
 .post.even {
-  animation-delay: 1.5s;
+  // animation-delay: 1s;
 }
 
 .content-home .post.result {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
   text-align: center;
   float: none;
   width: 90%;
@@ -71,11 +71,17 @@
 
 .content-home .wrapper:before {
   animation: fadeFromBottom 2s ease-in-out forwards;
-  animation-delay: .5s;
+  // animation-delay: .5s;
 }
 
 @keyframes fadeFromBottom {
   0% { transform: translateY(100%); }
   100% { transform: translateY(0%); }
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 0 $green; }
+  50% { box-shadow: 0 0 10px $green; }
+  100% { box-shadow: 0 0 0 $green; }
 }
 

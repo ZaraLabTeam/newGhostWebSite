@@ -103,18 +103,11 @@ a:hover {
 }
 a,
 a:hoverp {
-  -o-transition: all 0.25s ease-in;
-  -webkit-transition: all 0.25s ease-in;
-  -moz-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
 .fader,
-#wrap,
-#bg {
-  -o-transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+#wrap {
+  transition: all 0.5s ease-in;
 }
 .fader {
   opacity: .25;

@@ -13,6 +13,7 @@
   left: 0;
   top: 0;
   background: transparent url(../img/cover.png) no-repeat 50% 50% / cover;
+  animation: fadeIn 1s linear;
   z-index: 100;
 }
 .panel {

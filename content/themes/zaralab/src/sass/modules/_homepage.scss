@@ -1,7 +1,3 @@
-.content-home {
-  padding-bottom: 60px;
-}
-
 .content-home .post {
   background-color: #fff;
 }
@@ -13,8 +9,7 @@
 }
 .content-home .wrapper {
   height: 100%;
-  padding-top: 30px;
-  padding-bottom: 80px;
+  padding-top: 40px;
 }
 .content-home h1 {
   font-size: 34px;
@@ -62,8 +57,7 @@ a.more:hover {
 }
 
 .content-home .post .inner {
-  padding: 40px 20px;
-  max-width: 560px;
+  padding: 30px 20px;
 }
 
 .home-template,
@@ -76,32 +70,44 @@ a.more:hover {
   .post-title {
     font-size: 18px;
     font-weight: 300;
-    margin: 14px 0 20px;
+    margin: 14px 0 20px 10px;
   }
 
   .time {
     position: absolute;
-    top: 18px;
-    width: 60px;
-    height: 64px;
+    top: -17px;
+    left: 50%;
+    width: 40px;
+    height: 44px;
+    margin-left: -20px;
     color: #fff;
     text-align: center;
     font-size: 12px;
-    border-radius: 4px;
-    background-color: #59A426;
 
     time {
-      > span:nth-child(1) {
-        display: block;
-        padding: 2px 0;
-        font-size: 12px;
-        border-bottom: 1px solid rgba(0,0,0, .1);
-      }
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 4px;
+      background-color: #59A426;
 
-      > span:nth-child(2) {
-        display: block;
-        border-top: 1px solid rgba(255,255,255, .1);
-        font-size: 24px;
+      > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        &:nth-child(1) {
+          font-size: 10px;
+          height: 30px;
+          border-bottom: 1px solid rgba(0,0,0, .1);
+        }
+
+        &:nth-child(2) {
+          flex: 0 1 100%;
+          border-top: 1px solid rgba(255,255,255, .1);
+          font-size: 18px;
+        }
       }
     }
   }

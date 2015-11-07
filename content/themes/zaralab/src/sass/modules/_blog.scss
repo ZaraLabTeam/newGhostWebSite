@@ -1,6 +1,5 @@
 .content-home .wrapper {
   position: relative;
-  /*background: url(../img/steps.svg) top center repeat-y;*/
 }
 .content-home .wrapper:before {
   position: absolute;
@@ -20,7 +19,7 @@
   clear: both;
   width: 90%;
   max-width: 940px;
-  margin: 0 auto 65px auto;
+  margin: 0 auto 80px auto;
   border-radius: 7px;
 }
 #disqus_thread {
