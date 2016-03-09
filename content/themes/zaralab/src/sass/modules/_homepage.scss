@@ -1,0 +1,114 @@
+.content-home .post {
+  background-color: #fff;
+}
+.content-home .post.featured {
+  background-image: url(../img/assets.svg#featured);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+.content-home .wrapper {
+  height: 100%;
+  padding-top: 40px;
+}
+.content-home h1 {
+  font-size: 34px;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.content-home h2 a,
+.content-home h1 a {
+  color: #3a4042;
+  text-decoration: none;
+}
+
+.content-home h2 a:hover,
+.content-home h1 a:hover {
+  color: #4f9222;
+  text-decoration: none;
+}
+a.more,
+.older-posts,
+.newer-posts {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color: #479812;
+}
+.older-posts,
+.newer-posts {
+  color: #fff !important;
+}
+
+a.more:hover,
+.older-posts:hover,
+.newer-posts:hover {
+  color: #fff;
+  border-color: #222;
+  text-decoration: none;
+}
+
+a.more:hover {
+  background-color: #59a426;
+}
+
+.content-home .post .inner {
+  padding: 30px 20px;
+}
+
+.home-template,
+.archive-template {
+
+  img {
+    border-radius: 4px;
+  }
+
+  .post-title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 14px 0 20px 10px;
+  }
+
+  .time {
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    width: 40px;
+    height: 44px;
+    margin-left: -20px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+
+    time {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 4px;
+      background-color: #59A426;
+
+      > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        &:nth-child(1) {
+          font-size: 10px;
+          height: 30px;
+          border-bottom: 1px solid rgba(0,0,0, .1);
+        }
+
+        &:nth-child(2) {
+          flex: 0 1 100%;
+          border-top: 1px solid rgba(255,255,255, .1);
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

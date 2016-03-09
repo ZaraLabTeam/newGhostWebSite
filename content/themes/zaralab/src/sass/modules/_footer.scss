@@ -1,0 +1,31 @@
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: #222;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 30px;
+  font-size: 14px;
+  color: #9c9c9c;
+  z-index: 200;
+}
+.main-footer .inner {
+  margin: 40px 0;
+}
+
+.main-footer a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+.main-footer a:hover {
+  color: #ccc;
+}
+.main-footer p {
+  margin: 0 0 0.5em;
+}
+a.subscribe-me {
+  float: right;
+}
+

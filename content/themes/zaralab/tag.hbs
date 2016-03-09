@@ -1,0 +1,42 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<section class="content-home animated fadeIn" role="main">
+
+
+
+		<article class="post result animated fadeInDownBig">
+		<div class="inner">
+			<h1 class="searching"><a href="{{@blog.url}}/tag/{{tag.slug}}/rss/">{{tag.name}}</a></h1>
+		</div>
+	</article>
+
+<div class="wrapper">
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+
+    <article class="animated {{post_class}}{{#if @even}} fadeInLeftBig even {{else}} fadeInRightBig odd{{/if}}">
+        <div class="inner">
+	        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YY"}}</time>
+	        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+	        <p>{{excerpt words="25"}}[&hellip;]</p>
+	         {{#if tags}}<p class="post-tags">{{tags}}</p>{{/if}}
+	        <a class="more" href="{{url}}">Read more</a>
+
+	    </div>
+    </article>
+
+    <div class="clear"></div>
+
+    {{/foreach}}
+
+    {{!! After all the posts, we have the previous/next pagination links }}
+
+   </div>
+
+</section>
+
+    {{pagination}}

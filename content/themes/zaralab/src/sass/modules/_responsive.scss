@@ -1,0 +1,174 @@
+// @media only screen and (min-width: 43.75em) {
+//   /* 700px */
+
+//   .post-template .post .inner,
+//   .author {
+//     padding: 40px;
+//   }
+//   .pagination {
+//     min-height: 85px;
+//   }
+//   .older-posts,
+//   .newer-posts {
+//     margin-top: -10px;
+//   }
+// }
+// @media only screen and (min-width: 48em) {
+@media only screen and (min-width: 980px) {
+  .content-home {
+    padding-bottom: 60px;
+
+    .wrapper {
+      padding-top: 30px;
+      padding-bottom: 80px;
+    }
+
+    .pagination {
+      margin-top: -30px;
+    }
+  }
+
+  .author h4 {
+    text-align: left;
+  }
+  .author img {
+    height: auto;
+    float: left;
+  }
+  .author-bio {
+    padding-left: 100px;
+  }
+  blockquote:before,
+  blockquote:after {
+    font-size: 100px;
+  }
+  blockquote {
+    padding-bottom: 3.5em;
+  }
+  .post,
+  #disqus_thread {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+  .post::after {
+    opacity: 0.9;
+  }
+  .content-home {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1060px;
+
+    .post-title:hover + .time {
+      animation: glowing 1500ms infinite;
+    }
+  }
+  .wrapper,
+  .pagination {
+    float: left;
+    width: 100%;
+  }
+  .content-home .post {
+    float: right;
+    width: 44%;
+    margin-bottom: -30px;
+    position: relative;
+
+    .time {
+      position: absolute;
+      top: 18px;
+      left: auto;
+      width: 60px;
+      height: 64px;
+      margin: 0;
+      border-radius: 4px;
+      border-size: 2px;
+      border-radius: 6px;
+      border: 2px solid rgba(0,0,0, 0.08);
+
+      &:hover {
+        animation: glowing 1500ms infinite;
+      }
+
+      time {
+        > span {
+          &:nth-child(1) {
+            font-size: 12px;
+            height: 36px;
+          }
+
+          &:nth-child(2) {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+  .content-home .post.odd {
+    &:after {
+      right: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .time {
+      left: -96px;
+    }
+  }
+  .content-home .post.odd:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 10px;
+    top: 40px;
+    margin-top: -10px;
+  }
+  .content-home .post.even {
+    float: left;
+    margin-top: -160px;
+  }
+  .content-home .post.even {
+    margin-top: -60px;
+
+    &:after {
+      left: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-left-color: #fff;
+      border-width: 10px;
+      top: 40px;
+      margin-top: -10px;
+    }
+
+    .time {
+      right: -96px;
+    }
+  }
+  .content-home .post .inner {
+    padding: 10px 20px 20px;
+  }
+}
+@media only screen and (min-width: 58.125em) {
+  /* 938px */
+}
+/* ------------------------------------
+
+  10. Retina / Hi-DPI
+
+------------------------------------ */
+
+@media only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5/1),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .main-logo img {
+    max-width: 85px;
+  }
+}
+
