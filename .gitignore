@@ -2,5 +2,6 @@
 content/data
 content/images
 content/**/node_modules
-.develo
+
+#Node
 node_modules
