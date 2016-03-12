@@ -1,0 +1,11 @@
+<nav id="menu" class="panel" role="navigation">
+
+ <a href="#menu" class="menu-link"><span>Open Menu</span></a>
+
+  <ul>
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+
+</nav>
