@@ -1,4 +1,6 @@
-export OPENSHIFT_CNAME="zaralab-teo.sapp.io"
+#export OPENSHIFT_CNAME="zaralab-teo.sapp.io"
+#export OPENSHIFT_CNAME="website-zaralab.sapp.io"
+export OPENSHIFT_CNAME="localhost:2368"
 
 APPNAME='website'
 NAMESPACE='zaralab'
