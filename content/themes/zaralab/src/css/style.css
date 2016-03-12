@@ -1247,3 +1247,7 @@ a:hover .share-count:after {
     max-width: 85px;
   }
 }
+.main-article.about .inner p {
+  border-left: 5px solid #1F8475;
+  padding-left: 10px;
+}
