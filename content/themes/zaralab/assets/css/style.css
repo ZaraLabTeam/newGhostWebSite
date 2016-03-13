@@ -1068,6 +1068,7 @@ h6 {
 .page-number {
   font-size: 14px;
   display: inline-block;
+  margin-right: 1rem;
 }
 
 .header {
@@ -1383,7 +1384,62 @@ a:hover .share-count:after {
     max-width: 85px;
   }
 }
-.main-article.about .inner p {
+.page.main-article .inner {
+  position: relative;
+  padding: 100px 20px 40px;
+}
+.page.main-article .inner h1 {
+  position: absolute;
+  cursor: default;
+  -webkit-animation-name: headingSlide;
+          animation-name: headingSlide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  top: 0.5rem;
+  left: 0.25rem;
+  right: 0.25rem;
+  padding: 1.5rem;
+  margin: auto 0;
+  height: 5rem;
+  color: white;
+  background-color: #2E2E2E;
+  background-image: url(/content/images/page/header-pattern.png);
+  background-position: left;
+  border-radius: 7px;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+.page.main-article .inner h1:hover {
+  text-shadow: 2px 2px 10px white;
+  padding: 1.3rem;
+  font-size: 2.2em;
+}
+.page.main-article .inner p {
+  position: relative;
   border-left: 5px solid #1F8475;
-  padding-left: 10px;
+  padding-left: 20px;
+}
+.page.main-article .inner p:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@-webkit-keyframes headingSlide {
+  from {
+    top: -9999px;
+  }
+  to {
+    top: 0.5rem;
+  }
+}
+
+@keyframes headingSlide {
+  from {
+    top: -9999px;
+  }
+  to {
+    top: 0.5rem;
+  }
 }
