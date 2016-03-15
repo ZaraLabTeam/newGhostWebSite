@@ -1248,6 +1248,9 @@ a:hover .share-count:after {
     max-width: 85px;
   }
 }
+.page.main-article {
+  background-image: linear-gradient(#ffffff 50%, rgba(247, 247, 247, 0.5));
+}
 .page.main-article .inner {
   position: relative;
   padding: 100px 20px 40px;
@@ -1276,6 +1279,8 @@ a:hover .share-count:after {
   font-size: 2.2em;
 }
 .page.main-article .inner p {
+  animation-duration: 1.5s;
+  animation-name: slideFromRight;
   position: relative;
   border-left: 5px solid #1F8475;
   padding-left: 20px;
@@ -1286,6 +1291,9 @@ a:hover .share-count:after {
   bottom: 0;
   left: 0;
 }
+.page.main-article .inner p:nth-child(odd) {
+  animation-name: slideFromLeft;
+}
 
 @keyframes headingSlide {
   from {
@@ -1293,5 +1301,21 @@ a:hover .share-count:after {
   }
   to {
     top: 0.5rem;
+  }
+}
+@keyframes slideFromLeft {
+  from {
+    left: -9999px;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    right: -9999px;
+  }
+  to {
+    right: 0;
   }
 }

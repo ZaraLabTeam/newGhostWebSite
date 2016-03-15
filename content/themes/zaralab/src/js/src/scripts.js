@@ -8,8 +8,6 @@
 
   $(document).ready(function() {
 
-    applyPageWrapperClassFromLocation($);
-
     window.scrollTo(0, 0);
 
     // Fit Vids
@@ -75,29 +73,3 @@
   });
 
 }(jQuery));
-
-// ============ HELPERS ==========================
-
-/**
- * applyies the current location as html class 
- * to the article.page.main-article element 
- */
-function applyPageWrapperClassFromLocation($) {
-  var currentPageName = window.location
-    .pathname.match(/[^\/]*(?=\/$)/)[0];
-
-  if (!currentPageName) {
-    return;
-  }
-
-  var mainArticle = $('.page.main-article');
-  console.log(mainArticle);
-
-  if (!mainArticle) {
-    return;
-  }
-
-  mainArticle.addClass(currentPageName);
-}
-
-// ===============================================
