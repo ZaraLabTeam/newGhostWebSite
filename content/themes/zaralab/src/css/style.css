@@ -1248,24 +1248,25 @@ a:hover .share-count:after {
     max-width: 85px;
   }
 }
+body {
+  overflow-x: hidden;
+}
+
 .page.main-article {
   background-image: linear-gradient(#ffffff 50%, rgba(247, 247, 247, 0.5));
 }
 .page.main-article .inner {
   position: relative;
-  padding: 100px 20px 40px;
+  padding: 20px 20px 40px;
 }
 .page.main-article .inner h1 {
-  position: absolute;
+  position: relative;
   cursor: default;
+  height: auto;
   animation-name: headingSlide;
-  animation-duration: 1s;
-  top: 0.5rem;
-  left: 0.25rem;
-  right: 0.25rem;
+  animation-duration: 1.5s;
+  top: 0;
   padding: 1.5rem;
-  margin: auto 0;
-  height: 5rem;
   color: white;
   background-color: #2E2E2E;
   background-image: url(/content/images/page/header-pattern.png);
@@ -1273,14 +1274,9 @@ a:hover .share-count:after {
   border-radius: 7px;
   transition: 1s;
 }
-.page.main-article .inner h1:hover {
-  text-shadow: 2px 2px 10px white;
-  padding: 1.3rem;
-  font-size: 2.2em;
-}
 .page.main-article .inner p {
-  animation-duration: 1.5s;
-  animation-name: slideFromRight;
+  animation-duration: 2s;
+  animation-name: fadeInRightBig;
   position: relative;
   border-left: 5px solid #1F8475;
   padding-left: 20px;
@@ -1292,30 +1288,27 @@ a:hover .share-count:after {
   left: 0;
 }
 .page.main-article .inner p:nth-child(odd) {
-  animation-name: slideFromLeft;
+  animation-name: fadeInLeftBig;
 }
 
 @keyframes headingSlide {
-  from {
+  0% {
     top: -9999px;
   }
-  to {
-    top: 0.5rem;
+  80% {
+    top: 3rem;
+  }
+  100% {
+    top: 0;
   }
 }
-@keyframes slideFromLeft {
-  from {
-    left: -9999px;
+@media only screen and (min-width: 600px) {
+  .page.main-article .inner h1 {
+    height: 5rem;
   }
-  to {
-    left: 0;
-  }
-}
-@keyframes slideFromRight {
-  from {
-    right: -9999px;
-  }
-  to {
-    right: 0;
+  .page.main-article .inner h1:hover {
+    text-shadow: 2px 2px 10px white;
+    padding: 1.3rem;
+    font-size: 2.25rem;
   }
 }
