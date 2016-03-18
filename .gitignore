@@ -3,3 +3,6 @@ content/**/node_modules
 
 #Node
 node_modules
+
+#Web Storm
+.idea
