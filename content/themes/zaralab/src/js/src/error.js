@@ -1,5 +1,10 @@
 (function () {
 	var canvas = document.getElementById("canvas");
+
+	if(!canvas) {
+		return null; 
+	}
+
 var ctx = canvas.getContext("2d");
 var doncho = new Object("/content/images/GameImg/doncho.png",50,400,80,100);
 var nakov = new Object("/content/images/GameImg/peter.jpg",50,400,80,100);
