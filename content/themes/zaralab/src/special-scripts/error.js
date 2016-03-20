@@ -1,25 +1,23 @@
 (function () {
-	var canvas = document.getElementById("canvas");
 
-	if(!canvas) {
-		return null; 
-	}
+
+var canvas = document.getElementById("canvas");
+if(!canvas) {
+	return null; 
+}
 
 var ctx = canvas.getContext("2d");
-var doncho = new Object("/content/images/GameImg/doncho.png",50,400,80,100);
-var nakov = new Object("/content/images/GameImg/peter.jpg",50,400,80,100);
+var doncho = new Object("/content/images/GameImg/zara.png",50,400,80,100);
 var numcafe = 1;
 var cafe = new Array();
-for(var i = 0;i<numcafe;i++){
-cafe[i] = new Object("/content/images/GameImg/coff_cup_icon_pitr-1979px.png",Math.floor((Math.random()*900)+1),Math.floor((Math.random()*1000)+10),50,50);}
 var numcola = 5;
 var cola = new Array();
 for(var i = 0;i<numcola;i++){
-cola[i] = new Object("/content/images/GameImg/coca-cola.png",Math.floor((Math.random()*900)+1),Math.floor((Math.random()*1000)+10),80,100);}
+cola[i] = new Object("/content/images/GameImg/green.png",Math.floor((Math.random()*800)+1),Math.floor((Math.random()*1000)+10),20,20);}
 var numie = 3;
 var ie= new Array();
 for(var i = 0;i<numie;i++){
-ie[i] = new Object("/content/images/GameImg/IE8.png",Math.floor((Math.random()*900)+1),Math.floor((Math.random()*1000)+10),50,50);}
+ie[i] = new Object("/content/images/GameImg/black.png",Math.floor((Math.random()*800)+1),Math.floor((Math.random()*1000)+10),20,20);}
 var counter = 0;
 var levelcounter = 1;
 var isLeft = false;
@@ -52,9 +50,6 @@ function rightArrowPressed() {
 function spacePressed() {
    isSpace = true
 }
-function shootPressed() {
-   isShoot = true
-}
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     switch (evt.keyCode) {
@@ -64,7 +59,7 @@ document.onkeydown = function(evt) {
         case 39:
             rightArrowPressed();
             break;
-		case 32:
+		case 89:
             spacePressed();
             break;
 	    case 65:
@@ -91,9 +86,6 @@ function rightArrowRalased() {
 function spaceRelased() {
    isSpace = false
 }
-function shootRelased() {
-   isShoot = false
-}
 document.onkeyup = function(evt) {
     evt = evt || window.event;
     switch (evt.keyCode) {
@@ -103,7 +95,7 @@ document.onkeyup = function(evt) {
         case 39:
             rightArrowRalased();
             break;
-		case 32:
+		case 89:
 		    spaceRelased()
 			break;
 		case 65:
@@ -114,40 +106,48 @@ document.onkeyup = function(evt) {
             break;
     }
 };  
+
+
+
+	$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown(2000);
+
+
+var timer;
+timer =     setTimeout(function () {
 MainLoop();
+                }, 2050);
 function MainLoop(){
+
+
+
+
 //Pre-Adjustment
-nakov.X += nakov.Velocity_X;
 doncho.X += doncho.Velocity_X;
-if(doncho.X > 900) (doncho.Velocity_X = 0);
-if(nakov.X > 900) (nakov.Velocity_X = 0);
-for(var i = 0; i<numcafe;i++) {
-cafe[i].Y += cafe[i].Velocity_Y;}
+if(doncho.X > 800) (doncho.Velocity_X = 0);
 for(var i = 0;i<numcola;i++){
 cola[i].Y += cola[i].Velocity_Y;}
 for(var i = 0;i<numie;i++){
 ie[i].Y += ie[i].Velocity_Y;}
 //Draw
 ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle = "green";
 ctx.font="30px Arial";
 ctx.fillText("Score: "+counter,10,40);
 ctx.font="30px Arial";
-ctx.fillText("Level: "+levelcounter,760,40);
+ctx.fillText("Level: "+levelcounter,680,40);
 ctx.drawImage(doncho.Sprite,doncho.X,doncho.Y);
-ctx.drawImage(nakov.Sprite,nakov.X,nakov.Y);
 for(var i = 0;i<numcola;i++){
 ctx.drawImage(cola[i].Sprite,cola[i].X,cola[i].Y);}
 for(var i = 0;i<numie;i++){
 ctx.drawImage(ie[i].Sprite,ie[i].X,ie[i].Y);}
-for(var i = 0;i<numcafe;i++){
-ctx.drawImage(cafe[i].Sprite,cafe[i].X,cafe[i].Y);}
 //Logic
 if(isLeft) {doncho.Velocity_X = -4}
 if(isRight) {doncho.Velocity_X = 4}
 if (!isLeft && !isRight) {doncho.Velocity_X = 0}
-if(isA) {nakov.Velocity_X = -4}
-if(isD) {nakov.Velocity_X = 4}
-if (!isA && !isD) {nakov.Velocity_X = 0}
+if (doncho.X < 0) {doncho.X=0;}
+if (doncho.X > 720) {doncho.X=720;}
 for(var i = 0;i<numie;i++){
 	if(ie[i].Y > 500) {
 		ie[i].Velocity_Y = 1;
@@ -163,23 +163,11 @@ ie[i].Velocity_Y += 0.01;
 		if(counter <= 0) {
 	    ctx.clearRect(0,0,canvas.width,canvas.height);
 		ctx.font="50px Arial";
-		ctx.fillText("Game Over",300,250);
+		ctx.fillText("Game Over",260,250);
 		ctx = false;
 		} 
 		}
-		
-		if(ie[i].isColliding(nakov)) {	
-	    ie[i].Velocity_Y = 1;
-		ie[i].Y = Math.floor((Math.random()*1)+1);
-		ie[i].X = Math.floor((Math.random()*1000)+1);
-		counter = counter - 10;
-		if(counter <= 0) {
-	    ctx.clearRect(0,0,canvas.width,canvas.height);
-		ctx.font="50px Arial";
-		ctx.fillText("Game Over",300,250);
-		ctx = false;
-		} 
-		}	
+			
 		//Levels
 		if(counter >= 100) {
 		ie[i].Velocity_Y = 3.01;
@@ -210,34 +198,17 @@ cola[i].Velocity_Y += 0.01;
 		cola[i].Y = Math.floor((Math.random()*10)+1);
 		cola[i].X = Math.floor((Math.random()*1000)+1);
 		counter++;}
-    if(cola[i].isColliding(nakov)) {	
-	    cola[i].Velocity_Y = 1;
-		cola[i].Y = Math.floor((Math.random()*10)+1);
-		cola[i].X = Math.floor((Math.random()*1000)+1);
-		counter++;}
-}
-for(var i = 0;i<numcafe;i++){
-	if(cafe[i].Y > 500) {
-		cafe[i].Velocity_Y = 1;
-		cafe[i].Y = Math.floor((Math.random()*10)+1);
-		cafe[i].X = Math.floor((Math.random()*1000)+1);
-						}
-cafe[i].Velocity_Y += 0.01;
-	if(cafe[i].isColliding(doncho)) {	
-	    cafe[i].Velocity_Y = 1;
-		cafe[i].Y = Math.floor((Math.random()*10)+1);
-		cafe[i].X = Math.floor((Math.random()*1000)+1);
-		counter = counter + 4;
-}
-	if(cafe[i].isColliding(nakov)) {	
-	    cafe[i].Velocity_Y = 1;
-		cafe[i].Y = Math.floor((Math.random()*10)+1);
-		cafe[i].X = Math.floor((Math.random()*1000)+1);
-		counter = counter + 4;
-}
 }
 game = setTimeout(MainLoop, 1000/110);
 }
+
+            });
+});
+
+
+
+
+
 //Pause
 var gamecounter = 0;
 	function pauseGame() {
