@@ -726,6 +726,7 @@ a.more:hover {
   width: 100%;
   z-index: 200;
   margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 #bg {
@@ -735,8 +736,8 @@ a.more:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background: transparent url(../img/cover.png) no-repeat 50% 50%/cover;
-  animation: fadeIn 1s linear;
+  background: transparent url(/content/images/page/page-bg.png) no-repeat 50% 50%/cover;
+  animation: fadeIn 1s luminosity;
   z-index: 100;
 }
 
@@ -1248,46 +1249,68 @@ a:hover .share-count:after {
     max-width: 85px;
   }
 }
+@font-face {
+  font-family: "Blueprint";
+  src: url('../fonts/Blueprint.ttf?1458485881') format('truetype'), url('../fonts/Blueprint.otf?1458485881') format('opentype');
+}
+@font-face {
+  font-family: "Segoe Script";
+  src: url('../fonts/segoe-script.ttf?1458490482') format('truetype');
+}
 body {
   overflow-x: hidden;
 }
 
-.page.main-article {
-  background-image: linear-gradient(#ffffff 50%, rgba(247, 247, 247, 0.5));
+.blog-tagline {
+  font-family: Segoe Script, cursive;
+  font-size: 1.25rem;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
+  color: white;
 }
-.page.main-article .inner {
-  position: relative;
-  padding: 20px 20px 40px;
+
+.zara-page {
+  color: white;
 }
-.page.main-article .inner h1 {
+.zara-page h1, .zara-page h2, .zara-page h3, .zara-page h4, .zara-page h5, .zara-page h6 {
+  font-family: Blueprint, Segoe Script, cursive;
+  color: white;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
+}
+.zara-page .page.main-article {
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+.zara-page .page.main-article .inner {
   position: relative;
+  margin: 0;
+  padding: 20px 0 40px;
+}
+.zara-page .page.main-article .inner h1 {
   cursor: default;
-  height: auto;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  background-color: rgba(0, 0, 0, 0.15);
   animation-name: headingSlide;
   animation-duration: 1.5s;
-  top: 0;
-  padding: 1.5rem;
-  color: white;
-  background-color: #2E2E2E;
-  background-image: url(/content/images/page/header-pattern.png);
-  background-position: left;
-  border-radius: 7px;
   transition: 1s;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.62), 0 -3px 30px rgba(0, 0, 0, 0.62);
 }
-.page.main-article .inner p {
+.zara-page .page.main-article .inner p {
   animation-duration: 2s;
   animation-name: fadeInRightBig;
   position: relative;
-  border-left: 5px solid #1F8475;
-  padding-left: 20px;
+  padding: 1.5rem 1rem;
+  font-family: Segoe Script, cursive;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.62);
 }
-.page.main-article .inner p:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.page.main-article .inner p:nth-child(odd) {
+.zara-page .page.main-article .inner p:nth-child(odd) {
   animation-name: fadeInLeftBig;
 }
 
@@ -1303,13 +1326,13 @@ body {
   }
 }
 @media only screen and (min-width: 600px) {
-  .page.main-article .inner h1 {
-    height: 5rem;
-  }
-  .page.main-article .inner h1:hover {
+  .zara-page .page.main-article .inner h1:hover {
     text-shadow: 2px 2px 10px white;
     padding: 1.3rem;
-    font-size: 2.25rem;
+    font-size: 6rem;
+  }
+  .zara-page .page.main-article .inner p {
+    padding: 1.5rem 5rem;
   }
 }
 .error {
