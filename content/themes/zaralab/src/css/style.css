@@ -1254,17 +1254,17 @@ a:hover .share-count:after {
   src: url('../fonts/Blueprint.ttf?1458485881') format('truetype'), url('../fonts/Blueprint.otf?1458485881') format('opentype');
 }
 @font-face {
-  font-family: "Segoe Script";
-  src: url('../fonts/segoe-script.ttf?1458490482') format('truetype');
+  font-family: "Lazurski Cyrillic";
+  src: url('../fonts/lazurski-cyrillic.ttf?1458503298') format('truetype');
 }
 body {
   overflow-x: hidden;
 }
 
 .blog-tagline {
-  font-family: Segoe Script, cursive;
+  font-family: Lazurski Cyrillic, cursive;
   font-size: 1.25rem;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
   color: white;
 }
 
@@ -1272,7 +1272,7 @@ body {
   color: white;
 }
 .zara-page h1, .zara-page h2, .zara-page h3, .zara-page h4, .zara-page h5, .zara-page h6 {
-  font-family: Blueprint, Segoe Script, cursive;
+  font-family: Blueprint, Lazurski Cyrillic, cursive;
   color: white;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
 }
@@ -1306,9 +1306,9 @@ body {
   animation-name: fadeInRightBig;
   position: relative;
   padding: 1.5rem 1rem;
-  font-family: Segoe Script, cursive;
+  font-family: Lazurski Cyrillic, cursive;
   font-size: 1.25rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.62);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
 }
 .zara-page .page.main-article .inner p:nth-child(odd) {
   animation-name: fadeInLeftBig;

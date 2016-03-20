@@ -4,8 +4,8 @@
 }
 
 @font-face {
-	font-family: "Segoe Script";
-	src: font-files("segoe-script.ttf"); 
+	font-family: "Lazurski Cyrillic";
+	src: font-files("lazurski-cyrillic.ttf"); 
 }
 
 body {
@@ -13,9 +13,9 @@ body {
 }
 
 .blog-tagline {
-	font-family: Segoe Script, cursive;
+	font-family: Lazurski Cyrillic, cursive;
 	font-size: 1.25rem;
-	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
 	color: white;
 }
 
@@ -24,7 +24,7 @@ body {
 	color: white;
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: Blueprint, Segoe Script, cursive;
+		font-family: Blueprint, Lazurski Cyrillic, cursive;
 		color: white;
 		text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
 	}
@@ -69,9 +69,9 @@ body {
 				position: relative;
 				padding: 1.5rem 1rem;
 
-				font-family: Segoe Script, cursive;
+				font-family: Lazurski Cyrillic, cursive;
 				font-size: 1.25rem;
-				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.62);
+				text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
 
 				&:nth-child(odd) {
 					animation-name: fadeInLeftBig;
