@@ -59,7 +59,7 @@ gulp.task('styles', function() {
 
 gulp.task('special-scripts', function() {
   return gulp.src('src/special-scripts/**/*.js')
-    .pipe(gulp.dest('assests/special-scripts'));
+    .pipe(gulp.dest('assets/special-scripts'));
 });
 
 gulp.task('watch', function() {
@@ -68,8 +68,6 @@ gulp.task('watch', function() {
   gulp.watch('src/sass/**', ['styles']);
 });
 
-gulp.task('default', ['fonts', 'images', 'scripts', 'styles', 'watch']);
+gulp.task('build', ['fonts', 'images', 'scripts', 'styles', 'special-scripts']);
 
-gulp.task('build', ['fonts', 'images', 'scripts', 'styles']);
-
-
+gulp.task('default', ['build', 'watch']);
