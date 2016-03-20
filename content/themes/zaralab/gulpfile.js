@@ -57,6 +57,10 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('special-scripts', function() {
+  return gulp.src('src/special-scripts/**/*.js')
+    .pipe(gulp.dest('assests/special-scripts'));
+});
 
 gulp.task('watch', function() {
   gulp.watch('src/img/**', ['images']);
