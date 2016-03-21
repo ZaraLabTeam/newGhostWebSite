@@ -726,7 +726,6 @@ a.more:hover {
   width: 100%;
   z-index: 200;
   margin-bottom: 100px;
-  background-color: rgba(0, 0, 0, 0.45);
 }
 
 #bg {
@@ -1289,11 +1288,12 @@ body {
   padding: 20px 0 40px;
 }
 .zara-page .page.main-article .inner h1 {
+  position: relative;
   cursor: default;
-  padding: 1.5rem;
   margin-bottom: 3rem;
   font-size: 5rem;
   background-color: rgba(0, 0, 0, 0.15);
+  background-image: url(/content/images/page/pixel.png);
   animation-name: headingSlide;
   animation-duration: 1.5s;
   transition: 1s;
@@ -1313,22 +1313,37 @@ body {
 .zara-page .page.main-article .inner p:nth-child(odd) {
   animation-name: fadeInLeftBig;
 }
+.zara-page .page.main-article .inner p strong {
+  font-family: Blueprint, Lazurski Cyrillic, cursive;
+  color: #aaa;
+  font-size: 1.3em;
+}
+.zara-page .page.main-article .inner p em {
+  font-family: Blueprint, Lazurski Cyrillic, cursive;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.zara-page .page.main-article .inner p a {
+  color: white;
+  font-style: italic;
+}
 
 @keyframes headingSlide {
   0% {
     top: -9999px;
   }
-  80% {
+  75% {
     top: 3rem;
+    transform: scale(1, 0.5);
   }
   100% {
     top: 0;
+    transform: scale(1, 1);
   }
 }
 @media only screen and (min-width: 600px) {
   .zara-page .page.main-article .inner h1:hover {
     text-shadow: 2px 2px 10px white;
-    padding: 1.3rem;
     font-size: 6rem;
   }
   .zara-page .page.main-article .inner p {

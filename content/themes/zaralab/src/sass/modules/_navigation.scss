@@ -4,8 +4,8 @@
   width: 100%;
   z-index: 200;
   margin-bottom: 100px;
-  background-color: rgba(0, 0, 0, 0.45);
 }
+
 #bg {
   display: inline-block;
   position: fixed;
@@ -17,6 +17,7 @@
   animation: fadeIn 1s luminosity;
   z-index: 100;
 }
+
 .panel {
   position: fixed;
   left: -15.625em;
