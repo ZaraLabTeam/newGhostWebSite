@@ -1,10 +1,19 @@
-.error {
-	margin: 0 auto;
-	// background-image: 
-	p {
+
+.page.main-article.error {
+		p {
 		animation: none;
 		border-left: none;
 		text-align: center;
+		color: black;
+	}
+}
+
+.error {
+	margin: 0 auto;
+	//background-image: 
+	p {
+		text-align: center;
+		color: white;
 	}
 	#flip {
 		width: 20%;
@@ -27,7 +36,7 @@
 		border-radius: 7px;
 	    canvas {
 	    	border-radius: 7px;
-	    	background-image: linear-gradient(#ffffff 50%, rgba(247, 247, 247, 0.5));
+	    	background-color: rgb(12, 26, 23);
 	    	border: 3px solid green;
 	    }
 	}
