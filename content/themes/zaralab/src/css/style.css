@@ -1374,26 +1374,26 @@ body {
   border: 3px solid green;
 }
 
-.post.page.main-article.sponsors .inner {
+.page.main-article.sponsors .inner {
   text-align: center;
 }
-.post.page.main-article.sponsors .inner p {
+.page.main-article.sponsors .inner p {
   border-left: none;
   display: inline-block;
   width: 100%;
   height: auto;
   padding-left: 0px;
   border-radius: 7px;
-  background-image: url(../img/cover.png);
+  background-image: url(../content/images/page/page-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
 }
-.post.page.main-article.sponsors .inner p img {
-  width: 400px;
-  height: 100px;
+.page.main-article.sponsors .inner p img {
+  width: 310px;
+  height: 80px;
   border-radius: 10px;
   padding-right: 50px;
   padding-left: 50px;
@@ -1402,11 +1402,11 @@ body {
   border: none;
   transition: all 700ms ease;
 }
-.post.page.main-article.sponsors .inner p img:hover {
+.page.main-article.sponsors .inner p img:hover {
   animation-name: sponsor-animation;
-  animation-duration: 1.5s;
+  animation-duration: 2.5s;
   animation-iteration-count: infinite;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 @keyframes sponsor-animation {
