@@ -1251,11 +1251,11 @@ a:hover .share-count:after {
 }
 @font-face {
   font-family: "Blueprint";
-  src: url('../fonts/Blueprint.ttf?1458485881') format('truetype'), url('../fonts/Blueprint.otf?1458485881') format('opentype');
+  src: url('../fonts/Blueprint.ttf?1458558315') format('truetype'), url('../fonts/Blueprint.otf?1458558315') format('opentype');
 }
 @font-face {
   font-family: "Lazurski Cyrillic";
-  src: url('../fonts/lazurski-cyrillic.ttf?1458503298') format('truetype');
+  src: url('../fonts/lazurski-cyrillic.ttf?1458558315') format('truetype');
 }
 body {
   overflow-x: hidden;
@@ -1414,4 +1414,37 @@ body {
   100% {
     box-shadow: 0 0 0 rgba(255, 255, 255, 0.68), 0 0 0 rgba(255, 255, 255, 0.1) inset;
   }
+}
+#map, #route {
+  width: 280px;
+  height: 280px;
+  overflow-y: auto;
+  float: left;
+  background-color: white;
+  margin: 20px 20px 20px 20px;
+}
+
+#contacts {
+  background-color: black;
+}
+
+#contacts img {
+  margin: 0px 25px 0px 25px;
+}
+
+p {
+  float: left;
+  margin-right: 10%;
+}
+
+.fb-page {
+  margin: 20px 20px 20px 20px;
+}
+
+#method {
+  display: none;
+}
+
+.inline {
+  width: 20px;
 }
