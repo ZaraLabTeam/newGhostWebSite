@@ -1251,11 +1251,11 @@ a:hover .share-count:after {
 }
 @font-face {
   font-family: "Blueprint";
-  src: url('../fonts/Blueprint.ttf?1458485881') format('truetype'), url('../fonts/Blueprint.otf?1458485881') format('opentype');
+  src: url('../fonts/Blueprint.ttf?1458563121') format('truetype'), url('../fonts/Blueprint.otf?1458563121') format('opentype');
 }
 @font-face {
   font-family: "Lazurski Cyrillic";
-  src: url('../fonts/lazurski-cyrillic.ttf?1458503298') format('truetype');
+  src: url('../fonts/lazurski-cyrillic.ttf?1458563121') format('truetype');
 }
 body {
   overflow-x: hidden;
@@ -1371,7 +1371,6 @@ body {
 }
 .error #panel canvas {
   border-radius: 7px;
-  background-color: #0c1a17;
   border: 3px solid green;
 }
 

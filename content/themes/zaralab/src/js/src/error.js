@@ -7,27 +7,26 @@
 	}
 
 	var ctx = canvas.getContext("2d");
-	var doncho = new Object("/content/images/GameImg/zara.png", 50, 400, 80, 100);
-	var numcafe = 1;
-	var cafe = new Array();
-	var numcola = 5;
-	var cola = new Array();
-	for (var i = 0; i < numcola; i++) {
-		cola[i] = new Object("/content/images/GameImg/green.png", Math.floor((Math.random() * 800) + 1), Math.floor((Math.random() * 1000) + 10), 20, 20);
+	var zara = new Object("/content/images/GameImg/zara.png", 50, 400, 80, 100);
+	var numgreen = 5;
+	var green = new Array();
+	for (var i = 0; i < numgreen; i++) {
+		green[i] = new Object("/content/images/GameImg/green.png", Math.floor((Math.random() * 800) + 1), Math.floor((Math.random() * 1000) + 10), 20, 20);
 	}
-	var numie = 3;
-	var ie = new Array();
-	for (var i = 0; i < numie; i++) {
-		ie[i] = new Object("/content/images/GameImg/black.png", Math.floor((Math.random() * 800) + 1), Math.floor((Math.random() * 1000) + 10), 20, 20);
+	var numblack = 3;
+	var black = new Array();
+	for (var i = 0; i < numblack; i++) {
+		black[i] = new Object("/content/images/GameImg/black.png", Math.floor((Math.random() * 690) + 1), Math.floor((Math.random() * 1000) + 10), 20, 20);
 	}
 	var counter = 0;
 	var levelcounter = 1;
 	var isLeft = false;
 	var isRight = false;
 	var isSpace = false;
-	var isShoot = false;
 	var isA = false;
 	var isD = false;
+	var gameRunning = false;
+
 
 	//Press
 	function APressed() {
@@ -117,12 +116,26 @@
 		}
 	};
 
+	function preAdjustment() {
+		zara.X += zara.Velocity_X;
+		if (zara.X > 800)(zara.Velocity_X = 0);
+		for (var i = 0; i < numgreen; i++) {
+			green[i].Y += green[i].Velocity_Y;
+		}
+		for (var i = 0; i < numblack; i++) {
+			black[i].Y += black[i].Velocity_Y;
+		}
+	}
 
 
 	$(document).ready(function() {
-		$("#flip").click(function() {
-			var panel = $("#panel").slideDown(2000);
+		var panel = $("#panel");
 
+		$("#flip").click(function() {
+			if(!gameRunning) {
+				panel.slideDown(2000);
+				gameRunning = true;
+			}
 
 			var timer;
 			timer = setTimeout(function() {
@@ -130,19 +143,14 @@
 				window.scrollTo(0, $("#panel").offset().top);
 			}, 2050);
 
+		});
+	});
+
 			function MainLoop() {
 
 
+				preAdjustment();
 
-				//Pre-Adjustment
-				doncho.X += doncho.Velocity_X;
-				if (doncho.X > 800)(doncho.Velocity_X = 0);
-				for (var i = 0; i < numcola; i++) {
-					cola[i].Y += cola[i].Velocity_Y;
-				}
-				for (var i = 0; i < numie; i++) {
-					ie[i].Y += ie[i].Velocity_Y;
-				}
 				//Draw
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
 				ctx.fillStyle = "green";
@@ -150,41 +158,43 @@
 				ctx.fillText("Score: " + counter, 10, 40);
 				ctx.font = "30px Arial";
 				ctx.fillText("Level: " + levelcounter, 680, 40);
-				ctx.drawImage(doncho.Sprite, doncho.X, doncho.Y);
-				for (var i = 0; i < numcola; i++) {
-					ctx.drawImage(cola[i].Sprite, cola[i].X, cola[i].Y);
+				ctx.drawImage(zara.Sprite, zara.X, zara.Y);
+				for (var i = 0; i < numgreen; i++) {
+					ctx.drawImage(green[i].Sprite, green[i].X, green[i].Y);
 				}
-				for (var i = 0; i < numie; i++) {
-					ctx.drawImage(ie[i].Sprite, ie[i].X, ie[i].Y);
+				for (var i = 0; i < numblack; i++) {
+					ctx.drawImage(black[i].Sprite, black[i].X, black[i].Y);
 				}
 				//Logic
 				if (isLeft) {
-					doncho.Velocity_X = -4
+					zara.Velocity_X = -4
 				}
 				if (isRight) {
-					doncho.Velocity_X = 4
+					zara.Velocity_X = 4
 				}
 				if (!isLeft && !isRight) {
-					doncho.Velocity_X = 0
+					zara.Velocity_X = 0
 				}
-				if (doncho.X < 0) {
-					doncho.X = 0;
+				if (zara.X < 0) {
+					zara.X = 0;
 				}
-				if (doncho.X > 720) {
-					doncho.X = 720;
+				if (zara.X > 720) {
+					zara.X = 720;
 				}
-				for (var i = 0; i < numie; i++) {
-					if (ie[i].Y > 500) {
-						ie[i].Velocity_Y = 1;
-						ie[i].Y = Math.floor((Math.random() * 1) + 1);
-						ie[i].X = Math.floor((Math.random() * 1000) + 1);
+				for (var i = 0; i < numblack; i++) {
+					if (black[i].Y > 500) {
+						black[i].Velocity_Y = 1;
+						black[i].Y = Math.floor((Math.random() * 1) + 1);
+						black[i].X = Math.floor((Math.random() * 1000) + 1);
 					}
-					ie[i].Velocity_Y += 0.01;
-					if (ie[i].isColliding(doncho)) {
-						ie[i].Velocity_Y = 1;
-						ie[i].Y = Math.floor((Math.random() * 1) + 1);
-						ie[i].X = Math.floor((Math.random() * 1000) + 1);
+
+					black[i].Velocity_Y += 0.01;
+					if (black[i].isColliding(zara)) {
+						black[i].Velocity_Y = 1;
+						black[i].Y = Math.floor((Math.random() * 1) + 1);
+						black[i].X = Math.floor((Math.random() * 1000) + 1);
 						counter = counter - 10;
+
 						if (counter <= 0) {
 							ctx.clearRect(0, 0, canvas.width, canvas.height);
 							ctx.font = "50px Arial";
@@ -195,43 +205,38 @@
 
 					//Levels
 					if (counter >= 20) {
-						ie[i].Velocity_Y = 3.01;
+						black[i].Velocity_Y = 3.01;
 						levelcounter = 2;
 					}
 					if (counter >= 40) {
-						ie[i].Velocity_Y = 4.01;
+						black[i].Velocity_Y = 4.01;
 						levelcounter = 3;
 					}
 					if (counter >= 60) {
-						ie[i].Velocity_Y = 5.01;
+						black[i].Velocity_Y = 5.01;
 						levelcounter = 4;
 					}
 					if (counter >= 80) {
-						ie[i].Velocity_Y = 6.01;
+						black[i].Velocity_Y = 6.01;
 						levelcounter = 5;
 					}
 				}
-				for (var i = 0; i < numcola; i++) {
-					if (cola[i].Y > 500) {
-						cola[i].Velocity_Y = 1;
-						cola[i].Y = Math.floor((Math.random() * 10) + 1);
-						cola[i].X = Math.floor((Math.random() * 1000) + 1);
+				for (var i = 0; i < numgreen; i++) {
+					if (green[i].Y > 500) {
+						green[i].Velocity_Y = 1;
+						green[i].Y = Math.floor((Math.random() * 10) + 1);
+						green[i].X = Math.floor((Math.random() * 1000) + 1);
 					}
-					cola[i].Velocity_Y += 0.01;
-					if (cola[i].isColliding(doncho)) {
-						cola[i].Velocity_Y = 1;
-						cola[i].Y = Math.floor((Math.random() * 10) + 1);
-						cola[i].X = Math.floor((Math.random() * 1000) + 1);
+					green[i].Velocity_Y += 0.01;
+					if (green[i].isColliding(zara)) {
+						green[i].Velocity_Y = 1;
+						green[i].Y = Math.floor((Math.random() * 10) + 1);
+						green[i].X = Math.floor((Math.random() * 1000) + 1);
 						counter += 2;
 					}
 				}
 				game = setTimeout(MainLoop, 1000 / 110);
 			}
-
-		});
-	});
-
-
 
 	//Pause
 	var gamecounter = 0;
