@@ -132,6 +132,7 @@
 		var panel = $("#panel");
 
 		$("#flip").click(function() {
+			$("#flip").slideUp(2000);
 			if(!gameRunning) {
 				panel.slideDown(2000);
 				gameRunning = true;
