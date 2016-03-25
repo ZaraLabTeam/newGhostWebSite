@@ -84,8 +84,7 @@
   }
 
   function showMapAndRoute(method, coordinates) {
-    document.getElementById('method').innerHTML = 'Location obtained using ' + method;
-
+    
     var myOptions = {
       zoom: 8,
       mapTypeId: google.maps.MapTypeId.ROADMAP

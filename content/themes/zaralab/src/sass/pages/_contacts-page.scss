@@ -1,33 +1,82 @@
-       #map, #route {
-         width:280px;
-         height:280px;
-         overflow-y:auto;
-         float:left;
-         background-color:white;
-         margin:20px 20px 20px 20px;
-        }
+.zara-page .contacts {
+
+	.contacts-wrapper {
+		margin: 0 auto;
+	}
+
+	#map, .side {
+		display: inline-block;
+		vertical-align: top;
+		margin: 2rem;
+	}
+
+	#map {
+		width:40%;
+		height:400px;
+		overflow-y:auto;
 		
-		#contacts {
-		   background-color:black;
-		}
-		
-		#contacts img {
-		   margin:0px 25px 0px 25px;
-		  
-		}
-		
-		p {
-			float: left;
-			margin-right:10%;
+		box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
+	}
+
+	.side {
+		width: 40%;
+		min-width: 400px;
+
+		.contact-details {
+			background-color: white;
+			padding: 1rem;
+			margin-top: 2rem;
+			max-width: 400px;
+			
+			box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
+
+			a {
+				display: block;
+			}
+
+			img {
+				margin-right: 1rem;
+
+			}
 		}
 
 		.fb-page {
-		  margin:20px 20px 20px 20px;
+			width: 100% !important;
+			margin-bottom: 2rem;
+			
+			box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
 		}
-		
-		#method {
-		  display:none;
+	}
+
+	.inline {
+		width:20px;
+	}
+}
+
+@media only screen and (min-width: 980px) {
+	.zara-page {
+		.contacts-wrapper {
+			width: 960px;
 		}
+	}
+	
+}
+
+@media only screen and (max-width: 480px) {
+	.zara-page {
+		.contacts-wrapper {
+			width: 460px;
+		}
+
+		.contacts {
+			#map {
+				margin: 1rem;
+				width: 320px;
+			}
+		}
+
 		.inline {
-		    width:20px;
+			width:20px;
 		}
+	}
+}
