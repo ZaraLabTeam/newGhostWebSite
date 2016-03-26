@@ -1,3 +1,12 @@
 <!-- Start Who we are ================================================== -->
 <h3>Who we are</h3>
+
+{{#get "posts" limit="1" include="tags" filter="tags:who-we-are+page:true" order="count.posts desc" as |whoWeAre| }}
+ {{#foreach whoWeAre}}
+      <h1>{{title}}</h1>
+      <div>
+        {{content}}
+      </div>
+ {{/foreach}}
+{{/get}}
 <!-- End Who we are ================================================== -->
