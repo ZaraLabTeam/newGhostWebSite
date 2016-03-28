@@ -1,12 +1,36 @@
+<style media="screen">
+  p {
+    position: relative;
+    float: left;
+    max-width: 52em;
+    /*padding-left: 8em;*/
+    /*margin-right: 1em;*/
+    color: white;
+  }
+  iframe {
+    float: right;
+    width: 39%;
+    height: 28em;
+    padding-top: 5em;
+  }
+  .who-we-are {
+    margin: 5em 5em 40em 5em;
+  }
+  .who-we-are-content {
+    /*margin-left: 5em;
+    margin-right: 5em;*/
+  }
+</style>
 <!-- Start Who we are ================================================== -->
-<h3>Who we are</h3>
 
 {{#get "posts" limit="1" include="tags" filter="tags:who-we-are+page:true" order="count.posts desc" as |whoWeAre| }}
  {{#foreach whoWeAre}}
-      <h1>{{title}}</h1>
-      <div>
-        {{content}}
-      </div>
+       <div class="who-we-are">
+         <h1>{{title}}</h1>
+         <div class="who-we-are-content">
+           {{content}}
+         </div>
+       </div>
  {{/foreach}}
 {{/get}}
 <!-- End Who we are ================================================== -->

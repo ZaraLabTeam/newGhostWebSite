@@ -1,17 +1,55 @@
 <!-- Start Carousel ================================================== -->
-<h3>Carousel</h3>
+<!-- <h3>Carousel</h3>
 
 {{#get "posts" limit="5" include="tags" filter="tags:carousel+page:true" order="count.posts desc" as |carousels| }}
- {{#foreach carousels}}
+ {{#foreach carousels}} -->
   <!-- <div class="item {{#if @first}}active{{/if}}"> -->
-    <img src="{{image}}" alt="{{title}}" height="500px">
+    <!-- <img src="{{image}}" alt="{{title}}" height="500px"> -->
     <!-- <div class="container"> -->
       <!-- <div class="carousel-caption"> -->
-        <h1>{{title}}</h1>
+        <!-- <h1>{{title}}</h1> -->
       <!-- </div> -->
     <!-- </div> -->
   <!-- </div> -->
- {{/foreach}}
-{{/get}}
+ <!-- {{/foreach}}
+{{/get}} -->
 
 <!-- End Carousel ==================================================== -->
+<style media="screen">
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+body { margin: 0; }
+div#slider { overflow: hidden;   margin-top: -175px; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+position: relative;
+width: 500%;
+margin: 0;
+left: 0;
+text-align: left;
+font-size: 0;
+animation: 30s slidy infinite;
+height: 20%;
+}
+
+</style>
+
+<div id="slider">
+<figure>
+
+<img src="http://demosthenes.info/assets/images/austin-fireworks.jpg" alt="">
+<img src="http://demosthenes.info/assets/images/taj-mahal.jpg" alt="">
+<img src="http://demosthenes.info/assets/images/ibiza.jpg" alt="">
+<img src="http://demosthenes.info/assets/images/ankor-wat.jpg" alt="">
+<img src="http://demosthenes.info/assets/images/austin-fireworks.jpg" alt="">
+</figure>
+</div>
