@@ -1,20 +1,3 @@
-<!-- Start Carousel ================================================== -->
-<!-- <h3>Carousel</h3>
-
-{{#get "posts" limit="5" include="tags" filter="tags:carousel+page:true" order="count.posts desc" as |carousels| }}
- {{#foreach carousels}} -->
-  <!-- <div class="item {{#if @first}}active{{/if}}"> -->
-    <!-- <img src="{{image}}" alt="{{title}}" height="500px"> -->
-    <!-- <div class="container"> -->
-      <!-- <div class="carousel-caption"> -->
-        <!-- <h1>{{title}}</h1> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
- <!-- {{/foreach}}
-{{/get}} -->
-
-<!-- End Carousel ==================================================== -->
 <style media="screen">
 @keyframes slidy {
 0% { left: 0%; }
@@ -40,16 +23,20 @@ font-size: 0;
 animation: 30s slidy infinite;
 height: 20%;
 }
-
 </style>
-
+<!-- Start Carousel ================================================== -->
+{{#get "posts" limit="5" include="tags" filter="tags:carousel+page:true" order="count.posts desc" as |carousels| }}
 <div id="slider">
 <figure>
+ {{#foreach carousels}}
 
-<img src="http://demosthenes.info/assets/images/austin-fireworks.jpg" alt="">
-<img src="http://demosthenes.info/assets/images/taj-mahal.jpg" alt="">
-<img src="http://demosthenes.info/assets/images/ibiza.jpg" alt="">
-<img src="http://demosthenes.info/assets/images/ankor-wat.jpg" alt="">
-<img src="http://demosthenes.info/assets/images/austin-fireworks.jpg" alt="">
+    <!-- <img src="{{image}}" alt="{{title}}" height="500px"> -->
+     <img src="{{image}}" height="500em" alt="">
+ {{/foreach}}
 </figure>
 </div>
+{{/get}}
+
+
+
+<!-- End Carousel ==================================================== -->
