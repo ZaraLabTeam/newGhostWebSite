@@ -1,3 +1,16 @@
 <h3>
   Last news
 </h3>
+<!-- Start LastNews  ======================================================= -->
+{{#get "posts" limit="5" include="tags" filter="tags:news+page:true" order="count.posts desc" as |news| }}
+
+ {{#foreach news}}
+  {{title}}
+  {{content}}
+ {{/foreach}}
+
+{{/get}}
+
+
+
+<!-- End Carousel ========================================================== -->
