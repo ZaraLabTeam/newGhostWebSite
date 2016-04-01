@@ -8,6 +8,7 @@ body {
   color: #3a4042;
   font-size: 16px;
   font-family: 'Open Sans', Arial, Verdana, sans-serif;
+  overflow-x: hidden;
   background-size: cover;
 }
 body.home-template,
@@ -77,10 +78,12 @@ h6 {
   text-decoration: none;
 }
 .blog-tagline {
-  font-size: 14px;
+  font-family: Lazurski Cyrillic, cursive;
+  font-size: 1.25rem;
   margin-top: 10px;
   opacity: .8;
-  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
+  color: white;
   position: relative;
 }
 ::-moz-selection {

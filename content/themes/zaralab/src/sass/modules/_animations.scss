@@ -45,6 +45,12 @@
   animation-name: fadeInRightBig;
 }
 
+@keyframes headingSlide {
+  0% { top: -9999px }
+  75% { top: 3rem; transform: scale(1, 0.5); }
+  100% { top: 0; transform: scale(1, 1); }
+}
+
 #wrap {
   animation-delay: 0.5s;
 }
