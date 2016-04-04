@@ -7,16 +7,3 @@
      <img src="{{image}}">
  {{/foreach}}
 {{/get}}
-
-<script
-			  src="https://code.jquery.com/jquery-2.2.2.min.js"
-			  integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
-			  crossorigin="anonymous"></script>
-        
-<script type="text/javascript">
-$.get(ghost.url.api('posts', {limit: 20})).done(function (data){
-  console.log('posts', data.posts);
-}).fail(function (err){
-  console.log(err);
-});;
-</script>
