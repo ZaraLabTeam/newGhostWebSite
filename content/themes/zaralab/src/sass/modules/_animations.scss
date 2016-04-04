@@ -51,6 +51,18 @@
   100% { top: 0; transform: scale(1, 1); }
 }
 
+@keyframes homeCarousel {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
 #wrap {
   animation-delay: 0.5s;
 }
