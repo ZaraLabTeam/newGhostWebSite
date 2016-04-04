@@ -1,33 +1,12 @@
-@font-face {
-	font-family: "Blueprint";
-	src: font-files("Blueprint.ttf", "Blueprint.otf"); 
-}
-
-@font-face {
-	font-family: "Lazurski Cyrillic";
-	src: font-files("lazurski-cyrillic.ttf"); 
-}
-
-body {
-	overflow-x: hidden;
-}
-
-.blog-tagline {
-	font-family: Lazurski Cyrillic, cursive;
-	font-size: 1.25rem;
-	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
-	color: white;
-}
-
 .zara-page {
 
 	color: white;
 
-	h1, h2, h3, h4, h5, h6 {
-		font-family: Blueprint, Lazurski Cyrillic, cursive;
-		color: white;
-		text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
-	}
+	// h1, h2, h3, h4, h5, h6 {
+	// 	font-family: Blueprint, Lazurski Cyrillic, cursive;
+	// 	color: white;
+	// 	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.62);
+	// }
 
 	.page.main-article {
 		margin: 0;
@@ -68,7 +47,7 @@ body {
 				animation-name: fadeInRightBig;
 
 				position: relative;
-				padding: 1.5rem 1rem;
+				padding: 0.5rem 1rem;
 
 				font-family: Lazurski Cyrillic, cursive;
 				font-size: 1.25rem;
@@ -116,22 +95,6 @@ body {
 	}
 }
 
-@keyframes headingSlide {
-	0% {
-		top: -9999px;
-	}
-
-	75% {
-		top: 3rem;
-		transform: scale(1, 0.5);
-	}
-
-	100% {
-		top: 0;
-		transform: scale(1, 1);
-	}
-}
-
 @media only screen and (min-width: 600px) {
 	.zara-page {
 
@@ -148,7 +111,7 @@ body {
 				}
 
 				p {
-					padding: 1.5rem 5rem;
+					padding: 0.5rem 5rem;
 				}
 			}
 		}

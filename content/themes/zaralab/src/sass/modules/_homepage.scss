@@ -1,21 +1,25 @@
 .content-home .post {
   background-color: #fff;
 }
+
 .content-home .post.featured {
   background-image: url(../img/assets.svg#featured);
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: 50px 50px;
 }
+
 .content-home .wrapper {
   height: 100%;
   padding-top: 40px;
 }
+
 .content-home h1 {
   font-size: 34px;
   margin-bottom: 0;
   line-height: 1.4;
 }
+
 .content-home h2 a,
 .content-home h1 a {
   color: #3a4042;
@@ -27,6 +31,7 @@
   color: #4f9222;
   text-decoration: none;
 }
+
 a.more,
 .older-posts,
 .newer-posts {
@@ -39,6 +44,7 @@ a.more,
   border-radius: 4px;
   background-color: #479812;
 }
+
 .older-posts,
 .newer-posts {
   color: #fff !important;
@@ -110,5 +116,50 @@ a.more:hover {
         }
       }
     }
+  }
+}
+
+#slider { 
+  overflow: hidden;
+
+  figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s homeCarousel infinite;
+    height: 20%;
+
+    img {
+     width: 20%; 
+     height: 500px;
+     float: left; 
+   }
+ } 
+}
+
+.section-who-we-are {
+  p {
+    position: relative;
+    float: left;
+    max-width: 52em;
+    /*padding-left: 8em;*/
+    /*margin-right: 1em;*/
+    color: white;
+  }
+  iframe {
+    float: right;
+    width: 39%;
+    height: 28em;
+    padding-top: 5em;
+  }
+  .who-we-are {
+    margin: 5em 5em 40em 5em;
+  }
+  .who-we-are-content {
+    /*margin-left: 5em;
+    margin-right: 5em;*/
   }
 }
