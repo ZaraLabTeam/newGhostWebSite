@@ -119,7 +119,7 @@ a.more:hover {
   }
 }
 
-#slider { 
+#slider {
   overflow: hidden;
 
   figure {
@@ -133,33 +133,9 @@ a.more:hover {
     height: 20%;
 
     img {
-     width: 20%; 
+     width: 20%;
      height: 500px;
-     float: left; 
+     float: left;
    }
- } 
-}
-
-.section-who-we-are {
-  p {
-    position: relative;
-    float: left;
-    max-width: 52em;
-    /*padding-left: 8em;*/
-    /*margin-right: 1em;*/
-    color: white;
-  }
-  iframe {
-    float: right;
-    width: 39%;
-    height: 28em;
-    padding-top: 5em;
-  }
-  .who-we-are {
-    margin: 5em 5em 40em 5em;
-  }
-  .who-we-are-content {
-    /*margin-left: 5em;
-    margin-right: 5em;*/
-  }
+ }
 }
