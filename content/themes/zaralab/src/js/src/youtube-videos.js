@@ -1,54 +1,30 @@
 (function($) {
   "use strict";
   var channelName = 'xzq70r4',
-      videoResults = 3;
+      videoResults = 3,
+      gooleAppKey = 'AIzaSyBGRXhWbIOEGtnLAnAGUM8lXxWegunJ0Cw',
+      pid = 'UUHDYUiamPhPN9lo_87ksx3w';
 
   $(document).ready(function () {
     //who-we-are section
     addListenerToWhoWeAreYouTubeLinks();
+
+    //stream-player
+    addListenerToStreamPlayerYouTubeLinks();
+
     //last-youtube-videos section
-    getChannelId(channelName).then(getVideos)
-                             .then(addLinksWithYouTubeData)
-                             .then(addListenerToLastYouTubeLinks)
-                             .then(toggleVideoModal);
+    getVideos(pid, videoResults, gooleAppKey).then(addLinksWithYouTubeData)
+                        .then(addListenerToLastYouTubeLinks)
+                        .then(toggleVideoModal);
   });
 
-  function getChannelId(channelName) {
-    return $.get(
-      'https://www.googleapis.com/youtube/v3/channels', {
-       part: 'contentDetails',
-       forUsername: channelName,
-       key: 'AIzaSyBGRXhWbIOEGtnLAnAGUM8lXxWegunJ0Cw'}
-
-    ).then(function(data) {
-        var pid = data.items[0].contentDetails.relatedPlaylists.uploads;
-        return pid;
-      }
-    );
-  }
-
-  // $.get(
-  //   'https://www.googleapis.com/youtube/v3/channels', {
-  //    part: 'contentDetails',
-  //    forUsername: channelName,
-  //    key: 'AIzaSyBGRXhWbIOEGtnLAnAGUM8lXxWegunJ0Cw'},
-  //    function(data) {
-  //      console.log(data.items[0].contentDetails.relatedPlaylists.uploads);
-  //      $.each(data.items , function(i , item) {
-  //        pid = item.contentDetails.relatedPlaylists.uploads;
-  //        console.log(pid);
-  //        getVideos(pid);
-  //      });
-  //    }
-  // );
-
-  function getVideos(pid) {
+  function getVideos(pid, videoResults, gooleAppKey) {
     return $.get(
       'https://www.googleapis.com/youtube/v3/playlistItems', {
       part: 'snippet',
       maxResults: videoResults,
       playlistId: pid,
-      key: 'AIzaSyBGRXhWbIOEGtnLAnAGUM8lXxWegunJ0Cw'}
+      key: gooleAppKey }
     );
   }
 
@@ -57,23 +33,27 @@
         //var videoTitle = item.snippet.title;
         var videoId = item.snippet.resourceId.videoId,
             urlYouTubeVideo = 'https://www.youtube.com/watch?v=' + videoId,
-            urlYouTubeImg = 'http://i.ytimg.com/vi/' + videoId + '/sddefault.jpg',
+            urlYouTubeImg = 'https://i.ytimg.com/vi/' + videoId + '/sddefault.jpg',
             youTubeLinkTag = document.createElement('a');
 
         $(youTubeLinkTag).addClass('video-thumb js-trigger-modal play')
-        .attr('data-youtube-id', videoId)
-        .attr('href', urlYouTubeVideo)
-        .css('background-image', 'url('+urlYouTubeImg+')')
-        .appendTo($("#last-youtube-videos"));
+                         .attr('data-youtube-id', videoId)
+                         .attr('href', urlYouTubeVideo)
+                         .css('background-image', 'url('+urlYouTubeImg+')')
+                         .appendTo($("#last-youtube-videos"));
       });
     }
 
-  function addListenerToLastYouTubeLinks () {
-      $('a.video-thumb').on('click', setPlayerWithLinkData);
-  }
-
   function addListenerToWhoWeAreYouTubeLinks () {
       $('a.who-we-are-video').on('click', setPlayerWithLinkData);
+  }
+
+  function addListenerToStreamPlayerYouTubeLinks () {
+      $('a.stream-player').on('click', setPlayerWithLinkData);
+  }
+
+  function addListenerToLastYouTubeLinks () {
+      $('a.video-thumb').on('click', setPlayerWithLinkData);
   }
 
   function setPlayerWithLinkData () {
