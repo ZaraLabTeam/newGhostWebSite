@@ -65,6 +65,18 @@ a.more:hover {
 .content-home .post .inner {
   padding: 30px 20px;
 }
+.homepage-container {
+ margin-left: 5%;
+ margin-right: 5%;
+}
+
+.homepage-row {
+  width: 100%;
+  margin-left: auto;
+  -webkti-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 .tag-template,
 .archive-template {
