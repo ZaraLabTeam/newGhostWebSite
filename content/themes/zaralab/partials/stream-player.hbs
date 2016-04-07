@@ -1,12 +1,15 @@
+<h1>
+  Stream player
+</h1>
 <!-- Start Who we are ====================================================== -->
+<div class="homepage-row">
+  {{#get "posts" limit="1" include="tags" filter="tags:stream-player+page:true" order="count.posts desc" as |stream-player| }}
+   {{#foreach stream-player}}
+       <div class="youtube-tv">
+         {{content}}
 
-{{#get "posts" limit="1" include="tags" filter="tags:stream-player+page:true" order="count.posts desc" as |stream-player| }}
- {{#foreach stream-player}}
-     <div class="youtube-tv">
-       {{content}}
-
-     </div>
- {{/foreach}}
-{{/get}}
-
+       </div>
+   {{/foreach}}
+  {{/get}}
+</div>
 <!-- Start Who we are ====================================================== -->
