@@ -2,7 +2,10 @@
 
 {{#get "posts" limit="1" include="tags" filter="tags:stream-player+page:true" order="count.posts desc" as |stream-player| }}
  {{#foreach stream-player}}
-        {{content}}
+     <div class="youtube-tv">
+       {{content}}
+
+     </div>
  {{/foreach}}
 {{/get}}
 

@@ -14,8 +14,8 @@
 
     //last-youtube-videos section
     getVideos(pid, videoResults, gooleAppKey).then(addLinksWithYouTubeData)
-                        .then(addListenerToLastYouTubeLinks)
-                        .then(toggleVideoModal);
+                                             .then(addListenerToLastYouTubeLinks)
+                                             .then(toggleVideoModal);
   });
 
   function getVideos(pid, videoResults, gooleAppKey) {
