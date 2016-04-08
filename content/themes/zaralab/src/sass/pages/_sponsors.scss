@@ -1,0 +1,42 @@
+/*Flexbox grid for sponsors page */
+
+.sponsor-item {
+  display: inline-block;
+  position: relative;
+  width: 15%;
+  height: 240px;
+  margin-left: 4%;
+  text-align: center;
+}
+
+.sponsor-item img {
+  width:100%;
+  position:absolute;
+  top:80px;
+  left:0px;
+}
+
+.sponsor-item .link {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.sponsor-item p a {
+  background-color: #59A426;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 4px;
+  text-decoration: none !important;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: darken($green, 4%);
+  }
+}

@@ -1,1 +1,20 @@
 <h3>Sponsors</h3>
+
+<div class="homepage-row">
+
+  {{#get "posts" limit="5" include="tags" filter="tags:sponsor+page:true" order="count.posts desc" as |sponsors| }}
+  		{{#foreach sponsors}}
+
+      <div class="sponsor-item">
+        <img src="{{image}}" alt="{{title}}">
+        <div class="link">
+
+          {{content}}
+
+        </div>
+      </div>
+
+    {{/foreach}}
+
+  {{/get}}
+</div>
