@@ -12,5 +12,10 @@
       color: white;
     }
 
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 }

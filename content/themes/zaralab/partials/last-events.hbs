@@ -1,33 +1,28 @@
 <h3>
   Last events
 </h3>
-<!-- Start Last Events  ==================================================== -->
-<div class="homepage-row">
-  <!-- Post-->
-  {{#get "posts" limit="4" include="tags" filter="tags:event+page:false"  as |events| }}
-    {{#foreach events}}
-      <div class="post-module">
-        <!-- Thumbnail-->
-        <a href="{{url}}">
-          <div class="thumbnail">
-            <div class="date">
-              <div class="day">{{date format="MMM"}}</div>
-              <div class="month">{{date format="DD"}}</div>
-            </div><img src="{{image absolute="true"}}"/>
-          </div>
-          <!-- Post Content-->
-          <div class="post-content">
-            <div class="category">Event</div>
-            <h1 class="title">{{title}}</h1>
 
-            {{content words=25}}
+{{#get "posts" limit="4" include="tags" filter="tags:event+page:false"  as |events| }}
+  {{#foreach events}}
+    <div class="post-module">
+      <!-- Thumbnail-->
+      <a href="{{url}}">
+        <div class="thumbnail">
+          <div class="date">
+            <div class="day">{{date format="MMM"}}</div>
+            <div class="month">{{date format="DD"}}</div>
+          </div><img src="{{image absolute="true"}}"/>
+        </div>
+        <!-- Post Content-->
+        <div class="post-content">
+          <div class="category">Event</div>
+          <h1 class="title">{{title}}</h1>
 
-          </div>
-        </a>
+          {{content words=25}}
 
-      </div>
-    {{/foreach}}
-  {{/get}}
+        </div>
+      </a>
 
-</div>
-<!-- Start Last Events  ==================================================== -->
+    </div>
+  {{/foreach}}
+{{/get}}
