@@ -1,9 +1,7 @@
-<h1>
-  Stream player
-</h1>
 <!-- <div class="tv-frame"></div> -->
 <!-- TV ====================================================== -->
-<div class="homepage-row">
+<h2> Stream Player</h2>
+
   {{#get "posts" limit="1" include="tags" filter="tags:stream-player+page:true" order="count.posts desc" as |stream-player| }}
    {{#foreach stream-player}}
        <div class="youtube-tv">
@@ -12,5 +10,4 @@
        </div>
    {{/foreach}}
   {{/get}}
-</div>
 <!-- End TV ====================================================== -->
