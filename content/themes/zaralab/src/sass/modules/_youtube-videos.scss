@@ -1,35 +1,35 @@
 /* Main Layout
 -------------------------------------------------------------------------------*/
 .video-thumb {
-display: inline-block;
+  display: inline-block;
 
-width: 320px;
-height: 240px;
-padding-top: 20px;
-margin-right: 20px;
-margin-bottom: 20px;
+  width: 320px;
+  height: 240px;
+  padding-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 
-text-decoration: none;
-font-weight: bold;
-text-align: center;
-color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
 
-background-color: #D95BA2;
-background-size: contain;
--webkit-transform: scale(1.0);
-transform: scale(1.0);
+  background-color: #D95BA2;
+  background-size: contain;
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
 
--webkit-transition:
+  -webkit-transition:
   background-color 0.2s ease-out 0.05s,
   -webkit-transform 0.2s ease-out 0.05s;
-transition:
+  transition:
   background-color 0.2s ease-out 0.05s,
   transform 0.2s ease-out 0.05s;
 }
 .video-thumb:hover {
-background-color: #CF007D;
--webkit-transform: scale(1.05);
-transform: scale(1.05);
+  background-color: #CF007D;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .play::after {
@@ -39,16 +39,16 @@ transform: scale(1.05);
   background-position: center;
   background-size: 64px 64px;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
   opacity: .8;
   filter: alpha(opacity=80);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
 .play:hover::after {
@@ -73,9 +73,9 @@ transform: scale(1.05);
   z-index: 300;
 }
 .video-modal {
-overflow: hidden;
-position: fixed;
-opacity: 0.0;
+  overflow: hidden;
+  position: fixed;
+  opacity: 0.0;
 
   -webkit-transform: translate(500%,0%);
   transform: translate(500%,0%);
@@ -121,14 +121,14 @@ opacity: 0.0;
 
 
 .video-modal-content {
-position: relative;
-top: auto;
-right: auto;
-bottom: auto;
-left: auto;
-z-index: 1;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
 
-height: auto;
+  height: auto;
 /*   width: 76%; */
 width: calc(100% - 200px);
 max-width: 1000px;
@@ -148,14 +148,14 @@ overflow-y: visible;
 }
 /* Mobile Layout Tweaks */
 @media (max-width: 640px) {
-.video-modal-content {
-  width: calc(100% - 16px);
-}
+  .video-modal-content {
+    width: calc(100% - 16px);
+  }
 }
 
 /* close button */
 .close-video-modal {
-display: block;
+  display: block;
   position: absolute;
   right: 0;
   top: -40px;
@@ -170,38 +170,38 @@ display: block;
 
 /* using a 16:9 image to resize the video frame */
 .video-sizer {
-display: block;
-width: 100%;
-height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* set the iframe element to stretch to fit its parent element */
 iframe#youtube {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 
-background: #fff;
-box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
+  background: #fff;
+  box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
 }
 
 /* show the modal */
 /* add class to the body */
 .show-video-modal .video-modal {
-opacity: 1.0;
+  opacity: 1.0;
 
-transform: translate(0%,0%);
--webkit-transform: translate(0%,0%);
+  transform: translate(0%,0%);
+  -webkit-transform: translate(0%,0%);
 }
 .show-video-modal .video-modal .overlay {
-opacity: 1.0;
+  opacity: 1.0;
 }
 .show-video-modal .video-modal-content {
-transform: translate(0%,0%);
--webkit-transform: translate(0%,0%);
+  transform: translate(0%,0%);
+  -webkit-transform: translate(0%,0%);
 }
 
 /* ==========================================================================
@@ -219,6 +219,7 @@ transform: translate(0%,0%);
  background-color: #7B7B7B;
  background-size: contain;
  }
+
 /* ==========================================================================
                                 Stream Player
    ========================================================================== */
@@ -231,34 +232,64 @@ transform: translate(0%,0%);
     //  top: 338px;
     //  left: 185px;
 
-     top: 169px;
-     left: 93px;
-     width: 49%;
-     height: 48%;
+    top: 169px;
+    left: 93px;
+    width: 49%;
+    height: 48%;
+    background-color: #7B7B7B;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover{
      background-color: #7B7B7B;
-     background-size: contain;
-     background-position: center;
-     background-repeat: no-repeat;
-
-     &:hover{
-       background-color: #7B7B7B;
-     }
    }
+ }
 
-   .youtube-tv {
-     position: relative;
-     margin: 4rem auto;
-     width: 30%;
+ .youtube-tv {
+   position: relative;
+   margin: 4rem auto;
 
-     .tv-frame {
-       position: relative;
-       padding: 39.5%;
-       z-index: 1;
-       background-image: url("/content/images/page/tv.png");
-       background-repeat: no-repeat;
-       background-size: contain;
-       background-position: center;
-       width: 100%;
-       height: 66%;
-     }
-   }
+   p:first-child {
+    position: relative;
+    background-image: url("/content/images/page/tv.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    /*
+    * Keep a 3:2 ratio of width and height to keep
+    * To keep the picture inside of the TV (or edit the .tv-frame proportions)
+    **/
+    width: 720px;
+    height: 480px;
+
+    margin: 0 auto;
+
+    a {
+      position: absolute;
+      left: 23.4%;
+      top: 42.4%;
+      display: block;
+      background-image: url("/content/images/page/tv.png"), url("http://i.ytimg.com/vi/hdcSyE1sekc/sddefault_live.jpg");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 164% 210%, cover;
+      background-position: 26% 81%, center;
+      border-radius: 15px;
+      width: 41%;
+      height: 48%;
+    }
+  }
+
+  .tv-frame {
+   position: relative;
+   padding: 39.5%;
+   z-index: 1;
+   background-image: url("/content/images/page/tv.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 100%;
+   height: 66%;
+ }
+}
