@@ -1,4 +1,5 @@
 .who-we-are {
+  background-color: rgba(174, 65, 65, 0.74);
 
   .who-we-are-main {
   }
@@ -6,10 +7,6 @@
   .who-we-are-content {
     p {
       position: relative;
-      float: left;
-      max-width: 52em;
-
-      color: white;
     }
 
     &:after {

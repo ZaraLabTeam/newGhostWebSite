@@ -65,13 +65,17 @@ a.more:hover {
 .content-home .post .inner {
   padding: 30px 20px;
 }
-.homepage-container {
-  width: 1160px;
-  margin: 0 auto;
-  padding:0 1rem;
-}
 
-.homepage-row {
-  width: 100%;
-  box-sizing: border-box;
+.homepage-container {
+
+  .homepage-row {
+    width: 100%;
+    box-sizing: border-box;
+
+    .row-content {
+      width: 1160px;
+      margin: 0 auto;
+      padding:0 1rem;
+    }
+  }
 }
