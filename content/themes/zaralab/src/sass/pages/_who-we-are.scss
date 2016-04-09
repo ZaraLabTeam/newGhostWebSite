@@ -1,26 +1,16 @@
 .who-we-are {
-  p {
-    position: relative;
-    float: left;
-    max-width: 52em;
-    /*padding-left: 8em;*/
-    /*margin-right: 1em;*/
-    color: white;
-  }
-
-  // .who-we-are-video {
-  //   float: right;
-  //   width: 39%;
-  //   height: 28em;
-  //   padding-top: 5em;
-  // }
 
   .who-we-are-main {
-    margin: 5em 5em 40em 5em;
   }
 
   .who-we-are-content {
-    /*margin-left: 5em;
-    margin-right: 5em;*/
+    p {
+      position: relative;
+      float: left;
+      max-width: 52em;
+
+      color: white;
+    }
+
   }
 }

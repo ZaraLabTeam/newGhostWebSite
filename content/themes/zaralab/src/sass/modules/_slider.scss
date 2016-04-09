@@ -1,0 +1,20 @@
+#slider {
+  overflow: hidden;
+
+  figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s homeCarousel infinite;
+    height: 20%;
+
+    img {
+     width: 20%;
+     height: 400px;
+     float: left;
+   }
+ }
+}

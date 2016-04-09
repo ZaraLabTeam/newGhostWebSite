@@ -2,12 +2,18 @@
 
 {{#get "posts" limit="1" include="tags" filter="tags:who-we-are+page:true" order="count.posts desc" as |whoWeAre| }}
  {{#foreach whoWeAre}}
-       <div class="who-we-are-main">
-         <h1>{{title}}</h1>
-         <div class="who-we-are-content">
-           {{content}}
-         </div>
+
+   <div class="homepage-row">
+
+     <div class="who-we-are-main">
+       <h1>{{title}}</h1>
+       <div class="who-we-are-content">
+         {{content}}
        </div>
+     </div>
+
+   </div>
+
  {{/foreach}}
 {{/get}}
 <!-- End Who we are ================================================== -->

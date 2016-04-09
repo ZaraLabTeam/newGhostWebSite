@@ -20,6 +20,8 @@
 @import "modules/responsive";
 @import "modules/youtube-videos";
 @import "modules/thumbnail";
+@import "modules/slider";
+
 
 @import "pages/default-page";
 @import "pages/error-page";
@@ -27,4 +29,5 @@
 @import "pages/contacts-page";
 @import "pages/who-we-are";
 @import "pages/pricing";
-@import "pages/sponsors";
+@import "pages/homepage-sponsors";
+@import "pages/tag-page";
