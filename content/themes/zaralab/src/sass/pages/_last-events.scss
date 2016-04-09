@@ -1,6 +1,12 @@
-.home-page {
+.homepage-container {
 	.last-events {
-		
+		background-color: rgba(13, 31, 34, 0.72);
+
+		.row-content {
+			h2 {
+				margin-bottom: 1rem;
+			}
+		}
 	}
 }
 
