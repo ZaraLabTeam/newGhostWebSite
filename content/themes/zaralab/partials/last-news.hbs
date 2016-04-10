@@ -1,33 +1,32 @@
-<h3>
-  Last news
-</h3>
 <!-- Start News  =========================================================== -->
-<div class="homepage-row">
-  <!-- Post-->
-  {{#get "posts" limit="4" include="tags" filter="tags:news+page:false" as |news| }}
-    {{#foreach news}}
-      <div class="post-module">
-        <!-- Thumbnail-->
-        <a href="{{url}}">
-          <div class="thumbnail">
-            <div class="date">
-              <div class="day">{{date format="MMM"}}</div>
-              <div class="month">{{date format="DD"}}</div>
-            </div><img src="{{image absolute="true"}}"/>
+<h2>Last news</h2>
+
+{{#get "posts" limit="3" include="tags" filter="tags:news+page:false" as |news| }}
+
+  {{#foreach news}}
+    <div class="post-module">
+
+      <!-- Thumbnail-->
+      <a href="{{url}}">
+        <div class="thumbnail">
+          <div class="date">
+            <div class="day">{{date format="MMM"}}</div>
+            <div class="month">{{date format="DD"}}</div>
           </div>
-          <!-- Post Content-->
-          <div class="post-content">
-            <div class="category">News</div>
-            <h1 class="title">{{title}}</h1>
 
-            {{content words=25}}
+          <img src="{{image absolute="true"}}"/>
+        </div>
 
-          </div>
-        </a>
+        <!-- Post Content-->
+        <div class="post-content">
+          <div class="category">News</div>
+          <h3 class="title">{{title}}</h3>
 
-      </div>
-    {{/foreach}}
-  {{/get}}
+          {{content words=25}}
+        </div>
+      </a>
 
-</div>
+    </div>
+  {{/foreach}}
+{{/get}}
 <!-- End News ============================================================== -->

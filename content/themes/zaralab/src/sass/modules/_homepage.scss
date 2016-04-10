@@ -70,13 +70,19 @@ a.more:hover {
 
   .homepage-row {
     width: 100%;
+
     box-sizing: border-box;
     border-bottom: 5px solid white;
 
     .row-content {
       width: 1160px;
+
       margin: 0 auto;
       padding:3rem 1rem;
+
+      h2 {
+				margin-bottom: 1rem;
+			}
     }
   }
 }

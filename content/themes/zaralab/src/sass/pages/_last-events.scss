@@ -1,51 +1,5 @@
 .homepage-container {
 	.last-events {
 		background-color: rgba(13, 31, 34, 0.72);
-
-		.row-content {
-			h2 {
-				margin-bottom: 1rem;
-			}
-		}
 	}
-}
-
-.some-class {
-	content: '';
-
-	/* Display & position */
-	display: block;
-	z-index: 1;
-	opacity: 0.6;
-	float: left;
-	position: relative;
-	left: 0;
-	top: 0;
-
-	/* Size & Proportion */
-	width: 100%; 
-	max-width: 400px;
-	height: 100%;
-	
-	/* Margin & Padding */
-	margin: 1rem;
-	padding: 1rem;
-
-	/* Borders */
-	border: 1px solid #000;
-	border-radius: 15px;
-
-	/* Fonts */
-	font-family: 'Helvetica', sans-serif;
-	font-weight: normal;
-	font-size: 1em;
-	text-decoration: normal;
-	line-height: 1;
-	color: #fff;
-
-	/* Background */
-	background-color: #000;
-	background-image: url('/relativePath'), url('http://absolutePath/');
-
-	/* Other Styles */
 }
