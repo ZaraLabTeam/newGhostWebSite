@@ -1,9 +1,22 @@
 .who-we-are {
-  background-color: rgba(174, 65, 65, 0.74);
+  background-color: rgba(162, 162, 162, 0.7);
 
   .who-we-are-content {
     p {
       position: relative;
+
+      .who-we-are-video {
+        z-index: 2;
+        float: right;
+        position: relative;
+        top: 5px;
+
+        width: 39%;
+        height: 16rem;
+
+        background-color: #7B7B7B;
+        background-size: contain;
+      }
     }
 
     &:after {
