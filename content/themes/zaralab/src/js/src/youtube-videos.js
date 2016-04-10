@@ -30,17 +30,26 @@
 
   function addLinksWithYouTubeData(data) {
       $.each(data.items , function(i , item) {
-        //var videoTitle = item.snippet.title;
+
         var videoId = item.snippet.resourceId.videoId,
+            videoTitle = item.snippet.title,
             urlYouTubeVideo = 'https://www.youtube.com/watch?v=' + videoId,
             urlYouTubeImg = 'https://i.ytimg.com/vi/' + videoId + '/sddefault.jpg',
-            youTubeLinkTag = document.createElement('a');
+            youTubeModule = document.createElement('div'),
+            youTubeLink = document.createElement('a'),
+            youTubeTitle = document.createElement('h3');
 
-        $(youTubeLinkTag).addClass('video-thumb js-trigger-modal play')
-                         .attr('data-youtube-id', videoId)
-                         .attr('href', urlYouTubeVideo)
-                         .css('background-image', 'url('+urlYouTubeImg+')')
-                         .appendTo($("#last-youtube-videos"));
+        $(youTubeLink).addClass('last-youtube-video-thumb js-trigger-modal play')
+                      .attr('data-youtube-id', videoId)
+                      .attr('href', urlYouTubeVideo)
+                      .css('background-image', 'url('+urlYouTubeImg+')');
+
+        $(youTubeTitle).addClass('title').text(videoTitle);
+
+        $(youTubeModule).addClass('youtube-module')
+                        .append(youTubeLink)
+                        .append(youTubeTitle)
+                        .appendTo($("#last-youtube-videos"));
       });
     }
 
@@ -53,7 +62,7 @@
   }
 
   function addListenerToLastYouTubeLinks () {
-      $('a.video-thumb').on('click', setPlayerWithLinkData);
+      $('a.last-youtube-video-thumb').on('click', setPlayerWithLinkData);
   }
 
   function setPlayerWithLinkData () {

@@ -143,3 +143,51 @@
         height: auto !important;
     }
 }
+/* ==========================================================================
+                           YouTube Thumbnail
+   ========================================================================== */
+   .youtube-module {
+     display: inline-block;
+     z-index: 1;
+     position: relative;
+
+     width: 31%;
+     height: 302px;
+
+     margin-left: 3.1%;
+
+     border: 1px solid white;
+     border-radius: 0 0 25px 0;
+
+     box-sizing: border-box;
+     box-shadow: 0 0 30px $blackShadow;
+
+     background-color: white;
+
+     &:nth-of-type(1) {
+         margin-left: 0;
+     }
+
+     .title {
+       position: absolute;
+       bottom: 0;
+
+       width: 100%;
+
+
+       margin: 0;
+       padding: 1rem 1rem;
+
+       box-sizing: border-box;
+       border-radius: 0 0 25px 0;
+
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       font-size: 14px;
+       line-height: 1.5em;
+       color: #333333;
+
+       background-color: white;
+     }
+   }

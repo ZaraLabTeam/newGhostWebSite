@@ -34,7 +34,7 @@
 
 .play::after {
   content: "";
-  background-image: url("/content/images/page/youtube-button-gray.png");
+  background-image: url("/content/images/page/youtube-white.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 64px 64px;
@@ -52,7 +52,7 @@
 }
 
 .play:hover::after {
-  background-image: url("/content/images/page/youtube-button-red.png");
+  background-image: url("/content/images/page/youtube-red.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 64px 64px;

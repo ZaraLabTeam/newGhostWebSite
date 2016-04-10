@@ -4,6 +4,7 @@
   .who-we-are-content {
     p {
       position: relative;
+      color: #fff;
 
       .who-we-are-video {
         z-index: 2;
@@ -13,6 +14,10 @@
 
         width: 39%;
         height: 16rem;
+
+        box-sizing: border-box;
+        border-radius: 25px 0 25px 0;
+        border: 10px solid white;
 
         background-color: #7B7B7B;
         background-size: contain;
