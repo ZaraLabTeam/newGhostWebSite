@@ -1,7 +1,9 @@
-<!-- <div class="tv-frame"></div> -->
-<!-- TV ====================================================== -->
-<h2> Stream Player</h2>
+<div class="row-header">
+	<h2>Предаване на живо</h2>
+</div>
 
+<div class="row-content">
+<!-- TV ====================================================== -->
   {{#get "posts" limit="1" include="tags" filter="tags:stream-player+page:true" order="count.posts desc" as |stream-player| }}
    {{#foreach stream-player}}
        <div class="youtube-tv">
@@ -11,3 +13,4 @@
    {{/foreach}}
   {{/get}}
 <!-- End TV ====================================================== -->
+</div>

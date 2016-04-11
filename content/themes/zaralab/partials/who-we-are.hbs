@@ -1,5 +1,9 @@
+<div class="row-header">
+	<h2>Какво е Заралабъ?</h2>
+</div>
+
+<div class="row-content">
 <!-- Start Who we are ====================================================== -->
-<h2>Who we are</h2>
 
 {{#get "posts" limit="1" include="tags" filter="tags:who-we-are+page:true" order="count.posts desc" as |whoWeAre| }}
  {{#foreach whoWeAre}}
@@ -11,3 +15,6 @@
  {{/foreach}}
 {{/get}}
 <!-- End Who we are ======================================================== -->
+</div>
+
+
