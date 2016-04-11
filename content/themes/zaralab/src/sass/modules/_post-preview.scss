@@ -1,0 +1,131 @@
+.post-preview {
+	padding: 1rem;
+
+	a {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background-color: $greenSemiTransparent;
+
+		box-shadow: 1px 2px 4px $blackShadow;
+
+		.title {
+			a {
+				color: #222;
+			}
+		}
+	}	
+	
+	.thumb {
+		display: block;
+
+		width: 100%;
+		height: auto;
+	}
+
+	.title {
+		margin-top: 0.5rem;
+
+		text-align: left;
+	}
+
+	.date {
+		font-weight: bold;
+	}
+
+	.post-content {
+		margin-top: -0.5rem;
+
+		font-family: 'Lazurski Cyrillic', 'Helvetica', sans-serif;
+		font-size: 1.1em;
+
+		p {
+			line-height: 1.45;
+		}
+
+		.description:last-child:after {
+            content: ' ...';
+       
+            font-family: 'Helvetica', sans-serif;
+        }
+	}
+
+	.date, .post-content {
+		color: white;
+	}
+
+	.read-more {
+		position: relative;
+		display: inline-block;
+
+		padding: 5px;
+
+		border-radius: 5px;
+
+		color: white;
+
+		background-color: $green;
+
+		box-shadow: 1px 2px 4px $blackShadow;
+
+		&:active {
+			top: 1px;
+		}
+
+		&:hover {
+			.expression {
+				display: block;
+
+				background-color: black;
+				
+				animation-name: expandContainer;
+				animation-duration: 0.35s;
+
+				&:nth-child(odd) {
+					animation-name: fadeInLeftBig 0.2s;
+					animation-duration: 0.2s;
+				}
+
+				p {
+					width: 100%;
+					
+					margin: 0.5rem 0;
+					padding: 0 5%;
+
+					animation: type-type 1.2s steps(50, end); 
+					white-space: nowrap;
+						overflow: hidden;
+				}
+				
+				.cursor {
+					animation: blink-blink 0.9s infinite;
+				}
+			}
+		}
+
+		.expression {
+			display: none;
+			position: absolute;
+		    left: 60px;
+		    top: -5px;
+
+		    width: 220px;
+
+			font-family: monospace;
+		    color: white;
+
+		    @include boxShadow();
+
+			em {
+				color: #B91D38;;
+				font-weight: bold;
+			}
+
+			strong {
+				color: #ACFF14;
+				font-weight: normal;
+			}	
+		}
+	}
+}

@@ -79,6 +79,8 @@ a.more:hover {
       margin: 0 auto;
       padding: 2rem 1rem;
 
+      @extend %cf;
+
       h2 {
         margin-bottom: 2rem;
 

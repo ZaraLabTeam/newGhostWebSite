@@ -13,12 +13,23 @@
 
 		transition: 0.35s;
 
-		&:hover {
-			background-color: lighten($darkTeal, 10%);
-    		background-blend-mode: luminosity;
-		}
+		// &:hover {
+		// 	background-color: lighten($darkTeal, 10%);
+  //   		background-blend-mode: luminosity;
+		// }
 
 		.row-content {
+			.post-preview {
+				float: left;
+
+				width: 32.66%;
+
+				margin-left: 1%;
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+			}
 		}
 	}
 }
