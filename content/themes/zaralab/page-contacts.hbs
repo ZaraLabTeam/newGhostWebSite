@@ -15,31 +15,110 @@
         <div class="inner">
 
             {{content}}
-            <div id="form">
-              <h2>Contact Form</h2>
-              <!-- www.123contactform.com script begins here -->
-              <script type="text/javascript">
-                  var servicedomain="www.123contactform.com";
-                  var frmRef='';
-                  try {
-                    frmRef=window.top.location.href;
-                  } catch(err) {};
-                  var cfJsHost = (("https:" == document.location.protocol) ?
-                                   "https://" : "http://");
-                  document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain +
-                                "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E"));
-                  frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]');
-                  document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain +
-                                          "/jsform-1914487.js?ref="+frmRef+
-                                          "' type='text/javascript'%3E%3C/script%3E"));
-               </script>
+            <div class="contact-container">
+              <div class="contact-row">
+
+                <div class="details-container">
+                  <div id="contact-details" class="row-contact">
+
+                    <div class="detail-componet">
+                      <div class="icon-holder">
+                        <i class="fa fa-map-marker fa-3x"></i>
+                      </div>
+                      <div class="icon-text-holder">
+                        <p>Адрес:</p>
+                        <address class="">
+                          <p class="address">
+                            бул. “Княз Александър Батенберг” 28
+                          </p>
+                        </address>
+                      </div>
+                    </div>
+
+                    <div class="detail-componet">
+                      <div class="icon-holder">
+                        <i class="fa fa-phone fa-3x"></i>
+                      </div>
+                      <div class="icon-text-holder">
+                        <p>Телефон:</p>
+
+
+                          <p class="address">
+                            088 299 0709
+                          </p>
+                      </div>
+                    </div>
+
+                    <div class="detail-componet">
+                      <div class="icon-holder">
+                        <i class="fa fa-envelope fa-3x"></i>
+                      </div>
+                      <div class="icon-text-holder">
+                        <p>Имейл адрес:</p>
+
+                          <p class="address">
+                            info@zaralab.org
+                          </p>
+                      </div>
+                    </div>
+
+                    <div class="detail-componet">
+                      <div class="icon-holder">
+                        <i class="fa fa-clock-o fa-3x"></i>
+                      </div>
+                      <div class="icon-text-holder work-time-component">
+                          <p class="work-time-title">Работно Време:</p>
+
+                          <p class="work-time-days">
+                            Понеделник-Петък
+                          </p>
+                          <p class="work-time">
+                            9:00 - 18:00
+                          </p>
+
+                          <p class="work-time-days">
+                            Събота-Неделя
+                          </p>
+
+                          <p class="work-time">
+                            Почивни дни
+                          </p>
+
+                      </div>
+                    </div>
+
+                  </div>
 
 
 
+              </div>
             </div>
 
+            <div class="contact-row">
+              <div id="form">
+                <!-- www.123contactform.com script begins here -->
+                <script type="text/javascript">
+                    var servicedomain="www.123contactform.com";
+                    var frmRef='';
+                    try {
+                      frmRef=window.top.location.href;
+                    } catch(err) {};
+                    var cfJsHost = (("https:" == document.location.protocol) ?
+                                     "https://" : "http://");
+                    document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain +
+                                  "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E"));
+                    frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]');
+                    document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain +
+                                            "/jsform-1914487.js?ref="+frmRef+
+                                            "' type='text/javascript'%3E%3C/script%3E"));
+                 </script>
 
 
+
+              </div>
+            </div>
+
+            </div>
         </div>
 
 	  </article>

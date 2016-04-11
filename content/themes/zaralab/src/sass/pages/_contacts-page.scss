@@ -1,82 +1,79 @@
-.zara-page .contacts {
-
-	.contacts-wrapper {
+.contact-container {
+	.contact-row {
+		width: 1160px;
 		margin: 0 auto;
-	}
+		padding: 2rem 1rem;
 
-	#map, .side {
-		display: inline-block;
-		vertical-align: top;
-		margin: 2rem;
-	}
+		#contact-details {
+			.detail-componet{
+				margin-left: 1.5rem;
+				&:nth-of-type(1) {
+						margin-left: 3.9rem;
+				}
 
-	#map {
-		width:40%;
-		height:400px;
-		overflow-y:auto;
+				display: inline-block;
+				.icon-holder {
+					display: inline-block;
+					line-height: inherit;
+					position: relative;
+			    top: 0px;
+					margin-right: 0.5rem;
+				}
 
-		box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
-	}
+				.icon-text-holder {
+					display: inline-block;
+					text-align: left;
+					padding: 0 0 18px;
 
-	.side {
-		width: 40%;
-		min-width: 400px;
+					&.work-time-component {
+						position: absolute;
+						top:53px;
 
-		.contact-details {
-			background-color: white;
-			padding: 1rem;
-			margin-top: 2rem;
-			max-width: 400px;
+					}
 
-			box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
+					.work-time-days {
+						font-size: 0.7rem;
+						text-align: center;
+					}
+					.work-time-title {
+						font-size: 1rem;
+						text-align: center;
 
-			a {
-				display: block;
+					}
+					.work-time {
+						font-size: 0.65rem;
+						text-align: center;
+					}
+
+					p {
+						font-size: 1rem;
+						line-height: 23px;
+
+
+						background: transparent;
+						border: 0;
+						margin: 0;
+						padding: 0;
+						vertical-align: baseline;
+						outline: 0;
+
+						animation: none;
+
+						position: none;
+
+						font-family: none;
+						text-shadow: none;
+
+						font-size: none;
+
+						.address {
+							max-width: 267px;
+						}
+					}
+
+				}
 			}
-
-			img {
-				margin-right: 1rem;
-
-			}
 		}
 
-		.fb-page {
-			width: 100% !important;
-			margin-bottom: 2rem;
-
-			box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
-		}
-	}
-
-	.inline {
-		width:20px;
-	}
-}
-
-@media only screen and (min-width: 980px) {
-	.zara-page {
-		.contacts-wrapper {
-			width: 960px;
-		}
-	}
-
-}
-
-@media only screen and (max-width: 480px) {
-	.zara-page {
-		.contacts-wrapper {
-			width: 460px;
-		}
-
-		.contacts {
-			#map {
-				margin: 1rem;
-				width: 320px;
-			}
-		}
-
-		.inline {
-			width:20px;
-		}
 	}
 }
