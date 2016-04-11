@@ -1,0 +1,49 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{> logo}}
+
+<section class="zara-page content animated fadeInDownBig" role="main">
+
+    <article class="page main-article">
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+
+        <div class="inner">
+
+            {{content}}
+            <div id="form">
+              <h2>Contact Form</h2>
+              <!-- www.123contactform.com script begins here -->
+              <script type="text/javascript">
+                  var servicedomain="www.123contactform.com";
+                  var frmRef='';
+                  try {
+                    frmRef=window.top.location.href;
+                  } catch(err) {};
+                  var cfJsHost = (("https:" == document.location.protocol) ?
+                                   "https://" : "http://");
+                  document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain +
+                                "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E"));
+                  frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]');
+                  document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain +
+                                          "/jsform-1914487.js?ref="+frmRef+
+                                          "' type='text/javascript'%3E%3C/script%3E"));
+               </script>
+
+
+
+            </div>
+
+
+
+        </div>
+
+	  </article>
+
+        {{/post}}
+
+ </section>
