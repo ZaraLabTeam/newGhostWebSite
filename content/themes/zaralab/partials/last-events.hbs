@@ -1,32 +1,37 @@
-<h2>
-  Последни събития
-</h2>
+<div class="row-header">
+  <h2>Последни събития</h2>
+</div>
 
-{{#get "posts" limit="3" include="tags" filter="tags:event+page:false"  as |events| }}
+<div class="row-content">
+  {{#get "posts" limit="3" include="tags" filter="tags:event+page:false"  as |events| }}
 
   {{#foreach events}}
-    <div class="post-module">
+  <div class="post-preview"> 
 
-      <!-- Thumbnail-->
-      <a href="{{url}}">
-        <div class="thumbnail">
-          <div class="date">
-            <div class="day">{{date format="MMM"}}</div>
-            <div class="month">{{date format="DD"}}</div>
-          </div>
+    <!-- Thumbnail-->
+    <a href="{{url}}">
+      <img class="thumb" src="{{image absolute="true"}}"/>
+    </a>
 
-          <img src="{{image absolute="true"}}"/>
-        </div>
+    <h4 class="title"><a href="{{url}}">{{title}}</a></h4>
 
-        <!-- Post Content-->
-        <div class="post-content">
-          <div class="category">Event</div>
-          <h3 class="title">{{title}}</h1>
-
-          {{content words=25}}
-        </div>
-      </a>
-
+    <!-- Date -->
+    <div class="date">
+      <span class="day">{{date format="MMMM"}}</span>
+      <span class="month">{{date format="DD dddd"}}</span>
+      <span class="time">{{date format="HH:MM"}}</span>
     </div>
+
+    <!-- Post Content-->
+    <div class="post-content">
+      {{content words=25}}
+    </div>
+
+    <a class="read-more" href="{{url}}">
+      Още
+    </a>
+  </div>
   {{/foreach}}
-{{/get}}
+  {{/get}}
+
+</div>
