@@ -1,31 +1,25 @@
-.contact-container {
+
 	.contact-row {
 		width: 1160px;
 		margin: 0 auto;
-		//padding: 2rem 1rem;
 
 		#contact-details {
-			margin: 0 8.3%;
 			.detail-componet{
-				margin-left: 1.5rem;
-				display: inline-block;
-				&:nth-of-type(1) {
-						margin-left: 0;
-				}
-
-
 				.icon-holder {
 					display: inline-block;
 					line-height: inherit;
 					position: relative;
-			    top: 0px;
+					top: 0px;
 					margin-right: 0.5rem;
+					left: 28px;
+					width: 48px;
 				}
 
 				.icon-text-holder {
 					display: inline-block;
 					text-align: left;
 					padding: 0 0 18px;
+					margin-left: 29px;
 
 					.work-time {
 						font-size: 1rem;
@@ -33,7 +27,7 @@
 					}
 
 					p {
-						font-size: 1rem;
+						font-size: 14px;
 						line-height: 23px;
 
 
@@ -50,9 +44,9 @@
 
 						text-shadow: none;
 
-						.address {
-							max-width: 267px;
-						}
+						// .address {
+						// 	max-width: 267px;
+						// }
 					}
 
 				}
@@ -60,12 +54,17 @@
 		}
 
 	}
-}
+
 
  #maps {
+	 position: relative;
+   overflow: hidden;
+	 float: left;
+	 width: 70%;
 	 @extend %cf ;
 	 border: 10px solid #fff;
 	 border-radius: 25px;
+	 box-sizing: border-box;
 	 #map {
 			float: left;
 			height: 450px;
@@ -73,6 +72,7 @@
 
 			iframe {
 				border-radius: 15px 0 0 15px;
+				box-sizing: border-box;
 			};
 		}
 
@@ -83,6 +83,7 @@
 
 			iframe {
 				border-radius: 0 15px 15px 0;
+				box-sizing: border-box;
 			}
 		}
  }
@@ -95,11 +96,8 @@
    ========================================================================== */
 	 #form {
 		display: none;
-		float: right;
 		@extend %cf;
-		position: relative;
-		top: 27px;
-	 	width: 50%;
+	 	width: 100%;
 	 	border: 10px solid white;
 		border-radius: 25px;
 		margin-bottom: 10%;
@@ -526,9 +524,9 @@
   position:relative;
   display:inline-block;
   //top: -190px;
-	top:-118px;
+	top:-134px;
 	//left: 63px;
-	left: 0px;
+	left: 28px;
 	&:after{
 		  content: "";
 		   position: absolute;

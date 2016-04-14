@@ -15,81 +15,14 @@
         <div class="inner">
 
             {{content}}
-            <div class="contact-container">
-              <div class="contact-row">
-
-                <div class="details-container">
-                  <div id="contact-details" class="row-contact">
-
-                    <div class="detail-componet">
-                      <div class="icon-holder">
-                        <i class="fa fa-map-marker fa-3x"></i>
-                      </div>
-                      <div class="icon-text-holder">
-                        <p>Адрес:</p>
-                        <address class="">
-                          <p class="address">
-                            бул. “Княз Александър Батенберг” 28
-                          </p>
-                        </address>
-                      </div>
-                    </div>
-
-                    <div class="detail-componet">
-                      <div class="icon-holder">
-                        <i class="fa fa-phone fa-3x"></i>
-                      </div>
-                      <div class="icon-text-holder">
-                        <p>Телефон:</p>
-
-
-                          <p class="address">
-                            088 299 0709
-                          </p>
-                      </div>
-                    </div>
-
-                    <div class="detail-componet">
-                      <div class="icon-holder">
-                        <i class="fa fa-envelope fa-3x"></i>
-                      </div>
-                      <div class="icon-text-holder">
-                        <p>Имейл адрес:</p>
-
-                          <p class="address">
-                            info@zaralab.org
-                          </p>
-                      </div>
-                    </div>
-
-                    <div class="detail-componet">
-                      <div class="icon-holder">
-                        <i class="fa fa-clock-o fa-3x"></i>
-                      </div>
-                      <div class="icon-text-holder">
-
-                          <p>
-                            Понеделник-Петък
-                          </p>
-                          <p class="work-time-">
-                            9:00 - 18:00
-                          </p>
-
-                      </div>
-                    </div>
-
-                  </div>
-
-              </div>
-            </div>
 
             <div class="contact-row">
-              {{> map}}
-            </div>
-
-            <div class="contact-row">
+              {{> maps}}
+              {{> contact-details}}
               {{> mail-leaf}}
+            </div>
 
+            <div class="contact-row">
               {{> form}}
             </div>
 
