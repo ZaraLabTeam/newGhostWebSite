@@ -1,8 +1,4 @@
 .contact-container {
-	.contact-full-row {
-		width: 100%;
-		margin-top: 10%;
-	}
 	.contact-row {
 		width: 1160px;
 		margin: 0 auto;
@@ -11,11 +7,12 @@
 		#contact-details {
 			.detail-componet{
 				margin-left: 1.5rem;
+				display: inline-block;
 				&:nth-of-type(1) {
-						margin-left: 3.9rem;
+						margin-left: 3.2rem;
 				}
 
-				display: inline-block;
+
 				.icon-holder {
 					display: inline-block;
 					line-height: inherit;
@@ -29,23 +26,8 @@
 					text-align: left;
 					padding: 0 0 18px;
 
-					&.work-time-component {
-						position: absolute;
-						top:53px;
-
-					}
-
-					.work-time-days {
-						font-size: 0.7rem;
-						text-align: center;
-					}
-					.work-time-title {
-						font-size: 1rem;
-						text-align: center;
-
-					}
 					.work-time {
-						font-size: 0.65rem;
+						font-size: 1rem;
 						text-align: center;
 					}
 
@@ -114,15 +96,15 @@
                                Form CSS
    ========================================================================== */
 	 #form {
-		 display: none;
+		display: none;
 		float: right;
 		@extend %cf;
-
+		position: relative;
+		top: -47px;
 	 	width: 50%;
 	 	border: 10px solid white;
 		border-radius: 25px;
 		margin-bottom: 10%;
-	 	//margin: 10%;
 
 			input[type=text],
 			input[type=email],
@@ -545,7 +527,7 @@
 .envelope-wrapper {
   position:relative;
   display:inline-block;
-	top: -250px;
+  top: -190px;
 	left: 63px;
 	&:after{
 		  content: "";
@@ -563,7 +545,6 @@
   position:relative;
   z-index: 0;
   display:inline-block;
-  @include box-shadow(0 150px 90px 0 rgba(0,0,0,0.3));
 }
 .envelope-top {
   width: 0;
