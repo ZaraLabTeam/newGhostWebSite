@@ -2,14 +2,15 @@
 	.contact-row {
 		width: 1160px;
 		margin: 0 auto;
-		padding: 2rem 1rem;
+		//padding: 2rem 1rem;
 
 		#contact-details {
+			margin: 0 8.3%;
 			.detail-componet{
 				margin-left: 1.5rem;
 				display: inline-block;
 				&:nth-of-type(1) {
-						margin-left: 3.2rem;
+						margin-left: 0;
 				}
 
 
@@ -47,10 +48,7 @@
 
 						position: none;
 
-						font-family: none;
 						text-shadow: none;
-
-						font-size: none;
 
 						.address {
 							max-width: 267px;
@@ -100,7 +98,7 @@
 		float: right;
 		@extend %cf;
 		position: relative;
-		top: -47px;
+		top: 27px;
 	 	width: 50%;
 	 	border: 10px solid white;
 		border-radius: 25px;
@@ -527,8 +525,10 @@
 .envelope-wrapper {
   position:relative;
   display:inline-block;
-  top: -190px;
-	left: 63px;
+  //top: -190px;
+	top:-118px;
+	//left: 63px;
+	left: 0px;
 	&:after{
 		  content: "";
 		   position: absolute;

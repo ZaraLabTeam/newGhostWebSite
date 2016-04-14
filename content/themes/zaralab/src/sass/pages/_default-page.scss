@@ -14,7 +14,7 @@
 		width: 100%;
 		max-width: 100%;
 		background-color: transparent;
-		
+
 		.inner {
 			position: relative;
 
@@ -49,7 +49,7 @@
 				position: relative;
 				padding: 0.5rem 1rem;
 
-				font-family: Lazurski Cyrillic, cursive;
+				// font-family: Lazurski Cyrillic, cursive;
 				font-size: 1.25rem;
 				text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.62);
 
@@ -62,13 +62,13 @@
 				// }
 
 				strong {
-					font-family: Blueprint, Lazurski Cyrillic, cursive;	
+					// font-family: Blueprint, Lazurski Cyrillic, cursive;
 					color: #aaa;
 					font-size: 1.3em;
 				}
 
 				em {
-					font-family: Blueprint, Lazurski Cyrillic, cursive;
+					// font-family: Blueprint, Lazurski Cyrillic, cursive;
 					font-size: 1.3em;
 					text-transform: uppercase;
 				}
@@ -76,7 +76,7 @@
 				a {
 					color: white;
 					font-style: italic;
-				}		
+				}
 			}
 
 			// &:before, &:after {
