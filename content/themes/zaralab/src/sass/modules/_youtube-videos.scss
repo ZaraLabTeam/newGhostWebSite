@@ -111,7 +111,7 @@
 }
 .video-modal .overlay {
   z-index: 0;
-  background: rgba(0,93,171,0.80); /* dark blue */
+  background: rgba(62, 139, 118,0.80); /* dark blue */
 
   opacity: 0.0;
 
@@ -129,13 +129,13 @@
   z-index: 1;
 
   height: auto;
-/*   width: 76%; */
-width: calc(100% - 200px);
-max-width: 1000px;
-max-height: calc(100% - 100px);
-margin: 0 auto;
+  /*   width: 76%; */
+  width: calc(100% - 200px);
+  max-width: 1000px;
+  max-height: calc(100% - 100px);
+  margin: 0 auto;
 
-overflow-y: visible;
+  overflow-y: visible;
 
 /*background: #fff;*/ /* container will have a transparent BG—moving the BG color and shadow to the iframe element to make it look more seamless */
 
@@ -146,6 +146,7 @@ overflow-y: visible;
   -webkit-transition: -webkit-transform 0.2s ease-out 0.15s;
   transition: transform 0.2s ease-out 0.15s; */
 }
+
 /* Mobile Layout Tweaks */
 @media (max-width: 640px) {
   .video-modal-content {
