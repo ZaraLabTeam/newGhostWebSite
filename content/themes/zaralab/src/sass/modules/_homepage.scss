@@ -72,7 +72,9 @@ a.more:hover {
     width: 100%;
     box-sizing: border-box;
     // border-bottom: 5px solid white;
-
+    h2 {
+      color: white;
+    }
     .row-content {
       width: 1160px;
       margin: 0 auto;

@@ -7,6 +7,7 @@
 	transition: 0.7s;
 
 	a {
+		color: #B5EC92;//#B4EA91
 		text-decoration: none;
 	}
 
@@ -41,7 +42,6 @@
 	.post-content {
 		margin-top: -0.5rem;
 
-		//font-family: 'Lazurski Cyrillic', 'Helvetica', sans-serif;
 		font-size: 1.1em;
 
 		p {
@@ -50,8 +50,6 @@
 
 		.description:last-child:after {
             content: ' ...';
-
-            //font-family: 'Helvetica', sans-serif;
         }
 	}
 
