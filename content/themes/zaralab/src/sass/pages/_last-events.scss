@@ -18,16 +18,21 @@
   		//  background-blend-mode: luminosity;
 		// }
 
-		.row-content {
+		.row-content-last-events {
 			.post-preview {
-				float: left;
+				//float: left;
+				display: inline-block;
 
 				width: 32.66%;
 
-				margin-left: 1%;
+				//margin-left: 1%;
 
 				&:first-of-type {
 					margin-left: 0;
+				}
+
+				.title {
+					min-height: 60px;
 				}
 			}
 		}

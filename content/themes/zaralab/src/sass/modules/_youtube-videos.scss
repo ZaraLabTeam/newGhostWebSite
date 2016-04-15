@@ -203,77 +203,114 @@ iframe#youtube {
   transform: translate(0%,0%);
   -webkit-transform: translate(0%,0%);
 }
+/* ==========================================================================
+                            Last Youtube Video
+   ========================================================================== */
+ .youtube-module {
+   display: inline-block;
+   z-index: 1;
+   position: relative;
+
+   width: 31%;
+   height: 302px;
+
+   margin-left: 3.5%;
+
+   box-sizing: border-box;
+   border: 1px solid white;
+
+   box-sizing: border-box;
+   box-shadow: 0 0 30px $blackShadow;
+
+   background-color: white;
+
+   &:nth-of-type(1) {
+       margin-left: 0;
+   }
+
+
+   .title {
+     position: absolute;
+     bottom: 0;
+
+     width: 100%;
+
+
+     margin: 0;
+     padding: 1rem 1rem;
+
+     box-sizing: border-box;
+
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     font-size: 14px;
+     line-height: 1.5em;
+     color: #333333;
+
+     background-color: white;
+   }
+ }
+
+
+/* ==========================================================================
+                            Who We Are Video
+   ========================================================================== */
+
+   .who-we-are-video {
+     z-index: 2;
+     float: right;
+     position: relative;
+     top: 10px;
+
+     width: 39%;
+     height: 16rem;
+
+     box-sizing: border-box;
+     border: 1px solid white;
+
+     background-color: #7B7B7B;
+     background-size: contain;
+   }
 
 /* ==========================================================================
                                 Stream Player
    ========================================================================== */
+.youtube-stream-player-module {
+ display: inline-block;
+ z-index: 1;
+ position: relative;
+ left: 112.8px;
+ top: 0px;
 
-   .stream-player {
-     z-index: 2;
+ width: 80%;
+ height: 484px;
 
-     border-radius: 15px;
-     position: absolute;
-    //  top: 338px;
-    //  left: 185px;
+ border: 1px solid white;
 
-    top: 169px;
-    left: 93px;
-    width: 49%;
-    height: 48%;
-    background-color: #7B7B7B;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+ box-sizing: border-box;
+ box-shadow: 0 0 30px $blackShadow;
 
-    &:hover{
-     background-color: #7B7B7B;
-   }
+ background-color: white;
+
+ &:nth-of-type(1) {
+     margin-left: 0;
  }
 
- .youtube-tv {
-   position: relative;
-   margin: 4rem auto;
+ p {
+   .stream-player {
+     position: absolute;
 
-   p:first-child {
-    position: relative;
-    background-image: url("/content/images/page/tv.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+     width: 100%;
+     height: 449px;
 
-    /*
-    * Keep a 3:2 ratio of width and height to keep
-    * To keep the picture inside of the TV (or edit the .tv-frame proportions)
-    **/
-    width: 720px;
-    height: 480px;
+     background-repeat: no-repeat;
+     background-color: #D95BA2;
+     background-size:cover;
+   }
 
-    margin: 0 auto;
+   .stream-player-play {
 
-    a {
-      position: absolute;
-      left: 23.4%;
-      top: 42.4%;
-      display: block;
-      background-image: url("/content/images/page/tv.png"), url("http://i.ytimg.com/vi/hdcSyE1sekc/sddefault_live.jpg");
-      background-repeat: no-repeat, no-repeat;
-      background-size: 164% 210%, cover;
-      background-position: 26% 81%, center;
-      border-radius: 15px;
-      width: 41%;
-      height: 48%;
-    }
-  }
-
-  .tv-frame {
-   position: relative;
-   padding: 39.5%;
-   z-index: 1;
-   background-image: url("/content/images/page/tv.png");
-   background-repeat: no-repeat;
-   background-size: contain;
-   background-position: center;
-   width: 100%;
-   height: 66%;
+   }
  }
 }

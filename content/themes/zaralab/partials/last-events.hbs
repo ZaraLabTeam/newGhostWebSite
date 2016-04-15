@@ -2,11 +2,11 @@
   <h2>Последни събития</h2>
 </div>
 
-<div class="row-content">
+<div class="row-content-last-events">
   {{#get "posts" limit="3" include="tags" filter="tags:event+page:false"  as |events| }}
 
   {{#foreach events}}
-  <div class="post-preview"> 
+  <div class="post-preview">
 
     <!-- Thumbnail-->
     <a href="{{url}}">

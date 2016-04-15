@@ -8,8 +8,8 @@
 
     margin-left: 3.1%;
 
+    box-sizing: border-box;
     border: 1px solid white;
-    border-radius: 25px 0;
 
     background-color: white;
 
@@ -38,10 +38,8 @@
         img {
             display: block;
 
-            max-width: 205%;
-            height: auto;
-
-            border-radius: 25px 0 0 0;
+            width: 100%;
+            height: 100%;
 
             transition: all 0.3s linear 0s;
         }
@@ -86,8 +84,6 @@
         min-height: 30%;
 
         padding: 30px;
-
-        border-radius: 0 0 25px 0;
 
         background-color: white;
 
@@ -143,55 +139,3 @@
         height: auto !important;
     }
 }
-/* ==========================================================================
-                           YouTube Thumbnail
-   ========================================================================== */
-   .youtube-module {
-     display: inline-block;
-     z-index: 1;
-     position: relative;
-
-     width: 31%;
-     height: 302px;
-
-     margin-left: 3.1%;
-
-     border: 1px solid white;
-     border-radius: 25px;
-
-     box-sizing: border-box;
-     box-shadow: 0 0 30px $blackShadow;
-
-     background-color: white;
-
-     &:nth-of-type(1) {
-         margin-left: 0;
-     }
-
-     a {
-       border-radius: 25px 25px 0 0;
-     }
-
-     .title {
-       position: absolute;
-       bottom: 0;
-
-       width: 100%;
-
-
-       margin: 0;
-       padding: 1rem 1rem;
-
-       box-sizing: border-box;
-       border-radius: 0 0 25px 25px;
-
-       white-space: nowrap;
-       overflow: hidden;
-       text-overflow: ellipsis;
-       font-size: 14px;
-       line-height: 1.5em;
-       color: #333333;
-
-       background-color: white;
-     }
-   }
