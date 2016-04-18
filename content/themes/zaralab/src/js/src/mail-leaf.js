@@ -5,7 +5,7 @@
 
     $(".email-button").click(function(){
       $(".envelope").toggleClass("active");
-      $('#form').toggle("slow");
+      $('#form').toggle();
     });
 
   });
