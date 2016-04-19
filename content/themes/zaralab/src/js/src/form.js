@@ -79,7 +79,7 @@ function odamaeSubmit(b) {
 
 	var data = {};
 	data[sel.name] = sel.value;
-	data['apiKey'] = $('.odamae-submit').data('apikey');
+	data['apiKey'] = 'odamae.io_c65182077331d9b05106acd6017dd27d_4a4a';
 
 	$('.odamae-input, .odamae-textarea').each(function(i,v) {
 		data[$(v).attr('id')] = ($(v).val() || $(v).text());
@@ -203,7 +203,8 @@ domready(function () {
 		 return false;
 	});
 
-	var apiKey = $('.odamae-submit').data('apikey');
+	var apiKey = 'odamae.io_c65182077331d9b05106acd6017dd27d_4a4a';
+	console.log(apiKey);
 	vCaptcha = $( '.visual-captcha' ).visualCaptcha({
 		imgPath: 'images/',
 		captcha: {

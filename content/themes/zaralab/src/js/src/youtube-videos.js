@@ -56,7 +56,7 @@
         });
 
         var seeAllVideosLink = $('<a class="homepage-link normal" href="#">Виж всички клипове</a>');
-        
+
         $(seeAllVideosLink).appendTo($(lastVideosSectionId));
       }else {
         var nullMessage = $('<h2>Няма качение видео клипове</h2>');
