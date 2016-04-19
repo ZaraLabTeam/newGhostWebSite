@@ -29,28 +29,41 @@
   }
 
   function addLinksWithYouTubeData(data) {
-      $.each(data.items , function(i , item) {
+      console.log(data.items);
+      var lastVideosSectionId = '#last-youtube-videos';
+      if (data.items !== null) {
+        $.each(data.items , function(i , item) {
 
-        var videoId = item.snippet.resourceId.videoId,
-            videoTitle = item.snippet.title,
-            urlYouTubeVideo = 'https://www.youtube.com/watch?v=' + videoId,
-            urlYouTubeImg = 'https://i.ytimg.com/vi/' + videoId + '/sddefault.jpg',
-            youTubeModule = document.createElement('div'),
-            youTubeLink = document.createElement('a'),
-            youTubeTitle = document.createElement('h3');
+          var videoId = item.snippet.resourceId.videoId,
+              videoTitle = item.snippet.title,
+              urlYouTubeVideo = 'https://www.youtube.com/watch?v=' + videoId,
+              urlYouTubeImg = 'https://i.ytimg.com/vi/' + videoId + '/sddefault.jpg',
+              youTubeModule = $('<div></div>'),
+              youTubeLink = $('<a></a>'),
+              youTubeTitle = $('<h3></h3>');
 
-        $(youTubeLink).addClass('last-youtube-video-thumb js-trigger-modal play')
-                      .attr('data-youtube-id', videoId)
-                      .attr('href', urlYouTubeVideo)
-                      .css('background-image', 'url('+urlYouTubeImg+')');
+          $(youTubeLink).addClass('last-youtube-video-thumb js-trigger-modal play')
+                        .attr('data-youtube-id', videoId)
+                        .attr('href', urlYouTubeVideo)
+                        .css('background-image', 'url('+urlYouTubeImg+')');
 
-        $(youTubeTitle).addClass('title').text(videoTitle);
+          $(youTubeTitle).addClass('title').text(videoTitle);
 
-        $(youTubeModule).addClass('youtube-module')
-                        .append(youTubeLink)
-                        .append(youTubeTitle)
-                        .appendTo($("#last-youtube-videos"));
-      });
+          $(youTubeModule).addClass('youtube-module')
+                          .append(youTubeLink)
+                          .append(youTubeTitle)
+                          .appendTo($(lastVideosSectionId));
+        });
+
+        var seeAllVideosLink = $('<a class="homepage-link normal" href="#">Виж всички клипове</a>');
+        
+        $(seeAllVideosLink).appendTo($(lastVideosSectionId));
+      }else {
+        var nullMessage = $('<h2>Няма качение видео клипове</h2>');
+
+        $(nullMessage).appendTo(lastVideosSectionId);
+      }
+
     }
 
   function addListenerToWhoWeAreYouTubeLinks () {

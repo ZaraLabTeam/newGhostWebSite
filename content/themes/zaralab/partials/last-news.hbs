@@ -1,38 +1,40 @@
-<div class="row-header">
-  <h2>Новини</h2>
-</div>
+{{#get "posts" limit="3" include="tags" filter="tags:news+page:false" as |news| }}
+<!-- Start News  =========================================================== -->
+  {{#if news}}
+    <div class="row-header">
+      <h2>Новини</h2>
+    </div>
 
-<div class="row-content">
-  <!-- Start News  =========================================================== -->
-  {{#get "posts" limit="3" include="tags" filter="tags:news+page:false" as |news| }}
+    <div class="row-content">
 
-    {{#foreach news}}
-      <div class="post-module">
+        {{#foreach news}}
+          <div class="post-module">
 
-        <!-- Thumbnail-->
-        <a href="{{url}}">
-          <div class="thumbnail">
-            <div class="date">
-              <div class="day">{{date format="MMM"}}</div>
-              <div class="month">{{date format="DD"}}</div>
-            </div>
+            <!-- Thumbnail-->
+            <a href="{{url}}">
+              <div class="thumbnail">
+                <div class="date">
+                  <div class="day">{{date format="MMM"}}</div>
+                  <div class="month">{{date format="DD"}}</div>
+                </div>
 
-            <img src="{{image absolute="true"}}"/>
+                <img src="{{image absolute="true"}}"/>
+              </div>
+
+              <!-- Post Content-->
+              <div class="post-content">
+                <div class="category">News</div>
+                <h3 class="title">{{title}}</h3>
+
+                {{content words=25}}
+              </div>
+            </a>
+
           </div>
+        {{/foreach}}
 
-          <!-- Post Content-->
-          <div class="post-content">
-            <div class="category">News</div>
-            <h3 class="title">{{title}}</h3>
-
-            {{content words=25}}
-          </div>
-        </a>
-
-      </div>
-    {{/foreach}}
-  {{/get}}
-
-  <a class="homepage-link normal" href="/tag/news/">Виж всички новини</a>
-  <!-- End News ============================================================== -->
-</div>
+      <a class="homepage-link normal" href="/tag/news/">Виж всички новини</a>
+    </div>
+  {{/if}}
+<!-- End News ============================================================== -->
+{{/get}}
