@@ -1,8 +1,10 @@
-<h3>Sponsors</h3>
+<div class="row-header">
+  <h2>Спонсори</h2>
+</div>
 
-<div class="homepage-row">
+<div class="row-content">
 
-  {{#get "posts" limit="5" include="tags" filter="tags:sponsor+page:true" order="count.posts desc" as |sponsors| }}
+  {{#get "posts" limit="5" include="tags" filter="tags:sponsor+page:true"  as |sponsors| }}
   		{{#foreach sponsors}}
 
       <div class="sponsor-item">
@@ -13,6 +15,18 @@
 
         </div>
       </div>
+
+    {{/foreach}}
+
+  {{/get}}
+
+  {{#get "posts" limit="1" include="tags" filter="tags:sponsors-content+page:true" order="count.posts desc" as |sponsors-content| }}
+      {{#foreach sponsors-content}}
+
+      <div class="sponsors-content">
+        {{content}}
+      </div>
+
 
     {{/foreach}}
 
