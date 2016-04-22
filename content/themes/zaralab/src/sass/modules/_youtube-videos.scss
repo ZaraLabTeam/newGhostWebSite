@@ -271,7 +271,8 @@ iframe#youtube {
      border: 1px solid white;
 
      background-color: #7B7B7B;
-     background-size: contain;
+     background-size: cover;
+     background-repeat: no-repeat;
    }
 
 /* ==========================================================================
