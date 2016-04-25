@@ -48,9 +48,12 @@
 			line-height: 1.45;
 		}
 
+    .description {
+			min-height: 6.43rem;
+		}
 		.description:last-child:after {
             content: ' ...';
-        }
+    }
 	}
 
 	.date, .post-content {
