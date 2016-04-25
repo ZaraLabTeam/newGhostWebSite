@@ -176,7 +176,24 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Large Devices, Wide Screens */
     @media only screen and (max-width : 1200px) {
+      .inner{
+
+        .contact-row {
+
+          width: 100%;
+
+          #maps {
+            width: 66%
+          }
+
+          .social-row {
+            width: 15.2rem;
+          }
+        }
+      }
+
       .homepage-container {
+
         .homepage-row {
 
           .row-content{
@@ -224,6 +241,53 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
+      .inner{
+
+        .contact-row {
+          width: 100%;
+
+          #maps {
+            width: 100%;
+
+            #map {
+              width: 100%;
+
+              iframe {
+                border-radius: 15px 15px 0 0;
+                box-sizing: border-box;
+              };
+            }
+
+            #pano {
+              width: 100%;
+
+              iframe {
+                border-radius: 0 0 15px 15px;
+                box-sizing: border-box;
+              };
+            }
+          }
+
+          #contact-details {
+            position: relative;
+            top: 1.8rem;
+          }
+
+          .social-row {
+            margin-top: 2rem;
+          }
+
+          .envelope-wrapper {
+            display: none;
+          }
+
+          #form {
+            display: block;
+          }
+        }
+      }
+
+
       .homepage-container {
 
         .homepage-row {
@@ -371,6 +435,32 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Extra Small Devices, Phones */
     @media only screen and (max-width : 480px) {
+      .inner {
+
+        .contact-row {
+
+          #contact-details {
+
+            .detail-componet{
+
+              .icon-holder {
+                .fa-3x {
+                    font-size: 2em;
+                }
+              }
+
+              .icon-text-holder {
+                p {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
       .homepage-container {
 
         .homepage-row {
@@ -435,6 +525,21 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Custom, iPhone Retina */
     @media only screen and (max-width : 320px) {
+      .inner{
+        .contact-row {
+          #contact-details {
+
+            .detail-componet{
+              .icon-holder {
+                left: 0px;
+
+                width: 5px;
+              }
+            }
+          }
+        }
+      }
+
       .homepage-container {
 
         .homepage-row {
