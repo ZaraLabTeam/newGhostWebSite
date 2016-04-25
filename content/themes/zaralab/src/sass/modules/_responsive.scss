@@ -179,7 +179,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
       .inner{
 
         .contact-row {
-
           width: 100%;
 
           #maps {
@@ -303,7 +302,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
               .who-we-are-video {
                 display: block;
-
                 float: none;
 
                 width: 70%;
@@ -390,6 +388,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
               .who-we-are-video {
                 width: 100%;
                 height: 302px;
+
                 margin: 0;
               }
             }
@@ -400,6 +399,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
               width: 100%;
               height: 302px;
+
               margin: 0;
 
               p {
@@ -500,7 +500,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
             .sponsor-item {
               display: block;
+              
               width: 50%;
+
               margin-left: 23.88%;
 
               &:nth-of-type(1) {

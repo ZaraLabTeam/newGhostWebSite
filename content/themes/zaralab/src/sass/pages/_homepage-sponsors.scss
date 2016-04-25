@@ -17,27 +17,33 @@
   }
 
   img {
-    width:100%;
     position:absolute;
     top:80px;
     left:0px;
+
+    width:100%;
   }
 
   a {
-    background-color: #59A426;
-    color: #fff;
     display: inline-block;
+
     padding: 8px 25px;
+
     border-radius: 4px;
+
+    color: #fff;
     text-decoration: none !important;
 
+    background-color: #59A426;
     &:before {
-      content: '';
       display: block;
+
+      content: '';
     }
 
     &:hover {
       color: #fff;
+
       background-color: darken($green, 4%);
     }
   }
@@ -45,6 +51,7 @@
   .link {
     position: absolute;
     bottom: 0;
+
     width: 100%;
   }
 
@@ -52,7 +59,9 @@
 
 .sponsors-content {
   width: 50%;
+  
   margin-left: 25%;
+
   color:white;
   text-align: justify;
 }

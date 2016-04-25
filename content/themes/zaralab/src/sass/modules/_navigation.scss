@@ -90,20 +90,15 @@
   color: #fff;
 }
 
-$fb-cl:#3B579D;
-$twt-cl:#00ACED;
-$gp-cl:#DD4A3A;
-$youtube-cl:#DB2829;
-$github-cl:#353C45;
-$slack-cl:#4D394B;
-
 .social-nav{
   //font-size: 16px;
   //margin: 0;
   display: inline-block;
+  
   li{
     display: inline-block;
   }
+
   a {
     padding: 0 3px;
     display: inline-block;
