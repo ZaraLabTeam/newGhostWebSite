@@ -377,6 +377,23 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
+      .social-sharing {
+        margin-top: 0px;
+      }
+
+      .inner {
+        p {
+          .event {
+            display: inline-block;
+            position: relative;
+            bottom: 0;
+            right: 0;
+
+            margin-top: 5%;
+          }
+        }
+      }
+
       .homepage-container {
 
         .homepage-row {
