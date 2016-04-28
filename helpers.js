@@ -26,8 +26,8 @@ module.exports = function() {
         postDateWithoutNewLastChar,
         postNewDate;
 
-    postDateLastChar = postDate.slice(-1);
-    postDateWithoutLastChar = postDate.slice(0, postDate.length - 1);
+    postDateLastChar = postDate.slice(-2);
+    postDateWithoutLastChar = postDate.slice(0, postDate.length - 2);
     postDateWithoutNewLastChar = parseInt(postDateLastChar) + 1;
 
     postNewDate = postDateWithoutLastChar + postDateWithoutNewLastChar;
