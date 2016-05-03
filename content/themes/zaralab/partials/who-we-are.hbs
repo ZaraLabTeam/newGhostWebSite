@@ -1,9 +1,9 @@
+<!-- Start Who we are ====================================================== -->
 <div class="row-header">
 	<h2>Какво е ЗараЛаб?</h2>
 </div>
 
 <div class="row-content">
-<!-- Start Who we are ====================================================== -->
 
 {{#get "posts" limit="1" include="tags" filter="tags:who-we-are+page:true" order="count.posts desc" as |whoWeAre| }}
  {{#foreach whoWeAre}}
@@ -14,5 +14,5 @@
 
  {{/foreach}}
 {{/get}}
-<!-- End Who we are ======================================================== -->
 </div>
+<!-- End Who we are ======================================================== -->

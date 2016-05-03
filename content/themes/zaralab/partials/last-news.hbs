@@ -1,5 +1,5 @@
-{{#get "posts" limit="3" include="tags" filter="tags:news+page:false" as |news| }}
 <!-- Start News  =========================================================== -->
+{{#get "posts" limit="3" include="tags" filter="tags:news+page:false" as |news| }}
   {{#if news}}
     <div class="row-header">
       <h2>Новини</h2>
@@ -36,5 +36,5 @@
       <a class="homepage-link normal" href="/tag/news/">Виж всички новини</a>
     </div>
   {{/if}}
-<!-- End News ============================================================== -->
 {{/get}}
+<!-- End News ============================================================== -->
