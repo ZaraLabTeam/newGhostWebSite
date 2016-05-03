@@ -1,9 +1,8 @@
 (function($) {
   "use strict";
-  var channelName = 'xzq70r4',
-      videoResults = 3,
+  var videoResults = 3,
       gooleAppKey = 'AIzaSyBGRXhWbIOEGtnLAnAGUM8lXxWegunJ0Cw',
-      pid = 'UUHDYUiamPhPN9lo_87ksx3w';
+      pid = 'UUDllkYLP6M2_zP3lzDeB5dg';
 
   $(document).ready(function () {
     //who-we-are section
@@ -55,7 +54,9 @@
                           .appendTo($(lastVideosSectionId));
         });
 
-        var seeAllVideosLink = $('<a class="homepage-link normal" href="#">Виж всички клипове</a>');
+        var seeAllVideosLink = $('<a class="homepage-link normal"'+
+                                 'href="https://www.youtube.com/channel/UCDllkYLP6M2_zP3lzDeB5dg">'+
+                                 'Виж всички клипове</a>');
 
         $(seeAllVideosLink).appendTo($(lastVideosSectionId));
       }else {
