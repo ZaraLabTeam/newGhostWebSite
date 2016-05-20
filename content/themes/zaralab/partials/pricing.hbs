@@ -1,0 +1,9 @@
+<!-- Start Pricing ========================================================= -->
+{{#get "posts" limit="1" include="tags" filter="tags:pricing+page:true" order="count.posts desc" as |pricing| }}
+  {{#foreach pricing}}
+
+    {{content}}
+
+  {{/foreach}}
+{{/get}}
+<!-- End Pricing =========================================================== -->

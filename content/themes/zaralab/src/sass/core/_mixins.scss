@@ -84,3 +84,7 @@
   -webkit-animation: $animation;
   animation: $animation;
 }
+
+@mixin boxShadow() {
+  box-shadow: 1px 2px 4px $blackShadow;
+}

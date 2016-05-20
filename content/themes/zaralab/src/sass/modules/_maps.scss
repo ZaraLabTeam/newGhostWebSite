@@ -1,0 +1,36 @@
+#maps {
+  position: relative;
+  float: left;
+
+  overflow: hidden;
+
+  width: 70%;
+
+  @extend %cf ;
+
+  box-sizing: border-box;
+  border: 10px solid #fff;
+  border-radius: 25px;
+  #map {
+     float: left;
+
+     width: 50%;
+     height: 450px;
+     iframe {
+       border-radius: 15px 0 0 15px;
+       box-sizing: border-box;
+     };
+   }
+
+  #pano {
+     float: left;
+
+     height: 450px;
+     width: 50%;
+
+     iframe {
+       border-radius: 0 15px 15px 0;
+       box-sizing: border-box;
+     }
+   }
+}

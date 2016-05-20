@@ -1,0 +1,44 @@
+.carousel {
+  position: relative;
+  margin: 0;
+
+  .zara-logo {
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+
+    background-color: $blackShadow;
+
+    text-shadow: 1px 2px 4px $blackShadow;
+
+  }
+
+  #slider {
+    width: 100%;
+
+    overflow: hidden;
+
+    figure {
+      position: relative;
+
+      width: 500%;
+      height: 100%;
+
+      margin: 0;
+
+      animation: 30s homeCarousel infinite;
+
+      img {
+        float: left;
+
+        width: 20%;
+        height: 100%;  
+      }
+    }
+  }
+}
+

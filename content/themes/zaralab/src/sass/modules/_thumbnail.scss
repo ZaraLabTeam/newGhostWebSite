@@ -1,0 +1,141 @@
+.post-module {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+
+    width: 31%;
+    height: 475px;
+
+    margin-left: 3.1%;
+
+    box-sizing: border-box;
+    border: 1px solid white;
+
+    background-color: white;
+
+    box-shadow: 0 0 30px $blackShadow;
+    transition: all 0.3s linear 0s;
+
+    &:hover {
+        .thumbnail img,
+        .hover .thumbnail img {
+            opacity: 0.6;
+            transform: scale(1.1);
+        }
+    }
+
+    &:nth-of-type(1) {
+        margin-left: 0;
+    }
+
+    .thumbnail {
+        height: 400px;
+
+        background-color: black;
+
+        overflow: hidden;
+
+        img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            transition: all 0.3s linear 0s;
+        }
+
+        .date {
+            z-index: 1;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            width: 55px;
+            height: 55px;
+
+            padding: 12.5px 0;
+
+            border-radius: 100%;
+
+            font-weight: 700;
+            color: #FFFFFF;
+            text-align: center;
+
+            background: #59A426;
+
+            box-sizing: border-box;
+
+            .day {
+                font-size: 18px;
+            }
+
+            .month {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .post-content {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        min-height: 30%;
+
+        padding: 30px;
+
+        background-color: white;
+
+        box-sizing: border-box;
+        transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+
+        .title {
+            margin: 0;
+            padding: 0 0 10px;
+
+            font-size: 26px;
+            font-weight: 700;
+            color: #333333;
+        }
+
+        .category {
+            position: absolute;
+            top: -34px;
+            left: 0;
+
+            background-color: $green;
+
+            padding: 10px 15px;
+
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .description {
+            display: none;
+
+            font-size: 14px;
+            line-height: 1.8em;
+            color: #666666;
+
+            &:last-child:after {
+                content: ' ...'
+            }
+        }
+    }
+}
+
+// .post-module:hover,
+.hover {
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+
+    .post-content .description {
+        display: block !important;
+        opacity: 1 !important;
+
+        height: auto !important;
+    }
+}

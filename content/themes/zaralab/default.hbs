@@ -33,17 +33,6 @@
   <div id="bg"></div>
 
   <div id="wrap">
-
-  {{! The big featured header on the homepage, with the site logo and description }}
-    <header class="header animated fadeInDownBig">
-      <a class="main-logo" href="{{@blog.url}}" alt="{{@blog.title}} Logo">
-        <svg width="173" height="60">
-          <use xlink:href="/assets/img/assets.svg#logo"></use>
-        </svg>
-      </a>
-      <div class="blog-tagline">{{@blog.description}}</div>
-    </header>
-
     {{! Everything else gets inserted here }}
     {{{body}}}
   </div>

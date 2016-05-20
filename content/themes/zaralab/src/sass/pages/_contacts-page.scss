@@ -1,82 +1,60 @@
-.zara-page .contacts {
+.social-row {
+  margin: 0 auto 5% auto;
 
-	.contacts-wrapper {
-		margin: 0 auto;
-	}
+	width: 21%;
 
-	#map, .side {
-		display: inline-block;
-		vertical-align: top;
-		margin: 2rem;
-	}
+	background-color: white;
 
-	#map {
-		width:40%;
-		height:400px;
-		overflow-y:auto;
-		
-		box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
-	}
-
-	.side {
-		width: 40%;
-		min-width: 400px;
-
-		.contact-details {
-			background-color: white;
-			padding: 1rem;
-			margin-top: 2rem;
-			max-width: 400px;
-			
-			box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
-
-			a {
-				display: block;
-			}
-
-			img {
-				margin-right: 1rem;
-
-			}
-		}
-
-		.fb-page {
-			width: 100% !important;
-			margin-bottom: 2rem;
-			
-			box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.62), -3px -3px 30px rgba(0, 0, 0, 0.62);
-		}
-	}
-
-	.inline {
-		width:20px;
-	}
+	box-sizing: border-box;
+	border-radius: 25px;
 }
 
-@media only screen and (min-width: 980px) {
-	.zara-page {
-		.contacts-wrapper {
-			width: 960px;
-		}
-	}
-	
-}
+.contact-row {
+	width: 1160px;
 
-@media only screen and (max-width: 480px) {
-	.zara-page {
-		.contacts-wrapper {
-			width: 460px;
-		}
+	margin: 0 auto;
 
-		.contacts {
-			#map {
-				margin: 1rem;
-				width: 320px;
+	#contact-details {
+
+		.detail-componet{
+
+			color: white;
+			.icon-holder {
+				display: inline-block;
+				position: relative;
+				top: 0px;
+				left: 28px;
+
+				margin-right: 0.5rem;
+
+				width: 48px;
+
+        text-align: center;
+				line-height: inherit;
 			}
-		}
 
-		.inline {
-			width:20px;
+			.icon-text-holder {
+				display: inline-block;
+
+				padding: 0 0 18px;
+				margin-left: 29px;
+
+				text-align: left;
+				.work-time {
+					font-size: 1rem;
+					text-align: center;
+				}
+
+				p {
+					margin: 0;
+					padding: 0;
+
+					font-size: 14.4px;
+					line-height: 23px;
+
+					animation: none;
+				}
+			}
 		}
 	}
 }
