@@ -4,21 +4,23 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 
-<section class="zara-page content animated fadeInDownBig" role="main">
+<section class="content animated fadeInDownBig" role="main">
 
-    <article class="page main-article">
+    <article class="{{post_class}} main-article">
 
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+    {{! Everything inside the #post tags pulls data from the post }}
+    {{#post}}
+
 
         <div class="inner">
+        	{{! Everything below outputs content of the the post which has been published }}
 
+    	    <h1 class="post-title">{{{title}}}</h1>
             {{content}}
-
         </div>
 
-	 </article>
+		</article>
 
-        {{/post}}
+    {{/post}}
 
- </section>
+</section>
