@@ -3,34 +3,36 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{> logo}}
 {{#if posts}}
 
-{{! The main content area on the homepage }}
-  <section class="content-home animated fadeIn" role="main">
-    <div class="wrapper">
-      {{! Each post will be output using this markup }}
-      {{#foreach posts}}
+<div class="home-template">
+  {{! The main content area on the homepage }}
+    <section class="content-home animated fadeIn" role="main">
+      <div class="wrapper">
+        {{! Each post will be output using this markup }}
+        {{#foreach posts}}
 
-      <article class="animated {{post_class}}{{#if @even}} fadeInLeftBig even {{else}} fadeInRightBig odd{{/if}}">
-        <div class="inner">
-          <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-          <span class="time">
-            <time datetime="{{date format='DD MM YYYY'}}">
-              <span class="month">{{date format="MMM"}}</span>
-              <span class="day">{{date format="DD"}}</span>
-            </time>
-          </span>
-          <a href="{{url}}"><img src={{image absolute="true"}} alt="{{{title}}}"/></a>
-        </div>
-      </article>
+        <article class="animated {{post_class}}{{#if @even}} fadeInLeftBig even {{else}} fadeInRightBig odd{{/if}}">
+          <div class="inner">
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+            <span class="time">
+              <time datetime="{{date format='DD MM YYYY'}}">
+                <span class="month">{{date format="MMM"}}</span>
+                <span class="day">{{date format="DD"}}</span>
+              </time>
+            </span>
+            <a href="{{url}}"><img src={{image absolute="true"}} alt="{{{title}}}"/></a>
+          </div>
+        </article>
 
-      {{/foreach}}
-      {{!! After all the posts, we have the previous/next pagination links }}
+        {{/foreach}}
+        {{!! After all the posts, we have the previous/next pagination links }}
 
-     </div>
+       </div>
 
-  </section>
+    </section>
 
-{{pagination}}
+  {{pagination}}
+</div>
+
 {{/if}}

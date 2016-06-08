@@ -266,28 +266,6 @@
    }
  }
 
-
-/* ==========================================================================
-                            Who We Are Video
-   ========================================================================== */
-
- .who-we-are-video {
-   z-index: 2;
-   float: right;
-   position: relative;
-   top: 10px;
-
-   width: 39%;
-   height: 16rem;
-
-   box-sizing: border-box;
-   border: 1px solid white;
-
-   background-color: #7B7B7B;
-   background-size: cover;
-   background-repeat: no-repeat;
- }
-
 /* ==========================================================================
                                 Stream Player
    ========================================================================== */
@@ -321,7 +299,7 @@
      height: 450px;
 
      background-repeat: no-repeat;
-     background-color: #D95BA2;
+     background-color: rgba(62, 139, 118,0.80);
      background-size:cover;
 
      &::after {
