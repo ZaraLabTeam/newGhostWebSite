@@ -66,9 +66,9 @@ a.more:hover {
   padding: 30px 20px;
 }
 
-.homepage-container {
+.youtube-container {
 
-  .homepage-row {
+  .youtube-row {
     width: 100%;
 
     box-sizing: border-box;
@@ -82,25 +82,17 @@ a.more:hover {
       margin: 0 auto;
       padding:3rem 1rem;
     }
-
-    .row-content-last-events {
-      width: 1160px;
-
-      margin: 0 auto;
-      padding:3rem 0;
-    }
   }
 }
 
 .homepage-link {
   display: block;
 
-  width: 17%;
+  width: 8%;
 
   padding: 2px 10px;
 
   border-radius: 4px;
-  border: 1px solid white;
 
   color: #fff;
   text-align: center;

@@ -191,46 +191,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
-      .homepage-container {
+      .youtube-page {
+        .youtube-container {
 
-        .homepage-row {
+          .youtube-row {
 
-          .row-content{
-            width: 100%;
-
-            .who-we-are-content {
-
-              .who-we-are-video {
-                background-repeat: no-repeat;
-                background-size: cover;
-              }
+            .row-content{
+              width: 100%;
             }
-          }
 
-
-          .row-content-last-events {
-            width: 100%;
-
-            .post-preview {
-              margin-left: 0.359rem;
-            }
-          }
-
-
-          .post-module {
-            margin-left: 3%;
-
-            &:nth-of-type(1) {
-                margin-left: 0;
-            }
-          }
-
-
-          .sponsor-item {
-            margin-left: 5.8%;
-
-            &:nth-of-type(1) {
-                margin-left: 0;
+            .homepage-link {
+              width: 10%;
             }
           }
         }
@@ -286,93 +257,48 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
+      .youtube-page {
+        .youtube-container {
 
-      .homepage-container {
+          .youtube-row {
 
-        .homepage-row {
+            .row-content {
+              width: 100%;
 
-          .row-content {
-            width: 100%;
+            }
 
-            .who-we-are-content {
+            .youtube-stream-player-module {
+              left: 0px;
+
+              width: 70%;
+              height: 302px;
+
+              margin: 1rem 15% 0px 15%;
 
               p {
-                margin: 1em 0 1rem 0;
-              }
-
-              .who-we-are-video {
-                display: block;
-                float: none;
-
-                width: 70%;
-                height: 302px;
-
-                margin: 1rem 15% 0px 15%;
+               .stream-player {
+                 height: 300px;
+               }
               }
             }
 
-          }
+            .youtube-module {
+              display: block;
 
+              width: 50%;
+              height: 302px;
 
-          .row-content-last-events {
-            width: 100%;
-
-            .post-preview {
-              width: 100% !important;
+              margin: 1rem 25% 0px 25%;
             }
-          }
 
-
-          .youtube-stream-player-module {
-            left: 0px;
-
-            width: 70%;
-            height: 302px;
-
-            margin: 1rem 15% 0px 15%;
-
-            p {
-             .stream-player {
-               height: 300px;
-             }
+            .homepage-link {
+              width: 13%;
             }
-          }
 
-
-          .youtube-module {
-            display: block;
-
-            width: 50%;
-            height: 302px;
-
-            margin: 1rem 25% 0px 25%;
-          }
-
-
-          .post-module {
-            display: block;
-
-            width: 100%;
-
-            margin: 1rem 0 0 0;
-          }
-
-
-          .sponsor-item {
-            margin-left: 4.88%;
-
-            &:nth-of-type(1) {
-                margin-left: 0;
-            }
-          }
-
-
-          .sponsors-content {
-            width: 100%;
-            margin-left: 0;
           }
         }
       }
+
     }
 
     /* Small Devices, Tablets */
@@ -394,60 +320,42 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
-      .homepage-container {
+      .youtube-page {
+        .youtube-container {
 
-        .homepage-row {
+          .youtube-row {
 
-          .row-content {
+            .row-content {
 
-            .who-we-are-content {
+              .youtube-stream-player-module {
+                left: 0px;
 
-              .who-we-are-video {
                 width: 100%;
                 height: 302px;
 
                 margin: 0;
-              }
-            }
 
-
-            .youtube-stream-player-module {
-              left: 0px;
-
-              width: 100%;
-              height: 302px;
-
-              margin: 0;
-
-              p {
-               .stream-player {
-                 height: 300px;
-               }
-              }
-            }
-
-
-            .youtube-module {
-              width: 60%;
-
-              margin: 1rem 20% 0px 20%;
-            }
-
-
-            .sponsor-item {
-              margin-left: 4.88%;
-
-              &:nth-of-type(1) {
-                  margin-left: 0;
+                p {
+                 .stream-player {
+                   height: 300px;
+                 }
+                }
               }
 
-              a {
-                padding: 8px 3px;
+              .youtube-module {
+                width: 60%;
+
+                margin: 1rem 20% 0px 20%;
+              }
+
+              .homepage-link {
+                width: 100%;
               }
             }
           }
         }
       }
+
     }
 
     /* Extra Small Devices, Phones */
@@ -477,69 +385,39 @@ only screen and (min-device-pixel-ratio: 1.5) {
       }
 
 
+      .youtube-page{
+        .youtube-container {
 
-      .homepage-container {
+          .youtube-row {
 
-        .homepage-row {
+            .row-content {
 
-          .row-content {
+              .youtube-stream-player-module {
+                left: 0px;
 
-            .who-we-are-content {
-
-              .who-we-are-video {
                 width: 100%;
                 height: 210px;
-                margin: 0;
+
+                p {
+                 .stream-player {
+                   height: 208px;
+                 }
+                }
               }
-            }
 
 
-            .youtube-stream-player-module {
-              left: 0px;
+              .youtube-module {
+                width: 100%;
 
-              width: 100%;
-              height: 210px;
-
-              p {
-               .stream-player {
-                 height: 208px;
-               }
+                margin: 1rem 0px 0px 0px;
               }
-            }
 
 
-            .youtube-module {
-              width: 100%;
-
-              margin: 1rem 0px 0px 0px;
-            }
-
-
-            .sponsor-item {
-              display: block;
-
-              width: 50%;
-
-              margin-left: 23.88%;
-
-              &:nth-of-type(1) {
-                  margin-left: 23.88%;
-              }
-            }
-
-            .homepage-link {
-              width: 100%;
-            }
-          }
-
-
-          .row-content-last-events {
-            .homepage-link {
-              width: 97%;
             }
           }
         }
       }
+
     }
 
     /* Custom, iPhone Retina */
@@ -561,44 +439,34 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
-      .homepage-container {
+      .youtube-page {
+        .youtube-container {
 
-        .homepage-row {
+          .youtube-row {
 
-          .row-content {
+            .row-content {
 
-            .who-we-are-content {
-
-              .who-we-are-video {
+              .youtube-stream-player-module {
+                left: 0px;
 
                 width: 100%;
                 height: 10rem;
 
-                margin: 0;
+                p {
+                 .stream-player {
+                   height: 9.88rem;
+                 }
+                }
               }
-            }
 
+              .youtube-module {
+                width: 100%;
 
-            .youtube-stream-player-module {
-              left: 0px;
-
-              width: 100%;
-              height: 10rem;
-
-              p {
-               .stream-player {
-                 height: 9.88rem;
-               }
+                margin: 1rem 0px 0px 0px;
               }
-            }
-
-
-            .youtube-module {
-              width: 100%;
-
-              margin: 1rem 0px 0px 0px;
             }
           }
         }
       }
+
     }

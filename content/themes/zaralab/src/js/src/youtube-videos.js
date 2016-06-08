@@ -56,7 +56,7 @@
 
         var seeAllVideosLink = $('<a class="homepage-link normal"'+
                                  'href="https://www.youtube.com/channel/UCDllkYLP6M2_zP3lzDeB5dg">'+
-                                 'Виж всички клипове</a>');
+                                 'Виж още</a>');
 
         $(seeAllVideosLink).appendTo($(lastVideosSectionId));
       }else {

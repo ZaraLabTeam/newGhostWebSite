@@ -21,17 +21,12 @@
 @import "modules/maps";
 @import "modules/form";
 @import "modules/mail-leaf";
-
-
-
-
-
+@import "modules/last-youtube-videos";
 
 @import "pages/default-page";
 @import "pages/error-page";
 @import "pages/contacts-page";
 @import "pages/home-page";
-@import "pages/last-youtube-videos";
 
 /* import font-awesome */
 $fa-font-path:"../../node_modules/font-awesome/fonts";
