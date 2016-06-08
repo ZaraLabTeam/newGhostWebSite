@@ -204,7 +204,7 @@ domready(function () {
 	});
 
 	var apiKey = 'odamae.io_c65182077331d9b05106acd6017dd27d_4a4a';
-	console.log(apiKey);
+	//console.log(apiKey);
 	vCaptcha = $( '.visual-captcha' ).visualCaptcha({
 		imgPath: 'images/',
 		captcha: {

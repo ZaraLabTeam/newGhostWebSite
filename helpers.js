@@ -18,19 +18,24 @@ module.exports = function() {
     return excerpt + '.';
   });
 
+  //When date is 26/06/2015 19:00
+  //date format="DD/MM/YYYY HH:mm"
   hbs.registerHelper("formatDate", function(options){
 
     var postDate = options.fn(this),
-        postDateLastChar,
-        postDateWithoutLastChar,
-        postDateWithoutNewLastChar,
+        postDateYear,
+        postDateWithoutNewYearChars,
+        postDateWithouYearsChars,
+        postDateTime,
         postNewDate;
 
-    postDateLastChar = postDate.slice(-2);
-    postDateWithoutLastChar = postDate.slice(0, postDate.length - 2);
-    postDateWithoutNewLastChar = parseInt(postDateLastChar) + 1;
+    postDateYear = postDate.slice(8,10);
+    postDateWithoutNewYearChars = parseInt(postDateYear) + 1;
 
-    postNewDate = postDateWithoutLastChar + postDateWithoutNewLastChar;
+    postDateWithouYearsChars = postDate.slice(0, 8);
+    postDateTime = postDate.slice(-6);
+
+    postNewDate = postDateWithouYearsChars + postDateWithoutNewYearChars + postDateTime;
 
     return new hbs.SafeString(postNewDate);
   });

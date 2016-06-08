@@ -28,7 +28,7 @@
   }
 
   function addLinksWithYouTubeData(data) {
-      console.log(data.items);
+      //console.log(data.items);
       var lastVideosSectionId = '#last-youtube-videos';
       if (data.items !== null) {
         $.each(data.items , function(i , item) {
@@ -99,7 +99,6 @@
 
       // Close and Reset the Video Modal
       $('#close-video').on('click', function(event) {
-        console.log('click');
           event.preventDefault();
 
           $("body").removeClass("show-video-modal");
