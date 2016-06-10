@@ -231,12 +231,10 @@
    margin-left: 3.5%;
 
    box-sizing: border-box;
-   border: 1px solid white;
 
    box-sizing: border-box;
    box-shadow: 0 0 30px $blackShadow;
 
-   background-color: white;
 
    &:nth-of-type(1) {
        margin-left: 0;
@@ -277,14 +275,11 @@
  top: 0px;
 
  width: 80%;
- height: 452px;
-
- border: 1px solid white;
+ height: 450px;
 
  box-sizing: border-box;
  box-shadow: 0 0 30px $blackShadow;
 
- background-color: white;
 
  &:nth-of-type(1) {
      margin-left: 0;
