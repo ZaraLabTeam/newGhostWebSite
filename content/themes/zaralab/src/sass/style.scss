@@ -29,5 +29,5 @@
 @import "pages/home-page";
 
 /* import font-awesome */
-$fa-font-path:"../../node_modules/font-awesome/fonts";
-@import "../../node_modules/font-awesome/scss/font-awesome";
+$fa-font-path:"../fonts";
+@import "plugins/font-awesome";
