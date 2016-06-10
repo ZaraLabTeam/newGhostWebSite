@@ -1,18 +1,108 @@
+.show-footer {
+  display:none;
+  z-index: 200;
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+
+  font-size: 32px;
+  color: white;
+  background-color: #222;
+  background: $blackShadow;
+
+  width: 40px;
+  height: 40px;
+
+  i {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    top: 4px;
+  }
+}
+
 .main-footer {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: -12px;
   left: 0;
-  height: 100px;
+  height: 70px;
   width: 100%;
-  background: #222;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: #222;
+  background: $blackShadow;
   padding: 0 30px;
-  font-size: 14px;
+  //font-size: 14px;
   color: #9c9c9c;
   z-index: 200;
-}
-.main-footer .inner {
-  margin: 40px 0;
+
+  .title {
+    // Todo: make more cool or remove
+    display: none;
+    z-index: -1;
+    position: absolute;
+    top: -33px;
+    left: 35%;
+    right: 35%;
+
+    height: 130px;
+    padding: 6px;
+
+    font-size: 16px;
+    color: #9c9c9c;
+    background-color: #222;
+    background: $blackShadow;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  .inner {
+    @extend %cf;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  //.subscribe-me, .copyright, .sponsors-section {
+  //  display: inline-block;
+  //  vertical-align: middle;
+  //
+  //}
+
+  .sponsors-section {
+    display: block;
+    position: absolute;
+    left: 17.5%;
+    width: 62.5%;
+    margin: 0;
+
+    .sponsor-link {
+      display: block;
+      float: left;
+      width: 20%;
+
+      svg {
+        width: 100%;
+        height: 60px;
+      }
+    }
+  }
+
+  .subscribe-me, .copyright {
+    display: block;
+    margin: 26px 0 0;
+  }
+
+  .subscribe-me {
+    float: right;
+  }
+
+  .copyright {
+    float: left;
+  }
 }
 
 .main-footer a {
@@ -22,10 +112,43 @@
 .main-footer a:hover {
   color: #ccc;
 }
-.main-footer p {
-  margin: 0 0 0.5em;
-}
-a.subscribe-me {
-  float: right;
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
 }
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .main-footer {
+    .subscribe-me, .copyright {
+      margin: 22px 0 0;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .main-footer {
+    position: absolute;
+    padding: 0 15px;
+    height: 60px;
+    font-size: 0.75em;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px) {
+  .main-footer {
+    padding: 0 5px;
+    height: 50px;
+    font-size: 0.5em;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .main-footer {
+    font-size: 0.35em;
+  }
+}

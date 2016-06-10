@@ -1,13 +1,23 @@
+// @font-face {
+// 	font-family: "Blueprint";
+// 	src: font-files("Blueprint.ttf", "Blueprint.otf");
+// }
+//
+// @font-face {
+// 	font-family: "Lazurski Cyrillic";
+// 	src: font-files("lazurski-cyrillic.ttf");
+// }
+
 // @include font-face("OpenSansRegular", font-files("OpenSans-Regular.ttf", "OpenSans-Regular.svg#OpenSansRegular", "OpenSans-Regular.woff", "OpenSans-Regular.eot"));
 // @mixin OpenSansRegular {
 //   font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // }
-
+//
 // @include font-face("FiraSans-Regular", font-files("FiraSans-Regular.ttf", "FiraSans-Regular.svg#FiraSans", "FiraSans-Regular.woff", "FiraSans-Regular.eot"));
 // @mixin FiraSans {
 //   font-family: "FiraSans", sans-serif;
 // }
-
+//
 // @include font-face("HelveticaNeue", font-files("HelveticaNeue.ttf", "HelveticaNeue.svg#HelveticaNeue", "HelveticaNeue.woff", "HelveticaNeue.eot"));
 // @mixin HelveticaNeue {
 //   font-family: "HelveticaNeue", sans-serif;

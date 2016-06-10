@@ -1,2 +1,23 @@
-<a class="subscribe-me" href="{{@blog.url}}/rss/">Subscribe via RSS</a>
-<p class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; 2015</p>
+<div class="inner">
+    <p class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; 2015</p>
+
+    <section class="sponsors-section">
+        <h1 class="title">Спонсори</h1>
+
+        {{#inlineArray
+        "siteground | https://www.siteground.com/"
+        "bulsatcom | http://www.bulsat.com/"
+        "cloudstrap | http://www.cloudstrap.io/"
+        "eDynamix | http://www.edynamix.com/"
+        "zinteh | http://www.zintehlighting.com/"}}
+
+            <a href="{{link}}" class="sponsor-link">
+                <svg width="150" height="60" viewBox="0 0 150 50">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/svg.svg#{{name}}"></use>
+                </svg>
+            </a>
+        {{/inlineArray}}
+    </section>
+
+    <a class="subscribe-me" href="{{@blog.url}}/rss/">Subscribe via RSS</a>
+</div>

@@ -10,7 +10,6 @@
 @import "modules/animations";
 @import "modules/blog";
 @import "modules/common";
-@import "modules/homepage";
 @import "modules/navigation";
 @import "modules/post";
 @import "modules/pagination";
@@ -18,3 +17,17 @@
 @import "modules/footer";
 @import "modules/share";
 @import "modules/responsive";
+@import "modules/youtube-videos";
+@import "modules/maps";
+@import "modules/form";
+@import "modules/mail-leaf";
+@import "modules/last-youtube-videos";
+
+@import "pages/default-page";
+@import "pages/error-page";
+@import "pages/contacts-page";
+@import "pages/home-page";
+
+/* import font-awesome */
+$fa-font-path:"../../node_modules/font-awesome/fonts";
+@import "../../node_modules/font-awesome/scss/font-awesome";

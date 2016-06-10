@@ -28,15 +28,15 @@
 </head>
 <body class="{{body_class}}">
 
-{{> static_menu}}
+{{navigation}}
 
   <div id="bg"></div>
 
   <div id="wrap">
 
-  {{! The big featured header on the homepage, with the site logo and description }}
+    {{! The big featured header on the homepage, with the site logo and description }}
     <header class="header animated fadeInDownBig">
-      <a class="main-logo" href="{{@blog.url}}" alt="{{@blog.title}} Logo">
+      <a class="main-logo" href="{{@blog.url}}" title="{{@blog.title}} Logo">
         <svg width="173" height="60">
           <use xlink:href="/assets/img/assets.svg#logo"></use>
         </svg>
@@ -49,10 +49,9 @@
   </div>
 
   <footer class="main-footer">
-    <div class="inner">
       {{> footer}}
-    </div>
   </footer>
+  <button class="show-footer"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
 
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}

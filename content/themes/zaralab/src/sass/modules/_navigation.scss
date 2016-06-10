@@ -5,6 +5,7 @@
   z-index: 200;
   margin-bottom: 100px;
 }
+
 #bg {
   display: inline-block;
   position: fixed;
@@ -12,10 +13,12 @@
   height: 100%;
   left: 0;
   top: 0;
+  //background: transparent url(/content/images/page/page-bg.png) no-repeat 50% 50% / cover;
   background: transparent url(../img/cover.png) no-repeat 50% 50% / cover;
-  animation: fadeIn 1s linear;
+  animation: fadeIn 1s luminosity;
   z-index: 100;
 }
+
 .panel {
   position: fixed;
   left: -15.625em;
@@ -87,3 +90,24 @@
   color: #fff;
 }
 
+.social-nav{
+  //font-size: 16px;
+  //margin: 0;
+  display: inline-block;
+  
+  li{
+    display: inline-block;
+  }
+
+  a {
+    padding: 0 3px;
+    display: inline-block;
+
+  }
+
+  .twitter{color: $twt-cl}
+  .facebook{color: $fb-cl}
+  .youtube{color: $youtube-cl}
+  .github{color: $github-cl}
+  .slack{color: $slack-cl}
+}
