@@ -1,0 +1,22 @@
+<!--Start Stream-player ==================================================== -->
+<div class="row-content">
+	<div class="row-header" style="margin-bottom: 55px">
+		<h2>Предаване на живо</h2>
+	</div>
+
+  {{#get "posts" limit="1" include="tags" filter="tags:stream-player+page:true" order="count.posts desc" as |stream-player| }}
+   {{#foreach stream-player}}
+       <div class="youtube-stream-player-module">
+         {{content}}
+			 </div>
+				 <!-- <div class="youtube-module">
+					 <a style="background-image: url(&quot;https://i.ytimg.com/vi/UJc2UntCU7g/sddefault.jpg&quot;);"
+					 	  href="https://www.youtube.com/watch?v=UJc2UntCU7g"
+					 	  data-youtube-id="UJc2UntCU7g" class="last-youtube-video-thumb js-trigger-modal play">
+					 </a>
+					 <h3 class="title">Поточно предаване на живо от vasil dimov</h3></div>
+       </div> -->
+   {{/foreach}}
+  {{/get}}
+</div>
+<!-- End Stream-player ===================================================== -->

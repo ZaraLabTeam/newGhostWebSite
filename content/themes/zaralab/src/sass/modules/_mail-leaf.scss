@@ -1,0 +1,155 @@
+@import "compass/css3";
+
+// General
+*, *:before, *:after {  box-sizing: border-box; }
+
+// Envelope
+.envelope-wrapper {
+  display:inline-block;
+	position:relative;
+	top:-134px;
+	left: 28px;
+
+	&:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 144px;
+
+    width: 317px;
+    height: 100px;
+
+    background: #256a98;
+	}
+
+  .envelope {
+    display:inline-block;
+    z-index: 0;
+    position:relative;
+
+    margin: 2em auto 0;
+
+    &:after,
+    &:before {
+    	content:'';
+    	display: block;
+      z-index:4;
+    	position: absolute;
+    	top: 7em;
+
+    	border-style: solid;
+    }
+
+    &:after{
+      width: 0;
+      height: 0;
+
+      right: 0;
+
+      border-width: 6.2em 10em 6.2em 0;
+      border-color: transparent #2a7fb5 transparent transparent;
+    }
+
+    &:before{
+      width: 210px;
+      height: 180px;
+
+      border-width: 12.4em 0 0 20.1em;
+      border-color: transparent transparent transparent #3596da;
+    }
+  }
+
+  // Button
+  .email-button {
+    display:inline-block;
+    position:absolute;
+    bottom:0em;
+    left:-.5em;
+
+    padding:.75em .5em;
+
+    border: 1px solid #b24c45;
+    @include border-radius(0px 4px 4px 0);
+    @include box-shadow(1px 2px #b24c45);
+    @include transition(background-color 200ms);
+
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    font-size:1.5em;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    line-height:1em;
+
+    background-color: #E74C3C;
+
+    cursor:pointer;
+
+    &:before {
+      content:"";
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: 0;
+
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 0 1px 14px 11px ;
+      border-color: transparent transparent darken(#b24c45, 5%) transparent;
+    }
+
+    &:hover {
+      background-color: #B74C3B;
+    }
+  }
+}
+
+.envelope-top {
+  position: relative;
+  z-index:3;
+
+  margin-top:7em;
+
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: 7em 10em 0 10em;
+  border-color: #256a98 transparent transparent  transparent;
+
+  -webkit-transform-origin: top;
+  -webkit-transform: translate(0px,0px) scale(1) rotateX(0deg);
+  @include transition( 0.5s ease-in .4s forwards, z-index 1s ease-out .5s);
+  .active & {
+    z-index:0;
+
+    @include transition( 0.5s ease-in 0s forwards, z-index 1s ease-in-out .5s);
+    -webkit-transform-origin: top;
+    -webkit-transform: translate(0px,0px) scale(1) rotateX(-180deg);
+  }
+}
+
+
+// .active .card {
+// 	top:-20px;
+//   	@include transition(top 0.5s ease-in-out .5s);
+// }
+// .card {
+// 	width:280px;
+// 	height: 180px;
+// 	position: absolute;
+// 	top:120px;
+//   left: 20px;
+// 	z-index: 2;
+// 	background: white;
+//   padding:1.5em 1.5em 0 1.5em;
+// 	border-radius: 5px;
+//   @include transition(top 0.5s ease-in-out);
+// 	text-align: center;
+// 	letter-spacing: 0.06em;
+// 	text-transform: uppercase;
+// 	color: #919499;
+// }

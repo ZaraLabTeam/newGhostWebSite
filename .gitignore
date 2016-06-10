@@ -2,3 +2,9 @@
 content/data
 content/images
 content/**/node_modules
+
+#Node
+node_modules
+
+#Web Storm
+.idea

@@ -1,0 +1,39 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+    
+<!-- http://academy.ghost.org/adding-a-contact-form-to-your-ghost-blog/ -->
+<section class="zara-page content animated fadeInDownBig" role="main">
+
+    <article class="page main-article">
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+
+        <div class="inner">
+
+            {{content}}
+
+            <div class="contact-row">
+              {{> maps}}
+              {{> contact-details}}
+              {{> mail-leaf}}
+            </div>
+
+            <div class="social-row">
+              {{> social-links}}
+            </div>
+
+            <div class="contact-row">
+              {{> form}}
+            </div>
+
+            </div>
+        </div>
+
+	  </article>
+
+        {{/post}}
+
+ </section>

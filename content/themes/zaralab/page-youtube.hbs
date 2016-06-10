@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+  {{#post}}
+  <div class="youtube-page">
+
+    <div class="youtube-container">
+
+      {{! The big featured stream from youtube}}
+      <section class="youtube-row player">
+        {{> "stream-player"}}
+      </section>
+
+      {{! The big featured youtube}}
+      <section class="youtube-row last-youtube-videos">
+        {{> "last-youtube-videos"}}
+      </section>
+
+    </div>
+
+    <section class="video-modal">
+      {{> video-modal}}
+    </section>
+  </div>
+
+  {{/post}}
