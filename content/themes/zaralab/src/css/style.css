@@ -675,7 +675,7 @@ hr {
 }
 
 blockquote:before {
-  content: 'ΓÇ£';
+  content: '“';
   font-size: 60px;
   margin: 0;
   padding: 0;
@@ -688,7 +688,7 @@ blockquote:before {
 }
 
 blockquote:after {
-  content: 'ΓÇ¥';
+  content: '”';
   font-size: 60px;
   margin: 0;
   padding: 0;
@@ -1711,7 +1711,7 @@ a:hover .share-count:after {
   max-height: calc(100% - 100px);
   margin: 0 auto;
   /*background: #fff;*/
-  /* container will have a transparent BGΓÇömoving the BG color and shadow to the iframe element to make it look more seamless */
+  /* container will have a transparent BG—moving the BG color and shadow to the iframe element to make it look more seamless */
   /* Transition looks a bit janky with the iframe */
   /*-webkit-transform: translate(0%,-20%);
     transform: translate(0%,-20%);

@@ -9,7 +9,20 @@
 
       {{! The big featured stream from youtube}}
       <section class="youtube-row player">
-        {{> "stream-player"}}
+        <!--Start Stream-player ==================================================== -->
+        <div class="row-content">
+        	<div class="row-header" style="margin-bottom: 55px">
+        		<h2>Предаване на живо</h2>
+        	</div>
+               <div class="youtube-stream-player-module">
+                 <p>
+                   <a style="background-image: url(&quot;http://i.ytimg.com/vi/eyD_PwWsV8E/maxresdefault_live.jpg&quot;);" href="https://www.youtube.com/watch?v=eyD_PwWsV8E" data-youtube-id="eyD_PwWsV8E" class="stream-player js-trigger-modal stream-player-play"></a>
+                 </p>
+        			 </div>
+        </div>
+        <!-- End Stream-player ===================================================== -->
+
+        {{!> "stream-player"}}
       </section>
 
       {{! The big featured youtube}}
