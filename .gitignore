@@ -1,7 +1,6 @@
 .sass-cache
 content/data
-# content/images
-content/**/node_modules
+content/images
 
 #Node
 node_modules
