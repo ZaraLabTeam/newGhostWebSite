@@ -315,6 +315,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
+
+      .panel a,
+      .panel p {
+        display: inline;
+      }
+
       .social-sharing {
         margin-top: 0px;
       }

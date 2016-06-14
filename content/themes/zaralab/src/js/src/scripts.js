@@ -9,10 +9,6 @@
   $(document).ready(function() {
 
     window.scrollTo(0, 0);
-    
-    $('.carousel, #slider').css({
-      height: window.screen.availHeight - 200
-    });
 
     // Fit Vids
     $(".post").fitVids();
