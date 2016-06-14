@@ -1,2 +1,6 @@
 .sass-cache
 node_modules
+
+#auto-generated
+assets
+src/css/style.css
