@@ -1,5 +1,5 @@
 (function() {
-
+  //Refactor this Nico !!!
 
 	var canvas = document.getElementById("canvas");
 	if (!canvas) {
@@ -8,16 +8,19 @@
 
 	var ctx = canvas.getContext("2d");
 	var zara = new Object("/content/images/GameImg/zara.png", 50, 400, 80, 100);
+	//TODO move all img for game in src/img
 	var numgreen = 5;
 	var green = new Array();
 	for (var i = 0; i < numgreen; i++) {
 		green[i] = new Object("/content/images/GameImg/green.png", Math.floor((Math.random() * 800) + 1), Math.floor((Math.random() * 1000) + 10), 20, 20);
 	}
+
 	var numblack = 3;
 	var black = new Array();
 	for (var i = 0; i < numblack; i++) {
 		black[i] = new Object("/content/images/GameImg/black.png", Math.floor((Math.random() * 690) + 1), Math.floor((Math.random() * 1000) + 10), 20, 20);
 	}
+
 	var counter = 0;
 	var levelcounter = 1;
 	var isLeft = false;
@@ -30,31 +33,26 @@
 
 	//Press
 	function APressed() {
-		isA = true
-
-
+		isA = true;
 	}
 
 	function DPressed() {
-		isD = true
-
-
+		isD = true;
 	}
 
 	function leftArrowPressed() {
-		isLeft = true
-
-
+		isLeft = true;
 	}
 
 	function rightArrowPressed() {
-		isRight = true
-
+		isRight = true;
 	}
 
 	function spacePressed() {
-		isSpace = true
+		isSpace = true;
 	}
+
+
 	document.onkeydown = function(evt) {
 		evt = evt || window.event;
 		switch (evt.keyCode) {
@@ -77,24 +75,26 @@
 	};
 	//Relase
 	function ARelased() {
-		isA = false
+		isA = false;
 	}
 
 	function DRelased() {
-		isD = false
+		isD = false;
 	}
 
 	function leftArrowRalased() {
-		isLeft = false
+		isLeft = false;
 	}
 
 	function rightArrowRalased() {
-		isRight = false
+		isRight = false;
 	}
 
 	function spaceRelased() {
-		isSpace = false
+		isSpace = false;
 	}
+
+
 	document.onkeyup = function(evt) {
 		evt = evt || window.event;
 		switch (evt.keyCode) {
@@ -105,7 +105,7 @@
 				rightArrowRalased();
 				break;
 			case 89:
-				spaceRelased()
+				spaceRelased();
 				break;
 			case 65:
 				ARelased();
@@ -122,6 +122,7 @@
 		for (var i = 0; i < numgreen; i++) {
 			green[i].Y += green[i].Velocity_Y;
 		}
+
 		for (var i = 0; i < numblack; i++) {
 			black[i].Y += black[i].Velocity_Y;
 		}
@@ -147,104 +148,105 @@
 		});
 	});
 
-			function MainLoop() {
+	function MainLoop() {
 
 
-				preAdjustment();
+		preAdjustment();
 
-				//Draw
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				ctx.fillStyle = "green";
-				ctx.font = "30px Arial";
-				ctx.fillText("Score: " + counter, 10, 40);
-				ctx.font = "30px Arial";
-				ctx.fillText("Level: " + levelcounter, 680, 40);
-				ctx.drawImage(zara.Sprite, zara.X, zara.Y);
-				for (var i = 0; i < numgreen; i++) {
-					ctx.drawImage(green[i].Sprite, green[i].X, green[i].Y);
-				}
-				for (var i = 0; i < numblack; i++) {
-					ctx.drawImage(black[i].Sprite, black[i].X, black[i].Y);
-				}
-				//Logic
-				if (isLeft) {
-					zara.Velocity_X = -4
-				}
-				if (isRight) {
-					zara.Velocity_X = 4
-				}
-				if (!isLeft && !isRight) {
-					zara.Velocity_X = 0
-				}
-				if (zara.X < 0) {
-					zara.X = 0;
-				}
-				if (zara.X > 720) {
-					zara.X = 720;
-				}
-				for (var i = 0; i < numblack; i++) {
-					if (black[i].Y > 500) {
-						black[i].Velocity_Y = 1;
-						black[i].Y = Math.floor((Math.random() * 1) + 1);
-						black[i].X = Math.floor((Math.random() * 1000) + 1);
-					}
+		//Draw
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.fillStyle = "green";
+		ctx.font = "30px Arial";
+		ctx.fillText("Score: " + counter, 10, 40);
+		ctx.font = "30px Arial";
+		ctx.fillText("Level: " + levelcounter, 680, 40);
+		ctx.drawImage(zara.Sprite, zara.X, zara.Y);
+		for (var i = 0; i < numgreen; i++) {
+			ctx.drawImage(green[i].Sprite, green[i].X, green[i].Y);
+		}
 
-					black[i].Velocity_Y += 0.01;
-					if (black[i].isColliding(zara)) {
-						black[i].Velocity_Y = 1;
-						black[i].Y = Math.floor((Math.random() * 1) + 1);
-						black[i].X = Math.floor((Math.random() * 1000) + 1);
-						counter = counter - 10;
-
-						if (counter <= 0) {
-							ctx.clearRect(0, 0, canvas.width, canvas.height);
-							ctx.font = "50px Arial";
-							ctx.fillText("Game Over", 260, 250);
-							ctx = false;
-						}
-					}
-
-					//Levels
-					if (counter >= 20) {
-						black[i].Velocity_Y = 3.01;
-						levelcounter = 2;
-					}
-					if (counter >= 40) {
-						black[i].Velocity_Y = 4.01;
-						levelcounter = 3;
-					}
-					if (counter >= 60) {
-						black[i].Velocity_Y = 5.01;
-						levelcounter = 4;
-					}
-					if (counter >= 80) {
-						black[i].Velocity_Y = 6.01;
-						levelcounter = 5;
-					}
-				}
-				for (var i = 0; i < numgreen; i++) {
-					if (green[i].Y > 500) {
-						green[i].Velocity_Y = 1;
-						green[i].Y = Math.floor((Math.random() * 10) + 1);
-						green[i].X = Math.floor((Math.random() * 1000) + 1);
-					}
-					green[i].Velocity_Y += 0.01;
-					if (green[i].isColliding(zara)) {
-						green[i].Velocity_Y = 1;
-						green[i].Y = Math.floor((Math.random() * 10) + 1);
-						green[i].X = Math.floor((Math.random() * 1000) + 1);
-						counter += 2;
-					}
-				}
-				game = setTimeout(MainLoop, 1000 / 110);
+		for (var i = 0; i < numblack; i++) {
+			ctx.drawImage(black[i].Sprite, black[i].X, black[i].Y);
+		}
+		//Logic
+		if (isLeft) {
+			zara.Velocity_X = -4;
+		}
+		if (isRight) {
+			zara.Velocity_X = 4;
+		}
+		if (!isLeft && !isRight) {
+			zara.Velocity_X = 0;
+		}
+		if (zara.X < 0) {
+			zara.X = 0;
+		}
+		if (zara.X > 720) {
+			zara.X = 720;
+		}
+		for (var i = 0; i < numblack; i++) {
+			if (black[i].Y > 500) {
+				black[i].Velocity_Y = 1;
+				black[i].Y = Math.floor((Math.random() * 1) + 1);
+				black[i].X = Math.floor((Math.random() * 1000) + 1);
 			}
+
+			black[i].Velocity_Y += 0.01;
+			if (black[i].isColliding(zara)) {
+				black[i].Velocity_Y = 1;
+				black[i].Y = Math.floor((Math.random() * 1) + 1);
+				black[i].X = Math.floor((Math.random() * 1000) + 1);
+				counter = counter - 10;
+
+				if (counter <= 0) {
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					ctx.font = "50px Arial";
+					ctx.fillText("Game Over", 260, 250);
+					ctx = false;
+				}
+			}
+
+			//Levels
+			if (counter >= 20) {
+				black[i].Velocity_Y = 3.01;
+				levelcounter = 2;
+			}
+			if (counter >= 40) {
+				black[i].Velocity_Y = 4.01;
+				levelcounter = 3;
+			}
+			if (counter >= 60) {
+				black[i].Velocity_Y = 5.01;
+				levelcounter = 4;
+			}
+			if (counter >= 80) {
+				black[i].Velocity_Y = 6.01;
+				levelcounter = 5;
+			}
+		}
+		for (var i = 0; i < numgreen; i++) {
+			if (green[i].Y > 500) {
+				green[i].Velocity_Y = 1;
+				green[i].Y = Math.floor((Math.random() * 10) + 1);
+				green[i].X = Math.floor((Math.random() * 1000) + 1);
+			}
+			green[i].Velocity_Y += 0.01;
+			if (green[i].isColliding(zara)) {
+				green[i].Velocity_Y = 1;
+				green[i].Y = Math.floor((Math.random() * 10) + 1);
+				green[i].X = Math.floor((Math.random() * 1000) + 1);
+				counter += 2;
+			}
+		}
+		game = setTimeout(MainLoop, 1000 / 110);
+	}
 
 	//Pause
 	var gamecounter = 0;
 
 	function pauseGame() {
 		game = clearTimeout(game);
-		gamecounter = 0
+		gamecounter = 0;
 	}
 
 	function unpauseGame() {
@@ -272,7 +274,7 @@
 			if (this.Y > obj.Y + obj.Height) return false;
 			if (this.Y + this.Height < obj.Y) return false;
 			return true;
-		}
+		};
 	}
 
 })();
