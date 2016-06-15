@@ -316,6 +316,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
 
+      /*fix bug with scrolling*/
       .panel a,
       .panel p {
         display: inline;
