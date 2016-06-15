@@ -3,3 +3,4 @@ node_modules
 
 #Auto-generated files
 assets
+/src/css
