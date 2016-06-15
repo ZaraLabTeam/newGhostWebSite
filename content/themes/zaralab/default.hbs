@@ -10,7 +10,8 @@
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   {{! Styles'n'Scripts }}
   <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
@@ -36,7 +37,7 @@
 
     {{! The big featured header on the homepage, with the site logo and description }}
     <header class="header animated fadeInDownBig">
-      <a class="main-logo" href="{{@blog.url}}" title="{{@blog.title}} Logo">
+      <a class="main-logo" href="/" title="{{@blog.title}} Logo">
         <svg width="173" height="60">
           <use xlink:href="/assets/img/assets.svg#logo"></use>
         </svg>
