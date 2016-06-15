@@ -211,6 +211,18 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
+      .error {
+        #errSecondText {
+          display: none;
+        }
+        #flip {
+          display: none;
+        }
+        #panel {
+          display: none;
+        }
+      }
+
       .inner{
 
         .contact-row {
@@ -303,6 +315,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
+
+      /*fix bug with scrolling*/
+      .panel a,
+      .panel p {
+        display: inline;
+      }
+
       .social-sharing {
         margin-top: 0px;
       }
