@@ -47,4 +47,3 @@ Once you have the Ghost server up and running, you should be able to navigate to
 ## Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the [MIT license](LICENSE).
-Copyright (c) 2015-2016 Zaralab Organisation
