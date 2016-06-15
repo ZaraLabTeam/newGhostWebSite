@@ -10,7 +10,7 @@ git fetch $github
 
 echo "EXcluding changes to content/themes/zaralab/.gitignore and merging"
 git merge --no-ff --no-commit $github/master
-git checkout content/themes/zaralab/.gitignore
+git checkout master content/themes/zaralab/.gitignore
 
 echo "Committing changes"
 git commit -m "Merged github repository to cloudstrap"
