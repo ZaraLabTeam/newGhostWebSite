@@ -1071,7 +1071,7 @@ tbody > tr:nth-child(odd) > th {
   height: 100%;
   left: 0;
   top: 0;
-  background: transparent url(../img/cover.png) no-repeat 50% 50%/cover;
+  background: transparent url(../img/cover.jpg) no-repeat 50% 50%/cover;
   -webkit-animation: fadeIn 1s luminosity;
           animation: fadeIn 1s luminosity;
   z-index: 100;
