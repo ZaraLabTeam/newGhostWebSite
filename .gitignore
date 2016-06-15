@@ -5,7 +5,3 @@ node_modules
 
 #Web Storm
 .idea
-
-#Content
-content/images
-content/data
