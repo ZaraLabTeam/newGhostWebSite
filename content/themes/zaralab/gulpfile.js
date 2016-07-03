@@ -37,7 +37,7 @@ gulp.task('images', function(tmp) {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['src/js/jquery.js', 'src/js/**/*.js'])
+    return gulp.src(['src/js/lib/jquery.js', 'src/js/**/*.js'])
         .pipe(concat('app.js'))
         .on('error', gutil.log)
         .pipe(uglify())
