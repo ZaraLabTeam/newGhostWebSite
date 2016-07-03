@@ -37,10 +37,19 @@ gulp.task('images', function(tmp) {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['src/js/lib/jquery.js', 'src/js/**/*.js'])
+    return gulp.src(['src/js/lib/jquery.js', '!src/js/analytics.js', 'src/js/**/*.js'])
         .pipe(concat('app.js'))
         .on('error', gutil.log)
         .pipe(uglify())
+        .pipe(gulp.dest('assets/js'));
+});
+
+/**
+ * Compiles a separate script for google analitycs that resides in the
+ * page header
+ */
+gulp.task('analytics', function() {
+    return gulp.src('src/js/analytics.js')
         .pipe(gulp.dest('assets/js'));
 });
 
@@ -87,7 +96,8 @@ gulp.task('watch', function() {
     gulp.watch('src/svg/**', ['svgstore']);
 });
 
-gulp.task('assets', ['fonts', 'images', 'scripts', 'styles', 'svgstore']);
+gulp.task('assets', [
+    'fonts', 'images', 'scripts', 'analytics', 'styles', 'svgstore']);
 
 gulp.task('build', ['clean'], function() {
     return gulp.start('assets');
