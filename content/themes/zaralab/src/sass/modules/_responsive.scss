@@ -191,22 +191,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
-      .youtube-page {
-        .youtube-container {
-
-          .youtube-row {
-
-            .row-content{
-              width: 100%;
-            }
-
-            .homepage-link {
-              width: 10%;
-            }
-          }
-        }
-      }
-
     }
 
     /* Medium Devices, Desktops */
@@ -269,48 +253,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
-      .youtube-page {
-        .youtube-container {
-
-          .youtube-row {
-
-            .row-content {
-              width: 100%;
-
-            }
-
-            .youtube-stream-player-module {
-              left: 0px;
-
-              width: 70%;
-              height: 302px;
-
-              margin: 1rem 15% 0px 15%;
-
-              p {
-               .stream-player {
-                 height: 300px;
-               }
-              }
-            }
-
-            .youtube-module {
-              display: block;
-
-              width: 50%;
-              height: 302px;
-
-              margin: 1rem 25% 0px 25%;
-            }
-
-            .homepage-link {
-              width: 13%;
-            }
-
-          }
-        }
-      }
-
     }
 
     /* Small Devices, Tablets */
@@ -335,42 +277,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
             right: 0;
 
             margin-top: 5%;
-          }
-        }
-      }
-
-      .youtube-page {
-        .youtube-container {
-
-          .youtube-row {
-
-            .row-content {
-
-              .youtube-stream-player-module {
-                left: 0px;
-
-                width: 100%;
-                height: 302px;
-
-                margin: 0;
-
-                p {
-                 .stream-player {
-                   height: 300px;
-                 }
-                }
-              }
-
-              .youtube-module {
-                width: 60%;
-
-                margin: 1rem 20% 0px 20%;
-              }
-
-              .homepage-link {
-                width: 100%;
-              }
-            }
           }
         }
       }
@@ -403,40 +309,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
         }
       }
 
-
-      .youtube-page{
-        .youtube-container {
-
-          .youtube-row {
-
-            .row-content {
-
-              .youtube-stream-player-module {
-                left: 0px;
-
-                width: 100%;
-                height: 210px;
-
-                p {
-                 .stream-player {
-                   height: 208px;
-                 }
-                }
-              }
-
-
-              .youtube-module {
-                width: 100%;
-
-                margin: 1rem 0px 0px 0px;
-              }
-
-
-            }
-          }
-        }
-      }
-
     }
 
     /* Custom, iPhone Retina */
@@ -452,36 +324,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
                 width: 5px;
 
                 margin-left: 5%;
-              }
-            }
-          }
-        }
-      }
-
-      .youtube-page {
-        .youtube-container {
-
-          .youtube-row {
-
-            .row-content {
-
-              .youtube-stream-player-module {
-                left: 0px;
-
-                width: 100%;
-                height: 10rem;
-
-                p {
-                 .stream-player {
-                   height: 9.88rem;
-                 }
-                }
-              }
-
-              .youtube-module {
-                width: 100%;
-
-                margin: 1rem 0px 0px 0px;
               }
             }
           }

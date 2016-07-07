@@ -58,7 +58,7 @@ a img {
 	*overflow: visible;
 }
 
-.zaralab-vid-katuhu {
+.zaralab-video-list {
 	width:33.45%;
 	float:right
 }
@@ -68,7 +68,7 @@ a img {
 	font-weight: bold;
 }
 
-.zaralab-vid-kenca {
+.zaralab-video-info {
 	width:66.50%;
 }
 
@@ -156,31 +156,31 @@ iframe.zaralab-vid-iframe {
 }
 @media only screen and (min-width: 1500px) and (max-width : 2000px) {
 	#zaralab-content {
-		padding-left: 20%;
-		padding-right: 20%;
+		padding-left: 18%;
+		padding-right: 18%;
 	}
 }
 @media only screen and (min-width: 960px) and (max-width: 1045px) {
 	h1{font-size: 26px;line-height: 24px;}
 	#zaralab-content {padding:50px}
-	.zaralab-vid-katuhu {width:35%}
-	.zaralab-vid-kenca {width:65%}
+	.zaralab-video-list {width:35%}
+	.zaralab-video-info {width:65%}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	body {font-size: 14px;line-height: 24px}
 	h1 {font-size: 20px;line-height: 20px;}
 	#zaralab-content {padding:10px}
-	.zaralab-vid-katuhu {width:35%}
-	.zaralab-vid-kenca {width:65%}
+	.zaralab-video-list {width:35%}
+	.zaralab-video-info {width:65%}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {font-size: 14px;line-height: 24px}
 	h1 {font-size: 18px;line-height: 20px;}
 	#zaralab-content {padding:5px}
-	.zaralab-vid-katuhu {width:100%}
-	.zaralab-vid-kenca {width:100%;margin-bottom:20px}
+	.zaralab-video-list {width:100%}
+	.zaralab-video-info {width:100%;margin-bottom:20px}
 	iframe.zaralab-vid-iframe {height: 450px;}
 }
 
@@ -189,8 +189,8 @@ iframe.zaralab-vid-iframe {
 	#zaralab-content {padding:0}
 	h1 {font-size: 16px;line-height: 18px;}
 	.zaralab-vid-box{padding:5px}
-	.zaralab-vid-katuhu{margin:0}
-	.zaralab-vid-kenca {margin:0 0 20px 0}
+	.zaralab-video-list{margin:0}
+	.zaralab-video-info {margin:0 0 20px 0}
 	.zaralab-unit{width:auto;margin-left:0;display:block;margin-top:0}
 	iframe.zaralab-vid-iframe {height: 350px;}
 }
