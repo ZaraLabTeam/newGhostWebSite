@@ -3,38 +3,22 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
   {{#post}}
+
   <div class="youtube-page">
 
     <div class="youtube-container">
+		<div id="zaralab-content">
 
-      {{! The big featured stream from youtube}}
-      <section class="youtube-row player">
-        <!--Start Stream-player ==================================================== -->
-        <div class="row-content">
-        	<div class="row-header" style="margin-bottom: 55px">
-        		<h2>Предаваме на живо</h2>
-        	</div>
-               <div class="youtube-stream-player-module">
-                 <p>
-                   <a style="background-image: url(&quot;http://i.ytimg.com/vi/eyD_PwWsV8E/maxresdefault_live.jpg&quot;);" href="https://www.youtube.com/watch?v=eyD_PwWsV8E" data-youtube-id="eyD_PwWsV8E" class="stream-player js-trigger-modal stream-player-play"></a>
-                 </p>
-        			 </div>
-        </div>
-        <!-- End Stream-player ===================================================== -->
+				<div class="zaralab-unit zaralab-vid-kenca">
+					<div class="zaralab_vid_play"></div>
+				</div>
+				
+				<div class = "zaralab-unit zaralab-vid-katuhu">
+					<div class="zaralab_youtube_channels"></div>
+				</div>
+			</div>
+		</div>
 
-        {{!> "stream-player"}}
-      </section>
-
-      {{! The big featured youtube}}
-      <section class="youtube-row last-youtube-videos">
-        {{> "last-youtube-videos"}}
-      </section>
-
-    </div>
-
-    <section class="video-modal">
-      {{> video-modal}}
-    </section>
   </div>
 
   {{/post}}

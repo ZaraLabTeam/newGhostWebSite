@@ -1,0 +1,196 @@
+i.fa span {
+	font-size: 16px;
+}
+
+body * {
+	text-shadow: none;
+}
+
+#zaralab-content {
+	padding: 0 100px;
+}
+
+iframe,input,textarea,button{border:0}
+
+h1{
+	line-height: 34px;
+	font-weight: bold;
+	margin: 10px 0 10px 0;
+	font-size: 34px;
+}
+
+span.zaralab-nav-title {
+	font-size: 20px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.zaralab-vid-top hr {
+	border: 0;
+	height: 0;
+	border-top: 2px solid rgba(0, 0, 0, 0.7);
+	border-bottom: 1px solid rgba(150, 150, 150, 0.3);
+}
+
+a  {
+	text-decoration: none;
+}
+
+a img {
+	border: 0;
+}
+
+.zaralab-unit {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+	overflow: hidden;
+	*overflow: visible;
+}
+
+.zaralab-vid-katuhu {
+	width:33.45%;
+	float:right
+}
+
+.zaralab-uploader {
+	color: #000;
+	font-weight: bold;
+}
+
+.zaralab-vid-kenca {
+	width:66.50%;
+}
+
+.zaralab_youtube_thumb{float:left;margin-right:10px;}
+
+.zaralab_youtube_thumb {
+    position: relative;
+}
+
+.zaralab_youtube_thumb span {
+    position: absolute;
+    right: 1px;
+    bottom: 10px;
+	padding:0 5px 0 5px;
+	background: #000;
+}
+
+.zaralab-vid-box {
+	background:#fff;
+	border:1px solid #e0e0e0;
+	margin-bottom:10px;
+	padding:20px;
+	display:block;
+	overflow:hidden;
+	*overflow:visible;
+}
+
+.zaralab-vid-box-user {
+	margin-bottom: 35px;
+}
+
+#zaralab-user-img {
+	float:left;
+	margin-right:10px
+}
+
+.zaralab-play {
+	margin:0;
+	padding:10px;
+	display:block;
+	overflow:hidden;
+	*overflow:visible;
+}
+
+div.zaralab-vid-top {
+	color: #c0c0c0;
+	background:#1a1a1a;
+	padding:20px;
+	display:block;
+	overflow:hidden;
+	*overflow:visible;
+}
+
+div.zaralab-vid-bottom {
+	color: #c0c0c0;
+	background:#222222;
+	display:block;
+}
+
+.zaralab_youtube_thumb img {
+	width: 100px;
+}
+
+div.zaralab-play:hover {
+	background:#525252;
+}
+
+.zaralab-vid-active {
+	background:#3a3a3a;
+}
+
+.zaralab-vid-active img{
+	border :2px solid #e42b28;
+}
+
+.zaralab_vid_prev,.zaralab_vid_next,.zaralab-play{
+	cursor:pointer
+}
+
+iframe.zaralab-vid-iframe {
+	width: 100%;
+	height: 500px;
+
+	background-color: #000;
+}
+@media only screen and (min-width: 1500px) and (max-width : 2000px) {
+	#zaralab-content {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+}
+@media only screen and (min-width: 960px) and (max-width: 1045px) {
+	h1{font-size: 26px;line-height: 24px;}
+	#zaralab-content {padding:50px}
+	.zaralab-vid-katuhu {width:35%}
+	.zaralab-vid-kenca {width:65%}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body {font-size: 14px;line-height: 24px}
+	h1 {font-size: 20px;line-height: 20px;}
+	#zaralab-content {padding:10px}
+	.zaralab-vid-katuhu {width:35%}
+	.zaralab-vid-kenca {width:65%}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body {font-size: 14px;line-height: 24px}
+	h1 {font-size: 18px;line-height: 20px;}
+	#zaralab-content {padding:5px}
+	.zaralab-vid-katuhu {width:100%}
+	.zaralab-vid-kenca {width:100%;margin-bottom:20px}
+	iframe.zaralab-vid-iframe {height: 450px;}
+}
+
+@media screen and (max-width:479px){
+	body {font-size: 12px;line-height: 22px}
+	#zaralab-content {padding:0}
+	h1 {font-size: 16px;line-height: 18px;}
+	.zaralab-vid-box{padding:5px}
+	.zaralab-vid-katuhu{margin:0}
+	.zaralab-vid-kenca {margin:0 0 20px 0}
+	.zaralab-unit{width:auto;margin-left:0;display:block;margin-top:0}
+	iframe.zaralab-vid-iframe {height: 350px;}
+}
