@@ -4,10 +4,12 @@
   $(document).ready(function() {
 
     $(".email-button").click(function(){
-      $(".envelope").toggleClass("active");
-      $('#form').toggle();
-    });
+      var form = $('#form');
 
+      $(".envelope").toggleClass("active");
+      form.toggle('slow');
+      $('html, body').animate({ scrollTop: form.offset().top }, 500);
+    });
   });
 
 })(jQuery);
